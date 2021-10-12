@@ -54,4 +54,4 @@ Scrum Master:
 - Vá para a main: `git checkout main`
 - Atualize a main: `git pull`
 - Faça o merge das alterações de sua branch com a main: `git merge suabranch`
-- Confirme o merge enviando para o servidor do GitHub> `git push origin main`
+- Confirme o merge enviando para o servidor do GitHub: `git push origin main`
