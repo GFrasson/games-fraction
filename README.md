@@ -37,7 +37,8 @@ Scrum Master:
 - Cheque em qual branch está e quais alterações foram adicionadas: git status
 - Certifique-se de estar na sua branch usando: `git status`
   - Se não estiver na sua branch, vole para ela: `git checkout suabranch`
-- Adicione as alterações feitas na sua branch: `git add .`
+- Adicione todas as alterações feitas na sua branch: `git add .`
+  - Se achar necessário também é possível adicionar as modificações separadamente: `git add caminho/do/arquivo`
 - Dê um commit com uma mensagem especificando as alterações realizadas: `git commit -m "mensagem especificando o que foi feito"`
 - Envie o commit feito para sua branch no GitHub: `git push origin suabranch`
 
@@ -53,3 +54,4 @@ Scrum Master:
 - Vá para a main: `git checkout main`
 - Atualize a main: `git pull`
 - Faça o merge das alterações de sua branch com a main: `git merge suabranch`
+- Confirme o merge enviando para o servidor do GitHub> `git push origin main`
