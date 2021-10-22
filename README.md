@@ -6,7 +6,7 @@ Projeto desenvolvido para o Trainee da [Code Jr](https://codejr.com.br/) que con
   - Back-end: PHP e SQL
 
 
-## Projeto Trainee, Code Jr, Grupo X, 2021.2
+## Projeto Trainee, Code Jr, Grupo 5, 2021.2
 
 Desenvolvedores:
 - Integrante 1
