@@ -1,7 +1,7 @@
 # Games Fraction
 
 Projeto desenvolvido para o Trainee da [Code Jr](https://codejr.com.br/) que consiste em uma loja de jogos!
-- Desenvolvimento:
+- Desenvolvimento:aaaa
   - Front-end: HTML, CSS, JavaScript e Bootstrap
   - Back-end: PHP e SQL
 
