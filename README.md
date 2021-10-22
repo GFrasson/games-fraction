@@ -12,7 +12,7 @@ Desenvolvedores:
 - Integrante 1
 - Integrante 2
 - Integrante 3
-- Integrante 4
+- Integrante Jhonattan Meira dos SANTOS
 
 Scrum Master:
 
