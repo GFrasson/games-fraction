@@ -1,0 +1,59 @@
+html,body{
+    background-color:#141414;
+    color:white;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Zen Maru Gothic', sans-serif;
+}
+
+.titulo{
+    text-align: center;
+    color: #CA4727;
+    font-family: 'Bebas Neue', cursive;
+}
+
+.historia{
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+.historia div{
+    display: inline-block;
+    height: 410px;
+}
+
+.texto{
+    vertical-align: top;
+    width: 64%;
+    height: 100%;
+    text-align: justify;
+    font-size: 20px;
+    line-height: 29px;
+
+}
+
+.imagem{
+    width: 35%;
+    text-align: center;
+    height: 100%;
+
+    animation-name: efeitoUm;
+    animation-duration: 5s;
+}
+
+.imagem img{
+    width: 300px;
+}
+
+.icones{
+    display: inline-block;
+    height: 100px;
+}
+
+
+
+
+@keyframes efeitoUm{
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
