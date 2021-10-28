@@ -1,8 +1,8 @@
 html,body{
     background-color:#141414;
-    color:white;
+    color: #F2E9DF;
     margin: 0px;
-    padding: 0px;
+    padding-bottom: 5%;
     font-family: 'Zen Maru Gothic', sans-serif;
 }
 
@@ -45,15 +45,52 @@ html,body{
     width: 300px;
 }
 
-.icones{
-    display: inline-block;
-    height: 100px;
+.icones div{
+    height: 100%;
+    text-align: center;
 }
 
+.icones div i{
+    font-size: 55px;
+    color:#CA4727 ;
+    margin-bottom: 0%;
+}
 
+.icones div i:hover{
+    color: #FFE26F;
+    font-size: 60px;
+}
+
+.icones h2{
+    margin-bottom: 0%;
+    margin-right: 0%;
+    text-align: left;
+    font-family:'Bebas Neue', cursive; 
+    color:#CA4727 ;
+}
+
+.missao{
+    width: 100%;
+}
+
+.missao div{
+    display: inline-block;
+}
+
+.quebraLinha{
+    width: 79%;
+}
+
+.icone1{
+    width: 20%;
+}
 
 
 @keyframes efeitoUm{
     0% {opacity: 0;}
     100% {opacity: 1;}
+}
+
+@media (max-width: 1000px){
+
 }
