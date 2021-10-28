@@ -10,11 +10,12 @@ html,body{
     text-align: center;
     color: #CA4727;
     font-family: 'Bebas Neue', cursive;
+    margin-top: 20px;
 }
 
 .historia{
     margin-left: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 3%;
 }
 
 .historia div{
@@ -86,6 +87,28 @@ html,body{
 }
 
 
+.nav{
+    background-color:#1C2143;
+    height: 100px;
+    margin-bottom: 15px;
+}
+
+.nav ul{
+    margin-top: 0px;
+    list-style: none;
+    padding-left: 0px;
+    text-align: right;
+    height: 50px;
+}
+
+.nav li{
+    display: inline-block;
+    padding-left: 30px;
+    padding-right: 30px;
+    line-height: 50px;
+    font-size: 18px;
+}
+
 @keyframes efeitoUm{
     0% {opacity: 0;}
     100% {opacity: 1;}
@@ -93,4 +116,17 @@ html,body{
 
 @media (max-width: 1000px){
 
+    .texto{
+        width: 100%;
+        margin-left:0;
+        margin-top: 0%;
+       font-size: 20px;
+       line-height: 17px;
+    }
+
+    .imagem{
+        width: 100%;
+    }
+
+   
 }
