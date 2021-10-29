@@ -1,0 +1,57 @@
+html,body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+body{
+    background: #E5E5E5;
+}
+.box-geral-esquerda{
+    margin-top: 2rem;
+    margin-left: 2rem;
+}
+.box-geral-esquerda div.box-texto h3, .box-geral-direita div.box-texto h3 {
+    font-size:30px;
+    color:#27461f;
+    line-height:42px;
+    position: relative;
+}
+
+.box-geral-esquerda div.box-texto h3:before {
+    content: "";
+    position: absolute;
+    border-bottom: 5px solid #FFE26F;
+    width: 150px;
+    left:0;
+    bottom:0
+}
+/* card */
+.row{
+    margin: 0;
+}
+.card{
+    margin: auto;
+    margin-bottom: 2rem;
+    box-shadow: 3px 2px 2px 3px rgba(0, 0, 0, 0.11);
+}
+.card-img-top{
+   height: 256px;
+}
+a{
+    text-decoration: none;
+    font-family:'Courier New', Courier, monospace ;
+}
+a .card-title{
+   color: black; 
+   text-align: center;
+   font-size: 1.5rem;
+  
+}
+a .card-text-preco{
+    color:brown;
+    text-align: center;
+}
+a .card-text{
+    color:rgba(0, 0, 0, 0.575);
+    font-size: 0.9rem;
+}
