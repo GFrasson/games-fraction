@@ -39,12 +39,17 @@ body{
     background-color: white;
     width: 1016px;
     height: 49px;
-    text-align: center;
+    text-align: left;
     margin-bottom: 20px;
-    border-radius: 100px;
+    border-radius: 10px;
     margin-left: 150px;
+    color:#B2AEC2;
+    font-size: 25px;
+    
+    
 
 }
+
 
 .email h5{
     font-size: 20px;
@@ -56,10 +61,12 @@ body{
     background-color: white;
     width: 1016px;
     height: 49px;
-    text-align: center;  
+    text-align: left;  
     margin-bottom: 20px;
-    border-radius: 100px;
+    border-radius: 10px;
     margin-left: 150px;
+    color:#B2AEC2;
+    font-size: 25px;
 }
 
 .telefone h5{
@@ -72,10 +79,12 @@ body{
     background-color: white;
     width: 1016px;
     height: 49px;
-    text-align: center;  
+    text-align: left;  
     margin-bottom: 20px; 
-    border-radius: 100px;
+    border-radius: 10px;
     margin-left: 150px;
+    color:#B2AEC2;
+    font-size: 25px;
 }
 .assunto h5{
     font-size: 20px;  
@@ -88,10 +97,12 @@ body{
     background-color: white;
     width: 1016px;
     height: 49px;
-    text-align: center; 
+    text-align: left; 
     margin-bottom: 20px; 
-    border-radius: 100px;
+    border-radius: 10px;
     margin-left: 150px;
+    font-size: 25px;
+    color:#B2AEC2;
 }
 .mensagem h5{
     font-size: 20px; 
@@ -103,10 +114,12 @@ body{
     background-color: white;
     width: 1020px;
     height: 80px;
-    text-align: center;  
+    text-align:left;  
     margin-bottom: 20px;  
-    border-radius: 100px;
+    border-radius: 10px;
     margin-left: 150px;
+    color:#B2AEC2;
+    font-size: 25px;
 }
 img {
      margin-top: 54px;
@@ -122,4 +135,31 @@ img {
 .mapouter {
     margin-left: 350px;
     margin-top: 100px;
+    margin-bottom: 100px;
+}
+.rodape {
+    background-color:#1C2143 ;
+    width: 1440px;
+    height: 137px;
+}
+.rodape h4 {
+    color: white;
+    margin-left: 380px;
+    
+}
+
+.redes {
+    background-color:#1C2143 ;
+}
+
+.redes h3 {
+    color: white;
+}
+.social {
+    height: 60px;
+    
+}
+.social2 {
+    height: 60px;
+     ;
 }
