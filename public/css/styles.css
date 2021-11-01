@@ -118,8 +118,7 @@ html,body{
 
     .texto{
         width: 100%;
-        margin-right: 5px;
-        margin-top: 0%;
+        padding-right: 5px;
        font-size: 17px;
        line-height: 17px;
     }
