@@ -1,0 +1,52 @@
+body{
+    background-color:e5e5e5;
+    margin: 0%;
+}
+footer{
+    position: absolute;
+    bottom: 0;
+    background-color:1c2143;
+    color:79b2da;
+    height: 20%;
+    width: 100%;
+}
+.footer1{
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    float: left;
+    padding-left: 5%;
+    padding-top: 2%;
+    padding-right: 10%;
+}
+.footer2{
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    float: left;
+    padding-left: 5%;
+    padding-top: 2%;
+    padding-right: 10%;
+}
+.footer3{
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    float: left;
+    padding-left: 5%;
+    padding-top: 2%;
+    padding-right: 10%;
+}
+.footer4{
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    float: left;
+    padding-left: 5%;
+    padding-top: 2%;
+    padding-right: 10%;
+}
