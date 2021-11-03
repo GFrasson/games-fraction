@@ -8,11 +8,7 @@
     color: #1C2143;
     text-align: center;
     margin-top: 150px;
-    font-size: 28px;
-    position: absolute;
-    top: 10%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    font-size: 35px;
     font-family: 'Bebas Neue',cursive;
     
 }
@@ -23,10 +19,7 @@
     font-size: 20px;
     margin-top: 20px;
     margin-bottom: 200px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  
 }
 
 .inicio{
@@ -38,6 +31,10 @@
 body{
     background-color: #E5E5E5;
     font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     
 }
 
@@ -46,10 +43,8 @@ body{
 
 
 .box{
-    position: absolute;
-    top: 120%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    
+    width:50% ;
     border-radius: 15px;
     background-color:#1C2143;
     padding: 15px;
@@ -60,8 +55,9 @@ body{
 }
 fieldset{
     border: 3px solid #E5E5E5;
-    height: 600px;
-    width: 300px;
+    height: 100%;
+    width: 100%;
+    padding: 30px;
 }
 
 legend{
@@ -75,7 +71,20 @@ legend{
 }
 .inputbox {
     position: relative;
+    
 }
+
+.inputbox  + .inputbox {
+    margin-top: 4rem;
+}
+
+.inputbox textarea{
+resize: vertical;
+max-height: 15rem;
+min-height: 5rem;
+    
+}
+
 .inputUser {
     background: none;
     border:none;
@@ -101,23 +110,42 @@ legend{
     color: #79B2DA;
 
 }
-#submit{
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+form .submit-form {
     background-color: #79B2DA; 
-    width: 100%;
+    width: 30%;
     border:none;
     padding: 15px;
     color:#E5E5E5 ;
     font-size: 15px;
     cursor: pointer;
     border-radius: 10px;
+    margin-top: 2rem;
+    transition: background-color 0.3s;
+}
+form .submit-form:hover {
+    background-color:#5993bd ;
 }
 
 
 .mapouter {
      
-    margin-top: 1500px;
-    margin-left: 400px;
-    margin-bottom: 200px;
+    
+    margin: 5rem 0;
+    position: relative;
+    text-align: right;
+    width: 50%;
+    height: 200px ;
+
+    
     
     
    
@@ -132,4 +160,20 @@ legend{
     height: 30px;
      ;
 }
+
+
+
+
+.gmap_canvas {
+    overflow: hidden;
+    background: none !important;
+    width: 100%;
+    height: 100%;
+}
+
+.gmap_iframe {
+    width: 100% !important;
+    height: 100% !important;
+}
+ 
 
