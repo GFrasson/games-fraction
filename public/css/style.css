@@ -8,11 +8,12 @@
     color: #1C2143;
     text-align: center;
     margin-top: 150px;
-    font-size: 30px;
+    font-size: 28px;
     position: absolute;
     top: 10%;
     left: 50%;
     transform: translate(-50%, -50%);
+    font-family: 'Bebas Neue',cursive;
     
 }
 .site{
@@ -41,9 +42,7 @@ body{
 }
 
 
-img {
-     margin-top: 54px;
-}
+
 
 
 .box{
@@ -55,6 +54,7 @@ img {
     background-color:#1C2143;
     padding: 15px;
     color: #E5E5E5;
+    font-family: 'Zen Maru Gothic',sans-serif;
     
     
 }
@@ -113,4 +113,23 @@ legend{
 }
 
 
+.mapouter {
+     
+    margin-top: 1500px;
+    margin-left: 400px;
+    margin-bottom: 200px;
+    
+    
+   
+    
+}
+
+.social {
+    height: 30px;
+    
+}
+.social2 {
+    height: 30px;
+     ;
+}
 
