@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 html,body{
     background-color:#141414;
     color: #F2E9DF;
@@ -14,19 +20,19 @@ html,body{
 }
 
 .historia{
-    margin-left: 10px;
+    margin-left: 2rem;
+    margin-right: 2rem;
     margin-bottom: 3%;
+    display: flex;
 }
 
-.historia div{
-    display: inline-block;
-    height: 410px;
+.historia p{
+    margin-bottom: 2em;
 }
 
 .texto{
-    vertical-align: top;
+    
     width: 64%;
-    height: 100%;
     text-align: justify;
     font-size: 20px;
     line-height: 29px;
@@ -72,10 +78,9 @@ html,body{
 
 .missao{
     width: 100%;
-}
-
-.missao div{
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1em;
 }
 
 .quebraLinha{
@@ -116,11 +121,15 @@ html,body{
 
 @media (max-width: 1000px){
 
+    .historia{
+        display: inline-block;
+    }
+
+
     .texto{
         width: 100%;
-        padding-right: 5px;
-       font-size: 17px;
-       line-height: 17px;
+       font-size: 15px;
+       line-height: 25px;
        padding-bottom: 5px;
     }
 
@@ -131,14 +140,11 @@ html,body{
     .missao{
         width: 100%;
         text-align: center;
-    }
-
-    .missao div{
-        display: block;
+        flex-direction: column;
     }
 
     .quebraLinha{
-        width: 100%;
+        width: 100%; 
         text-align: center;
     }
 
@@ -151,6 +157,7 @@ html,body{
     .icone1{
         text-align: center;
         width: 100%;
+        margin-bottom: 1em;
     }
    
 }
