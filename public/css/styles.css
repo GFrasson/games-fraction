@@ -1,0 +1,67 @@
+html,body{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: 'Zen Maru Gothic', sans-serif;
+    text-decoration: none;
+    background-color: #F2E9DF;
+}
+
+header{
+    min-height: 9vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:#1C2143;
+   
+}
+
+header h1{
+    font-family: 'Bebas Neue', cursive;
+    font-size: 3.0em;
+   
+}
+
+main{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+main form{
+    margin-top: 2%;
+    width: 40%;
+    height: 15em;
+    background-color:#1C2143;
+    color: white;
+    border-radius: 2em;
+    box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.5);
+    padding: 2%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.quadrados{
+    margin-top: 5%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.quadrados input{
+    width: 90%;
+    height: 2em;
+    padding: 8px 15px;
+    border:0;
+    outline: 0;
+
+    border-radius: 1em;
+
+    font-size: 16px;
+    color: black;
+    box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.5);
+}
