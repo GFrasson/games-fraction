@@ -92,27 +92,6 @@ html,body{
 }
 
 
-.nav{
-    background-color:#1C2143;
-    height: 100px;
-    margin-bottom: 20px;
-}
-
-.nav ul{
-    margin-top: 0px;
-    list-style: none;
-    padding-left: 0px;
-    text-align: right;
-    height: 50px;
-}
-
-.nav li{
-    display: inline-block;
-    padding-left: 30px;
-    padding-right: 30px;
-    line-height: 50px;
-    font-size: 18px;
-}
 
 @keyframes efeitoUm{
     0% {opacity: 0;}
