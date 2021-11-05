@@ -7,13 +7,13 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link rel="stylesheet" href="../../public/css/styles.css">
+       
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Zen+Maru+Gothic:wght@300&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/efe53d977f.js" crossorigin="anonymous"></script>
-       
-
+        <link rel="stylesheet" href="../../public/css/styles.css">
+        <script src="../../public/js/login.js"></script>
 
         <title>Login</title>
     </head>
@@ -34,14 +34,14 @@
                         <input type="email" id="email" placeholder="exemplo@gmail.com">
                     </div>
 
-                     <div class="senha">
-                         <label for="senha">Senha:</label>
-                        <input type="senha" id="senha" placeholder="******">
-                        <i class="fas fa-eye"></i>
-                        <i class="fas fa-eye-slash"></i>
+                    <div class="senha">
+                        <label for="senha">Senha:</label>
+                        <input type="password" id="senha" placeholder="******">
+                        <i class="fas fa-eye" id="aberto" onclick="mostrarSenha()"></i>
+                        <i class="fas fa-eye-slash" id="fechado" onclick="mostrarSenha()"></i>
                     </div>
 
-                    <div class="button">
+                    <div class="botao">
                         <button type="submit">Login</button>
                     </div>
 
