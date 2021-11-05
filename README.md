@@ -10,7 +10,7 @@ Projeto desenvolvido para o Trainee da [Code Jr](https://codejr.com.br/) que con
 
 Desenvolvedores:
 - Integrante 1
-- Integrante 2
+- [Gabriella Cruz e Silva](https://github.com/gabriellac2002)
 - Integrante 3
 - Integrante 4
 
