@@ -29,17 +29,28 @@ body{
 .row{
     margin: 0;
 }
+.d-flex{
+    align-items: center;
+    justify-content: center;
+}
 .card{
-    margin: auto;
+    margin: 10px;
     margin-bottom: 2rem;
-    box-shadow: 3px 2px 2px 3px rgba(0, 0, 0, 0.11);
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.11);
+}
+.card:hover{
+    background: #f8f7f7;
+    box-shadow: 3px 2px 1px 1px rgba(0, 0, 0, 0.11);
 }
 .card-img-top{
    height: 256px;
 }
+h3{
+    font-family:'Bebas Neue', cursive;
+}
 a{
     text-decoration: none;
-    font-family:'Courier New', Courier, monospace ;
+    font-family:'spotify-circular, Helvetica, Arial, sans-serif' ;
 }
 a .card-title{
    color: black; 
@@ -54,4 +65,17 @@ a .card-text-preco{
 a .card-text{
     color:rgba(0, 0, 0, 0.575);
     font-size: 0.9rem;
+}
+.d-block{
+    height: 313px;
+}
+@media(max-width:700px){
+    .d-block{
+        height: max-content;
+    }
+}
+@media(max-width:550px){
+    .d-block{
+        height: 213px;
+    }
 }
