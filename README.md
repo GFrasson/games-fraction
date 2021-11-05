@@ -9,7 +9,7 @@ Projeto desenvolvido para o Trainee da [Code Jr](https://codejr.com.br/) que con
 ## Projeto Trainee, Code Jr, Grupo 4, 2021.2 
 
 Desenvolvedores:
-- Integrante 1
+- [Fernando Giardini](https://github.com/FernandoGiardini)
 - Integrante 2
 - Integrante 3
 - Integrante 4

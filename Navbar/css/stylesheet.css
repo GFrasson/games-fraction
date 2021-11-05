@@ -1,41 +1,38 @@
-.navBar{
-/* overflow: visible; */
-height: 10%;
-width: 100%;
-background-color:1c2143;
-padding-left: 20px 10px;
-margin:auto;
-position: relative;
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-.navBar .botoes a {
-    float: right;
-    color:e5e5e5;
-    text-align:justify;
-    padding: 12px;
-    text-decoration: none;
-    font-size: 18px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    line-height: 25px;
-    border-radius: 4px;
-   
-    
-}
+
 
 body{
-    background-color:e5e5e5;
-    margin: 0%;
+    background: color #e5e5e5;;
+
+}
+.navBar{
+background-color:#1c2143;
+display: flex;
+justify-content: space-between;
+align-items: center;
+
+}
+.navBar .botoes a {
+  
+    color:#e5e5e5;
+    margin: 12px;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: 'Bebas Neue', cursive;
 }
 .navBar a:hover{
-    color: ffe26f;
+    color: #ffe26f;
+}
+.logomain{
+    margin-left: 2%;
 }
 
-.botoes {
-    padding-top: 10px;
-    float: right;
-    width: 29%;
-
-}
-img:hover {
+.navbar .logomain img:hover {
    animation: shake 0.5s;
    animation-iteration-count: infinite;
 }
@@ -52,42 +49,61 @@ img:hover {
     90% { transform: translate(1px, 2px) rotate(0deg); }
     100% { transform: translate(1px, -2px) rotate(-1deg); }
   }
+  .container{
+      height: 100%;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding-right: 2%;
+  }
+  #checkbox-menu{
+      position: absolute;
+      opacity: 0;
+  }
+  label{
+      cursor: pointer;
+      position: relative;
+      display: block;
+      height: 22px;
+      width: 30px;  
+  }
+  label span{
+      position: absolute;
+      display: block;
+      height: 5px;
+      width: 100%;
+      border-radius: 30px;
+      background: #ca4727;
+      transition: 0.25s ease-in-out;
+  }
+    label span:nth-child(1){
+        top: 0;
+    }
+    label span:nth-child(2){
+        top: 8px;
+    }
+    label span:nth-child(3){
+        top: 16px;
+    }
 
-.searchbar{
-    padding-top: 1.5%;
-    float:right;
-    max-width: fit-content;
-    padding-right: 1%;
-}
-.searchbar button{
-    color:E5E5E5;
-    background-color:ca4727;
-    text-decoration:none;
-    font-size: 15px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    border-radius: 5px;
+    #checkbox-menu:checked + label span:nth-child(1){
+        transform: rotate(-45deg);
+        top: 8px;
+    }
+    #checkbox-menu:checked + label span:nth-child(2){
+        opacity: 0;
+    }
+    #checkbox-menu:checked + label span:nth-child(3){
+        transform: rotate(+45deg);
+        top: 8px;
+    }
 
-  
-}
-.searchbar button:hover{
-    background-color: 79b2da;
-    color: ffe26f;
-}
-.searchbar input{
-    color: grey;
-    text-decoration: none;
-    font-size: 18px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    border-radius: 4px;
-}
-.menuHB{
 
-    max-width: fit-content;
-    float: right;
-    padding-top: 1%;
-    padding-right: 5%;
-}
-.logoMain{
-    width: fit-content;
-    padding-top: 1%;
-}
+    @media screen and (max-width: 455px) {
+        .container{
+            display: block;
+        }
+        .botoes{
+            display: none;
+        }
+    }
