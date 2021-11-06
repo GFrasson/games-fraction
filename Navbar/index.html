@@ -5,43 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Games Fraction</title>
     <link rel="stylesheet" href="css/stylesheet.css">
+    <script type="text/javascript" src="js/scripts.js"></script>
 
 </head>
 
 <body>    
-    <header class="navBar">
+    <header  class="navBar">
 
         <div class="logoMain">
             <a href="#default" class="logo"> <img src="img/Logo.svg" height="70px" width="70px" ></a>
         </div>
 
         <div class="container">
-            <input type="checkbox" id="checkbox-menu">
-
-            <label for="checkbox-menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </label>
+           <input type="checkbox" id="checkbox-menu">
         
-            <ul>
-                <li><a class="active" href="#home">Home</a></li>
-                <li><a href="#quemSomos">Quem somos</a></li>
-                <li><a href="#produtos">Produtos</a></li>
-                <li><a href="#contato">Contato</a></li>
-                <li><a href="#login">Login</a></li>
-                
-            </ul>
+           <label  for="checkbox-menu" onclick="openNav()">
+               <span></span>
+               <span></span>
+               <span></span>
+            </label>
         </div>
-
-        <nav class="botoes"> 
-
-            <a class="active" href="#home">Home</a>
-            <a href="#quemSomos">Quem somos</a>
-            <a href="#produtos">Produtos</a>
-            <a href="#contato">Contato</a>
-            <a href="#login">Login</a>
+       
+        <nav id="botoes" class="botoes-menujs"> 
            
+           
+                <a class="active" href="#home">Home</a>
+                <a href="#quemSomos">Quem somos</a>
+                <a href="#produtos">Produtos</a>
+                <a href="#contato">Contato</a>
+                <a href="#login">Login</a>
+                   
         </nav>
 
     </header>
