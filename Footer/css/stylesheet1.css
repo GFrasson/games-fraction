@@ -15,7 +15,7 @@ body{
     display:flex;
     height: 350px;
     width: 100%;
-    justify-content:space-around ;
+    justify-content:space-between ;
     
 }
 
@@ -26,31 +26,45 @@ body{
     font-size: 16px;
     font-family: 'Zen Maru Gothic', sans-serif;
     display: block;
-    background-color: #2d2d2d;
-    margin-top: 5%;
-    margin-bottom: 2%;
+    margin-top: 30px;
+    margin-bottom: 15px;
+
+    border-style: solid;
+    border-width: 1px;
+    border-top: 0;
+    border-bottom: 0;
+    border-left:0;
+    border-color: #ffe26f;
+
+    padding-right: 1%;
+    padding-left: 1%;
+
 }
 .item2{
     color:#79b2da;
     text-align: center;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 20px;
     font-family: 'Zen Maru Gothic', sans-serif;
     display: block;
-    background-color: white;
-    margin-top: 5%;
-    margin-bottom: 2%;
+    margin-top: 30px;
+    margin-bottom: 15px;
+
+    padding-right: 1%;
+    padding-left: 1%;
 }
 .item3{
     color:#79b2da;
     text-align: center;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 20px;
     font-family: 'Zen Maru Gothic', sans-serif;
     display: block;
-    background-color: green;
-    margin-top: 5%;
-    margin-bottom: 2%;
+    margin-top: 30px;
+    margin-bottom: 15px;
+
+    padding-right: 1%;
+    padding-left: 1%;
 }
 .item4{
     color:#79b2da;
@@ -59,9 +73,13 @@ body{
     font-size: 16px;
     font-family: 'Zen Maru Gothic', sans-serif;
     display: block;
-    background-color: orange;
     margin-top: 5%;
-    margin-bottom: 2%;
+    margin-bottom: 30px;
+
+    padding-right: 1%;
+    padding-left: 1%;
+
+    min-width:fit-content;
 }
 
 @media only screen and (max-widht: 400px) {
