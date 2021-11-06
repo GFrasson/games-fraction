@@ -1,52 +1,69 @@
-body{
-    background-color:e5e5e5;
-    margin: 0%;
+@import url('https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-footer{
+body{
+    background-color:#e5e5e5;
+
+}
+.rodapes{
     position: absolute;
     bottom: 0;
-    background-color:1c2143;
-    color:79b2da;
-    height: 20%;
+    background-color:#1c2143;
+    display:flex;
+    height: 350px;
     width: 100%;
+    justify-content:space-around ;
+    
 }
-.footer1{
+
+.item1{
+    color:#79b2da;
     text-align: center;
     text-decoration: none;
     font-size: 16px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    float: left;
-    padding-left: 5%;
-    padding-top: 2%;
-    padding-right: 10%;
+    font-family: 'Zen Maru Gothic', sans-serif;
+    display: block;
+    background-color: #2d2d2d;
+    margin-top: 5%;
+    margin-bottom: 2%;
 }
-.footer2{
+.item2{
+    color:#79b2da;
     text-align: center;
     text-decoration: none;
     font-size: 16px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    float: left;
-    padding-left: 5%;
-    padding-top: 2%;
-    padding-right: 10%;
+    font-family: 'Zen Maru Gothic', sans-serif;
+    display: block;
+    background-color: white;
+    margin-top: 5%;
+    margin-bottom: 2%;
 }
-.footer3{
+.item3{
+    color:#79b2da;
     text-align: center;
     text-decoration: none;
     font-size: 16px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    float: left;
-    padding-left: 5%;
-    padding-top: 2%;
-    padding-right: 10%;
+    font-family: 'Zen Maru Gothic', sans-serif;
+    display: block;
+    background-color: green;
+    margin-top: 5%;
+    margin-bottom: 2%;
 }
-.footer4{
+.item4{
+    color:#79b2da;
     text-align: center;
     text-decoration: none;
     font-size: 16px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    float: left;
-    padding-left: 5%;
-    padding-top: 2%;
-    padding-right: 10%;
+    font-family: 'Zen Maru Gothic', sans-serif;
+    display: block;
+    background-color: orange;
+    margin-top: 5%;
+    margin-bottom: 2%;
+}
+
+@media only screen and (max-widht: 400px) {
+    
 }
