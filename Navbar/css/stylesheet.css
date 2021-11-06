@@ -27,6 +27,20 @@ align-items: center;
 .navBar a:hover{
     color: #ffe26f;
 }
+
+.navBar .botoes-menujs a {
+    color:#e5e5e5;
+    padding-right: 6px;
+    padding-left: 6px;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: 'Bebas Neue', cursive;
+}
+.navBar .botoes-menujs a:hover{
+    color: #ffe26f;
+}
+
+
 .logomain{
     margin-left: 2%;
 }
@@ -88,8 +102,8 @@ align-items: center;
     }
 
     #checkbox-menu:checked + label span:nth-child(1){
-        transform: rotate(-45deg);
         top: 8px;
+        transform: rotate(-45deg);
     }
     #checkbox-menu:checked + label span:nth-child(2){
         opacity: 0;
@@ -108,8 +122,27 @@ align-items: center;
             display: none;
          }
         .botoes-menujs{
-            display: block;
-            background-color: aquamarine;
+            display:flex;
+            flex-direction: column;
+            position:relative;
+            
+
+        }
+         .botoes-menujs a {
+            color:#e5e5e5;
+            margin: 0px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 18px;
+            font-family: 'Bebas Neue', cursive;
+            box-sizing: border-box;
+            background-color:#79b2da;
+          
+            
+        }
+        .botoes-menujs a:hover{
+            color: #ffe26f;
+           background-color: #ca4727;
         }
     }
 
