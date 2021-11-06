@@ -104,10 +104,10 @@ body{
         border-style: solid;
         border-width: 1px;
         border-top: 0;
-        border-bottom: 0;
+        border-right: 0;
         border-left:0;
         border-color: #ffe26f;
-    
+       
         padding-right: 1%;
         padding-left: 1%;
        
@@ -149,12 +149,11 @@ body{
         display:block;
         margin-top: 5%;
         margin-bottom: 30px;
-    
         padding-right: 1%;
         padding-left: 1%;
-    
-        min-width:200px;
-        min-height: 200px;
+        max-width: 80%;
+        margin-left: auto;
+        margin-right: auto;
     }
   
 }
