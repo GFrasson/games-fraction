@@ -7,7 +7,7 @@ body{
     background-color:#f2e9df;
     color: aquamarine;
 }
-.sidebar{
+.container{
     position:absolute;
     background-color:#ffe26f;
     width: 5%;
@@ -15,7 +15,7 @@ body{
     display: flex;
     flex-direction: column;
 }
-.sidebar{
+.container{
     align-items: center;
     padding-top: 5%;
     color: #f2e9df;
