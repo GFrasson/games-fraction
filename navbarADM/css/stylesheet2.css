@@ -5,8 +5,8 @@
 }
 body{
     background-color:#f2e9df;
-    color: aquamarine;
 }
+
 .container{
     position:absolute;
     background-color:#ffe26f;
@@ -15,14 +15,30 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-}
-.container{
     align-items: center;
     padding-top: 5%;
     color: #f2e9df;
+    transition: width 2s;
 }
+
+
 #checkbox-menuS{
     position: absolute;
     opacity: 0;
 }
+label{
+    cursor: pointer;
+}
+#checkbox-menuS:checked + label :nth-child(1){
+    transform: rotate(360deg);
+    transition: 2s;
+}
+
+
+#checkbox-menuS:checked + .container  {
+    width: 300px;  
+}
+
+
+
 
