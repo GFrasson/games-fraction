@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color:#f2e9df;
+    color: aquamarine;
+}
+.sidebar{
+    position:absolute;
+    background-color:#ffe26f;
+    width: 5%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.sidebar{
+    align-items: center;
+    padding-top: 5%;
+    color: #f2e9df;
+}
