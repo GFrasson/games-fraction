@@ -23,6 +23,7 @@ body{
     border-radius: 75px;
 }
 .topicos{
+    z-index: 999;
     position: absolute;
     height: 50%;
     background-color:#ffe26f;
