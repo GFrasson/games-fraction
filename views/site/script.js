@@ -1,4 +1,4 @@
-const imgs = document.querySelectorAll('.img-select a');
+const imgs = document.querySelectorAll('.img-selecao a');
 const imgBtns = [...imgs];
 let imgId = 1;
 
