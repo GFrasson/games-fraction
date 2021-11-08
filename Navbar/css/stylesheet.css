@@ -8,7 +8,7 @@ head{
     overflow: visible;
 }
 body{
-    background: color #e5e5e5;;
+    background-color: #f2e9df;
 
 }
 .navBar{
@@ -18,7 +18,7 @@ justify-content: space-between;
 align-items: center;
 }
 .navBar .botoes a {
-    color:#e5e5e5;
+    color:#f2e9df;
     margin: 12px;
     text-decoration: none;
     font-size: 18px;
@@ -29,7 +29,7 @@ align-items: center;
 }
 
 .navBar .botoes-menujs a {
-    color:#e5e5e5;
+    color:#f2e9df;
     padding-right: 6px;
     padding-left: 6px;
     text-decoration: none;
@@ -129,7 +129,7 @@ align-items: center;
 
         }
          .botoes-menujs a {
-            color:#e5e5e5;
+            color:#f2e9df;
             margin: 0px;
             text-align: center;
             text-decoration: none;
