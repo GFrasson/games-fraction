@@ -13,7 +13,7 @@ imgBtns.forEach((imgItem) => {
 function slideImage(){
     const displayWidth = document.querySelector('.mostruario img:first-child').clientWidth;
 
-    document.querySelector('.mostruario').style.transform = `translateX(${- (imgId - 1) * displayWidth}px)`;
+    document.querySelector('.mostruario').style.transform = `translateX(${- (imgId ) * displayWidth}px)`;
 }
 
 window.addEventListener('resize', slideImage);
