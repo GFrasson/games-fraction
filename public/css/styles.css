@@ -75,12 +75,21 @@ main form{
     box-shadow: inset 1px 4px 7px rgba(0, 0, 0, 0.5);
 }
 
+input::-ms-reveal,
+input::-ms-clear {
+    display: none;
+}
+
 .email{
     margin-top: 1em;
     margin-bottom: 1.5em;
 
     display: flex;
     align-items: center;
+}
+
+.email label{
+    margin-right: 0.5em;
 }
 
 .senha{
@@ -101,6 +110,10 @@ main form{
 
 .senha #aberto{
     display: none;
+}
+
+.senha label{
+    margin-right: 0.5em;
 }
 
 .botao button{
