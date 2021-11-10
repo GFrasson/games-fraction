@@ -8,6 +8,7 @@ head{
     overflow: visible;
 }
 body{
+    overflow: visible;
     background-color: #f2e9df;
 
 }
@@ -124,9 +125,9 @@ align-items: center;
         .botoes-menujs{
             display:flex;
             flex-direction: column;
-            position:relative;
-            
-
+            position:absolute;
+            width: 100%;
+            top:70px;
         }
          .botoes-menujs a {
             color:#f2e9df;
