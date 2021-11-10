@@ -2,8 +2,10 @@ html,body{
     margin: 0;
     padding: 0;
     width: 100%;
-}
-body{
+    display: grid;
+    height: 100%;
+    place-items: center;
+    text-align: center;
     background: #E5E5E5;
 }
 .box-geral-esquerda{
@@ -124,6 +126,33 @@ box-shadow:  4px 4px 6px 0 rgba(255,255,255,.5),
 /* Serviços */
 .code-servicos{
     height:500px;
+}
+/* Cards com Carrosel */
+.slider{
+    max-width: 1150px;
+    display: flex;
+    margin: 20px;
+}
+.slider .card{
+    background:#fff;
+    flex: 1;
+    margin: 0 10px;
+}
+.slider .card .img img{
+    height:200px;
+    width: 100%;
+    object-fit: cover;
+}
+.slider .card .content{
+    padding: 10px 20px;
+}
+.slider .card .content .title{
+    font-size: 25px;
+    font-weight: 600;
+}
+.slider .content p{
+    text-align: justify;
+    margin: 10px 0;
 }
 /* Responsivo */
 @media(max-width:700px){

@@ -13,8 +13,11 @@
 
 <!-- CSS -->
 <link rel="stylesheet" href="../../public/css/seu_css.css">
-
-
+<script src="../../public/js/seujs.js"></script>
+<!-- Jquery do Carrosel dos cards -->
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css">
 </head>
 
 <body>
@@ -54,56 +57,47 @@
         </div>
     </div>
     <div class="d-flex flex-wrap">
+        <div class="slider owl-carousel">
+            
+            <div class="card">
+                <div class="img"><img src="../../public/img/gta v.png" alt="Card image cap"></div>
+                <div class="content">
+                    <div class="title">Brianna</div>
+                    <div class="sub-title"></div>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam enim cumque esse optio cupiditate veniam sed excepturi qui nisi nam!</p>
 
-        <div class="card" style="width: 18rem;">
-            <a href="#">
-                <img class="card-img-top" src="../../public/img/gta v.png" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">Gta V</h5>
-                    <p class="card-text-preco">R$ 96,00</p>
-                    <p class="card-text">Lorem ipsum dolor sit amet. Et commodi cumque ex soluta nulla non
-                        voluptates unde et minima possimus hic fugiat consequatur. Ab aliquid neque sed voluptate
-                        dolorem ut ducimus fuga.</p>
                 </div>
-            </a>
-        </div>
-        <div class="card" style="width: 18rem;">
-            <a href="#">
-                <img class="card-img-top" src="../../public/img/gta v.png" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">Gta V</h5>
-                    <p class="card-text-preco">R$ 96,00</p>
-                    <p class="card-text">Lorem ipsum dolor sit amet. Et commodi cumque ex soluta nulla non
-                        voluptates unde et minima possimus hic fugiat consequatur. Ab aliquid neque sed voluptate
-                        dolorem ut ducimus fuga.</p>
+            </div>
+
+            <div class="card">
+                <div class="img"><img src="../../public/img/gta v.png" alt="Card image cap"></div>
+                <div class="content">
+                    <div class="title">Brianna</div>
+                    <div class="sub-title"></div>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam enim cumque esse optio cupiditate veniam sed excepturi qui nisi nam!</p>
+
                 </div>
-            </a>
-        </div>
-        <div class="card" style="width: 18rem;">
-            <a href="#">
-                <img class="card-img-top" src="../../public/img/gta v.png" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">Gta V</h5>
-                    <p class="card-text-preco">R$ 96,00</p>
-                    <p class="card-text">Lorem ipsum dolor sit amet. Et commodi cumque ex soluta nulla non
-                        voluptates unde et minima possimus hic fugiat consequatur. Ab aliquid neque sed voluptate
-                        dolorem ut ducimus fuga.</p>
+            </div>
+            <div class="card">
+                <div class="img"><img src="../../public/img/gta v.png" alt="Card image cap"></div>
+                <div class="content">
+                    <div class="title">Brianna</div>
+                    <div class="sub-title"></div>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam enim cumque esse optio cupiditate veniam sed excepturi qui nisi nam!</p>
+
                 </div>
-            </a>
-        </div>
-        <div class="card" style="width: 18rem;">
-            <a href="#">
-                <img class="card-img-top" src="../../public/img/gta v.png" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">Gta V</h5>
-                    <p class="card-text-preco">R$ 96,00</p>
-                    <p class="card-text">Lorem ipsum dolor sit amet. Et commodi cumque ex soluta nulla non
-                        voluptates unde et minima possimus hic fugiat consequatur. Ab aliquid neque sed voluptate
-                        dolorem ut ducimus fuga.</p>
-                </div>
-            </a>
+            </div>
+            
         </div>
     </div>
+    <script>
+        $(".slider").owlCarousel({
+            loop:true,
+            autoplay:true,
+            autoplayTimeout: 3000,
+            autoplayHoverPause:true,
+        });
+    </script>
     <!-- Fim  -->
     <div class="code-information">
         <div class="title-code-information">
