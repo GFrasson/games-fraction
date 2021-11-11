@@ -14,14 +14,34 @@ h1{
     font-size: 52px;
     margin-top: 70px;
 }
+
 .container{
+    display: flex;
     background-color:  #f2e9df;
     padding: 0;
     width: 60%;
-    margin-top:8%;
+    
    border-bottom-left-radius: 20px;
    border-bottom-right-radius: 20px;
 
+}
+.procura{
+ 
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+.menuLista{
+    margin-top: 5%;
+    justify-self: center;
+    align-content: center;
+    display:flex;
+    flex-direction: row;
+    justify-content:space-around;
+    margin-left: 20%;
+    margin-right: 20%;
+    background-color: #1C2143;
+   
 }
 .thead{
     background-color:#1C2143;
@@ -29,3 +49,9 @@ h1{
     font-family: 'Bebas Neue', cursive;
     font-size: 1.2em;
 }
+input[type=text] {
+    width:100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+  }
