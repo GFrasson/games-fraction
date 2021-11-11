@@ -7,15 +7,25 @@ body{
 
     background-color: #c4c4c4 ;
 }
+h1{
+    text-align: center;
+    font-family: 'Bebas Neue', cursive;
+    color: #ca4727;
+    font-size: 52px;
+    margin-top: 70px;
+}
 .container{
     background-color:  #f2e9df;
     padding: 0;
     width: 60%;
-    margin-top:10%;
-    border-radius: 20px;
+    margin-top:8%;
+   border-bottom-left-radius: 20px;
+   border-bottom-right-radius: 20px;
 
 }
-table{
-    
-    border-radius: 20px;
+.thead{
+    background-color:#1C2143;
+    color:#79B2DA;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 1.2em;
 }
