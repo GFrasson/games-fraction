@@ -1,4 +1,19 @@
 body{
     background-color: #E5E5E5;
+    font-family: 'Zen Maru Gothic', sans-serif;
 }
 
+header{
+    min-height: 9vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:#1C2143;
+    margin-top: 2em;
+       
+}
+    
+header h1{
+    font-family: 'Bebas Neue', cursive;
+    font-size: 3.0em;       
+}
