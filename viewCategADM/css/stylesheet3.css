@@ -5,5 +5,17 @@
 }
 body{
 
-    background-color:aqua;
+    background-color: #c4c4c4 ;
+}
+.container{
+    background-color:  #f2e9df;
+    padding: 0;
+    width: 60%;
+    margin-top:10%;
+    border-radius: 20px;
+
+}
+table{
+    
+    border-radius: 20px;
 }
