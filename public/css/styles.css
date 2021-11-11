@@ -108,7 +108,7 @@ input::-ms-clear {
     cursor: pointer;
 }
 
-.senha #aberto{
+.senha .hidden{
     display: none;
 }
 
@@ -140,7 +140,7 @@ input::-ms-clear {
 @media (max-width: 1000px){
 
     main form{
-        width: 35em;
+        width: 80%;
         height: 15em;
         margin-left: 1em;
         margin-right: 1em;

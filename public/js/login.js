@@ -4,13 +4,13 @@ function mostrarSenha(){
     const campoSenha= document.getElementById('senha');
 
 
-    if(aberto.style.display === 'none'){
-        aberto.style.display = 'block';
-        fechado.style.display = 'none';
+    if(aberto.classList.contains("hidden")){
+        aberto.classList.remove("hidden");
+        fechado.classList.add("hidden");
         campoSenha.type = 'text';
     } else {
-        aberto.style.display = 'none';
-        fechado.style.display = 'block';
+        aberto.classList.add("hidden");
+        fechado.classList.remove("hidden");
         campoSenha.type = 'password';
     }
 };
