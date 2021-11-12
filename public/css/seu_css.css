@@ -2,7 +2,6 @@ html,body{
     margin: 0;
     padding: 0;
     width: 100%;
-    display: grid;
     height: 100%;
     place-items: center;
     text-align: center;
@@ -123,15 +122,55 @@ box-shadow:  4px 4px 6px 0 rgba(255,255,255,.5),
     inset -4px -4px 6px 0 rgba(255,255,255,.5),
     inset 4px 4px 6px 0 rgba(116, 125, 136, .3);
 }
+/* Icons Saiba mais hover */
+div.icon-contato{
+    padding: 4px;
+}
+.div-contato{
+    background: #79B2DA;
+    color: #fff;
+    border-radius: 5%;
+    padding: 13px;
+    font-size: 18px;
+    text-shadow: 1px 1px 1px darkblue ;
+
+    display: none;
+    font-family: 'Times New Roman', Times, serif;
+    align-items: center;
+    justify-content: center;
+}
+.div-contato:hover{
+    display:flex
+}
+.btn:hover +.div-contato{
+    display: flex;
+}
+
 /* Serviços */
 .code-servicos{
     height:500px;
 }
 /* Cards com Carrosel */
+.responsividade{
+    justify-content: center;
+    align-items: center;
+    display: inline-block;
+}
+.carrosel-cards{
+    width: 100%;
+    margin:0;
+    padding: 0;
+    top:0;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: drop-shadow(4px 4px 10px blue);
+    background-position: center; /* Center the image */
+}
 .slider{
     max-width: 1150px;
     display: flex;
     margin: 20px;
+    width: 10px;
 }
 .slider .card{
     background:#fff;
@@ -139,7 +178,7 @@ box-shadow:  4px 4px 6px 0 rgba(255,255,255,.5),
     margin: 0 10px;
 }
 .slider .card .img img{
-    height:200px;
+    height:100%;
     width: 100%;
     object-fit: cover;
 }
@@ -154,7 +193,13 @@ box-shadow:  4px 4px 6px 0 rgba(255,255,255,.5),
     text-align: justify;
     margin: 10px 0;
 }
+
 /* Responsivo */
+@media(max-width:1190px){
+    .responsividade{
+        display: none;
+    }
+}
 @media(max-width:700px){
     .d-block{
         height: max-content;
@@ -164,4 +209,6 @@ box-shadow:  4px 4px 6px 0 rgba(255,255,255,.5),
     .d-block{
         height: 213px;
     }
+    
 }
+
