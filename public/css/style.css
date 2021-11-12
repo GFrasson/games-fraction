@@ -141,12 +141,15 @@ img{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 1.5rem;
+
     }
     .principal{
         height: 100vh;
         display: flex;
         justify-content: center;
         align-items: center;
+        
+        
     }
     .produtos-imgs{
         display: flex;
@@ -156,6 +159,7 @@ img{
     .produto-conteudo{
         padding-top: 0;
     }
+    
 }
 .fotoprincipal {
     padding: 15%;
