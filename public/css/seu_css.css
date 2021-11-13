@@ -122,29 +122,20 @@ box-shadow:  4px 4px 6px 0 rgba(255,255,255,.5),
     inset -4px -4px 6px 0 rgba(255,255,255,.5),
     inset 4px 4px 6px 0 rgba(116, 125, 136, .3);
 }
-/* Icons Saiba mais hover */
 div.icon-contato{
     padding: 4px;
 }
-.div-contato{
-    background: #79B2DA;
-    color: #fff;
-    border-radius: 5%;
-    padding: 13px;
-    font-size: 18px;
-    text-shadow: 1px 1px 1px darkblue ;
-
-    display: none;
-    font-family: 'Times New Roman', Times, serif;
+a.btn{
+    display: flex;
     align-items: center;
     justify-content: center;
+    
 }
-.div-contato:hover{
-    display:flex
+span{
+    color:#fff;
+    margin-left: -3px;
 }
-.btn:hover +.div-contato{
-    display: flex;
-}
+
 
 /* Serviços */
 .code-servicos{
