@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body{
     background-color: #E5E5E5;
     font-family: 'Zen Maru Gothic', sans-serif;
@@ -8,7 +14,7 @@ header{
     display: flex;
     align-items: center;
     justify-content: center;
-    color:#1C2143;
+    color:#CA4727;;
     margin-top: 2em;
        
 }
@@ -16,4 +22,64 @@ header{
 header h1{
     font-family: 'Bebas Neue', cursive;
     font-size: 3.0em;       
+}
+
+.container{
+    background-color:  #f2e9df;
+    padding: 0;
+    width: 60%;
+    margin-top:3em;
+    border-radius: 20px;
+
+}
+
+.table{
+    width: 100%;
+    align-items: center;
+   
+}
+
+.icones {
+    text-align: center;
+}
+
+.icones i{
+    margin-right: 0.5em;
+}
+
+.icones i:hover{
+    color: white;
+}
+
+.thead{
+    background-color:#1C2143;
+    color:#79B2DA;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 1.2em;
+}
+
+.thead i{
+    color:white;
+    margin-right: 1.5em;
+    font-size: 1.5em;
+}
+
+.thead th i.searchBar{
+    font-size: 0.5em;
+}
+
+.searchBar{
+    width: 10em;
+    height: 1.5em;
+    border-radius: 0.3em;
+}
+
+.th{
+    color:#CA4727;
+    background-color: #F2E9DF;
+}
+
+td{
+    color:#CA4727;
+    background-color: #F2E9DF;
 }
