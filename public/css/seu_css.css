@@ -161,7 +161,7 @@ span{
     background-position: center; /* Center the image */
 }
 .slider{
-    max-width: 1150px;
+   width: 100%;
     margin-bottom: 20px;
     align-items: center;
     justify-content: space-around;
