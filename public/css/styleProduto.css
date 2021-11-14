@@ -44,7 +44,7 @@ form{
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #E5E5E5;
+    background: #E5E5E5;    
 }
 .d-flex{
     margin-top: 90px;
@@ -105,8 +105,28 @@ nav{
         width: 100%;
     }
 }
-@media screen {
+@media(max-width:450px){
     .d-flex{
-       width: 100%;
+        margin: 0;
+        margin-top: 80px;
+        margin-left: -30px;
+    }
+    .container{
+        margin: 0;
+        padding: 0;
+    }
+    a{
+        width: 80%;
+    }
+    .card{
+        width: max-content;
+    }
+    body{
+        background: #E5E5E5;
+    }
+}
+@media (max-width:320px){
+    .card{
+        margin-left: -15px;
     }
 }
