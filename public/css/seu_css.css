@@ -217,4 +217,8 @@ span{
     }
     
 }
-
+@media(max-width:300px){
+    .d-block{
+        height: 145px;
+    }
+}
