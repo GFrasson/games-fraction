@@ -128,19 +128,13 @@ nav{
         margin: 0;
         padding: 0;
     }
-    a.link-card{
-        width: 80%;
-    }
+    
     
     body{
         background: #E5E5E5;
     }
 }
-@media (max-width:320px){
-    .card{
-        margin-left: -15px;
-    }
-}
+
 @media(max-width:300px){
     .card{
         margin-left: 10px;
