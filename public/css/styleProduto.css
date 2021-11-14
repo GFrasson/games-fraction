@@ -59,20 +59,31 @@ a{
     text-decoration: none;
     color:black;
 }
+a.link-card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+}
 .card{
+   display:flex;
+   align-items: flex-start;
+   justify-content: start;
+
     margin:10px;
     margin-top: 30px;
     box-shadow: 2px 2px rgba(0, 0, 0, 0.164), 1px 1px rgba(0, 0, 0, 0.164);
     width: 25rem;
     height: 12rem;
-    display:-webkit-box;
+   
 }
 .card:hover{
     margin-top: 20px;
     box-shadow: 2px 3px rgba(0, 0, 0, 0.26), 1px 1px rgba(0, 0, 0, 0.26);
 }
 .image-left{
-    width: 50%;
+    width: 100%;
 }
 .image-left img{
     height: 11.9rem;
@@ -80,10 +91,11 @@ a{
 }
 .body-right{
     height:11.9rem;
-    width: 50%;
+    width: 100%;
     font-size: 13px;
 }
 p#nome{
+    width: 100%;
     font-size: 20px;
     font-weight:bold;
     text-align: center;
@@ -107,21 +119,19 @@ nav{
     }
 }
 @media(max-width:450px){
-    .d-flex{
-        margin: 0;
-        margin-top: 80px;
-        margin-left: -30px;
+    .flex-card{
+       display: flex;
+       align-items: center;
+       justify-content: center;
     }
     .container{
         margin: 0;
         padding: 0;
     }
-    a{
+    a.link-card{
         width: 80%;
     }
-    .card{
-        width: max-content;
-    }
+    
     body{
         background: #E5E5E5;
     }
@@ -129,5 +139,10 @@ nav{
 @media (max-width:320px){
     .card{
         margin-left: -15px;
+    }
+}
+@media(max-width:300px){
+    .card{
+        margin-left: 10px;
     }
 }
