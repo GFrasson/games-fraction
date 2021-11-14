@@ -52,7 +52,11 @@ h3{
 }
 a{
     text-decoration: none;
+    color:black;
     font-family:'spotify-circular, Helvetica, Arial, sans-serif' ;
+}
+a:hover{
+    color: black;
 }
 a .card-title{
    color: black; 
@@ -130,7 +134,10 @@ a.btn{
     display: flex;
     align-items: center;
     justify-content: center;
-    
+    width:100%;  
+}
+a.btn:hover{
+    background-color: #FFE26F; 
 }
 span{
     color:#fff;
@@ -174,7 +181,7 @@ span{
     margin: 0 10px;
 }
 .slider .card .img img{
-    height:256px;
+    height:min-content;
     width: 100%;
     object-fit: cover;
 }
