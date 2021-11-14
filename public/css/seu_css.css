@@ -184,7 +184,10 @@ span{
 .slider .card .img img{
     height:min-content;
     width: 100%;
-    object-fit: cover;
+    height: 313px;
+    object-fit: contain;
+    padding: 10px;
+
 }
 .slider .card .content{
     padding: 10px 20px;
@@ -197,7 +200,10 @@ span{
     text-align: justify;
     margin: 10px 0;
 }
-
+.image-carousel{
+    object-fit: cover;
+    text-align: center;
+}
 /* Responsivo */
 
 @media(max-width:700px){
@@ -207,7 +213,7 @@ span{
 }
 @media(max-width:550px){
     .d-block{
-        height: 213px;
+        height: 180px;
     }
     
 }
