@@ -16,13 +16,10 @@
       <H1><b>Categorias</b></H1>
       
       <div class="menuLista">
-        <button type="button" class="btn btn-primary botaoacao verCateg" data-toggle="modal" data-target=".viewCategorias">
-          <a href="#addCateg"><img src="img/add.png" height="40px" width="40px"></a>
-        </button>
-        
         <a>
           <div class="procura">
-          <input type="text" id="searchBar" name="searchBar"><img src="img/procurar.png" height="50px"
+          <input type="text" id="searchBar" name="searchBar">
+          <img src="img/procurar.png" height="50px"
           width="50px">
           </div>
         </a>
@@ -34,7 +31,9 @@
               <tr>
                 <th scope="col">ID</th>
                 <th scope="col">Categoria</th>
-                <th scope="col">              </th>
+                <th scope="col"><button type="button" class="btn btn-primary botaoacao verCateg" data-toggle="modal" data-target=".viewCategorias">
+                  <a href="#addCateg"><img src="img/add.png" height="40px" width="40px"></a>
+                </button></th>
               </tr>
             </thead>
             <tbody>
