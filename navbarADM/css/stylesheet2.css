@@ -51,7 +51,10 @@ body{
     border-color: #ca4727;
 
 }
-
+.topicos a:hover{
+    color: #ff3300;
+    font-size: 22px;
+}
 
 #checkbox-menuS{
     position: absolute;
@@ -59,6 +62,9 @@ body{
     z-index: 1;
 }
 label{
+    cursor: pointer;
+}
+input{
     cursor: pointer;
 }
 #checkbox-menuS:checked + label :nth-child(1){
