@@ -20,7 +20,7 @@
 <body>
   
     
-  <h1>Usuarios</h1>
+  <h1>Usuários</h1>
     
 
      <div class="container tabela"> 
@@ -117,7 +117,7 @@
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
         <div class="modal-header cabecalho">
-          <h5 class="modal-title" id="exampleModalLabel">Adicionar Usuario</h5>
+          <h5 class="modal-title" id="exampleModalLabel">Adicionar Usuário</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -131,8 +131,13 @@
                   </div>
 
                   <div class="form-group">
+                    <label for="input-nome" >Email:</label>
+                    <input type="text" class="form-control" id="nome" required placeholder="Fulaninho@gmail.com">
+                  </div>
+
+                  <div class="form-group">
                     <label for="descricao">Senha</label>
-                    <input type="password" class="form-control" id="senha" placeholder="***">
+                    <input type="password" class="form-control" id="senha" required placeholder="***">
                   </div>
 
                   <p> </p>
@@ -154,7 +159,7 @@
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
         <div class="modal-header cabecalho">
-          <h5 class="modal-title" id="exampleModalLabel">Visualizar Usuario</h5>
+          <h5 class="modal-title" id="exampleModalLabel">Visualizar Usuário</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -167,6 +172,10 @@
               <input type="text" class="form-control" id="nome" disabled placeholder="Fulaninho da Silva">
             </div>
 
+            <div class="form-group">
+              <label for="input-nome" >Email:</label>
+              <input type="text" class="form-control" id="nome" disabled placeholder="Fulaninho@gmail.com">
+            </div>
 
             <p> </p>
 
@@ -188,7 +197,7 @@
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
         <div class="modal-header cabecalho">
-          <h5 class="modal-title" id="exampleModalLabel">Editar Usuario</h5>
+          <h5 class="modal-title" id="exampleModalLabel">Editar Usuário</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -199,6 +208,11 @@
                   <div class="form-group">
                     <label for="input-nome">Nome:</label>
                     <input type="text" class="form-control" id="nome" placeholder="Fulaninho da Silva">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="input-nome" >Email:</label>
+                    <input type="text" class="form-control" id="nome" required placeholder="Fulaninho@gmail.com">
                   </div>
 
                   <div class="form-group">
@@ -226,7 +240,7 @@
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
         <div class="modal-header cabecalho">
-          <h5 class="modal-title" id="exampleModalLabel">Editar Usuario</h5>
+          <h5 class="modal-title" id="exampleModalLabel">Deletar Usuário</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
             <span aria-hidden="true">&times;</span>
           </button>
