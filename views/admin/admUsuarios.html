@@ -19,103 +19,104 @@
 
 <body>
   
-    <header>
-     <h1>Usuarios</h1>
-    </header>
+    
+  <h1>Usuarios</h1>
+    
 
-    <div class="container">
+     <div class="container tabela"> 
+
+      <button type="button" class="btn btn-primary adicionar" data-toggle="modal" data-target=".addUsuario">
+        <i class="fas fa-plus-circle"></i>
+      </button>
+
       <table class="table table-hover table-responsive{-sm|-md|-lg|-xl}">
-        <thead class="thead">
+        <thead class="thead cabecalho-tabela">
 
           <tr>
-            <th scope="col"></th>
+            <th scope="col">#</th>
             <th scope="col">Nome</th>
             <th scope="col">Email</th>
-            <th scope="col">Senha</th>
           </tr>
         </thead>
 
         <tbody>
       
           <tr class="colunaacoes">
-            <th scope="row">
+            <th class="roxo" scope="row">
 
-              <div class="btn-grop icones"> 
+              <div class="btn-grop icones d-flex flex-wrap"> 
                 <button type="button" class="btn btn-primary botaoacao" data-toggle="modal" data-target=".viewUsuario">
                   <i class="fas fa-eye iconebotao"></i>
-                </button></a> 
+                </button>
 
                 <button type="button" class="btn btn-primary botaoacao" data-toggle="modal" data-target=".editUsuario">
                   <i class="far fa-edit iconebotao"></i> 
-                </button></a> 
+                </button>
                
                 <button type="button" class="btn btn-primary botaoacao" data-toggle="modal" data-target=".deleteUsuario">
                   <i class="fas fa-trash iconebotao"></i>
-                </button></a>
+                </button>
               </div>
 
             </th>
             <td>Mark</td>
             <td>Otto@gmail.com</td>
-            <td>321</td>
+         
           </tr>
 
           <tr>
-           <th scope="row">
+           <th class="roxo" scope="row">
             
-            <div class="btn-grop icones"> 
+            <div class="btn-grop icones d-flex flex-wrap"> 
               <button type="button" class="btn btn-primary botaoacao" data-toggle="modal" data-target=".viewUsuario">
                 <i class="fas fa-eye iconebotao"></i>
-              </button></a> 
+              </button>
 
               <button type="button" class="btn btn-primary botaoacao" data-toggle="modal" data-target=".editUsuario">
                 <i class="far fa-edit iconebotao"></i> 
-              </button></a> 
+              </button>
              
               <button type="button" class="btn btn-primary botaoacao" data-toggle="modal" data-target=".deleteUsuario">
                 <i class="fas fa-trash iconebotao"></i>
-              </button></a>
+              </button>
             </div>
 
             </th>
             <td>Jacob</td>
             <td>jacob.01@gmail.com</td>
-            <td>123</td>
+            
           </tr>
 
           <tr>
-           <th scope="row">
-            <div class="btn-grop icones"> 
+           <th class="roxo" scope="row">
+            <div class="btn-grop icones d-flex flex-wrap"> 
               <button type="button" class="btn btn-primary botaoacao" data-toggle="modal" data-target=".viewUsuario">
                 <i class="fas fa-eye iconebotao"></i>
-              </button></a> 
+              </button>
 
               <button type="button" class="btn btn-primary botaoacao" data-toggle="modal" data-target=".editUsuario">
                 <i class="far fa-edit iconebotao"></i> 
-              </button></a> 
+              </button> 
              
               <button type="button" class="btn btn-primary botaoacao" data-toggle="modal" data-target=".deleteUsuario">
                 <i class="fas fa-trash iconebotao"></i>
-              </button></a>
+              </button>
             </div> 
            </th>
             <td>Larry</td>
             <td>bird@gmail.com</td>
-            <td>741</td>
+           
           </tr>
         </tbody>
       </table>
-    </div>
-    
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".addUsuario">
-      <i class="fas fa-plus-circle"></i>
-    </button>
+     </div> 
+  
 
-    <!-- Modal Adiconar Produto -->
+    <!-- Modal Adiconar usuario -->
   <div class="modal fade addUsuario" id="addUsuario" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
-        <div class="modal-header">
+        <div class="modal-header cabecalho">
           <h5 class="modal-title" id="exampleModalLabel">Adicionar Usuario</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
             <span aria-hidden="true">&times;</span>
@@ -125,8 +126,8 @@
           <form>
 
                   <div class="form-group">
-                    <label for="input-nome">Nome:</label>
-                    <input type="text" class="form-control" id="nome" placeholder="Fulaninho da Silva">
+                    <label for="input-nome" >Nome:</label>
+                    <input type="text" class="form-control" id="nome" required placeholder="Fulaninho da Silva">
                   </div>
 
                   <div class="form-group">
@@ -146,38 +147,34 @@
 
     </div>
   </div>
-  <!-- Fim Modal Adicionar Produto -->
+  <!-- Fim Modal Adicionar Usuario -->
 
   <!-- Modal View -->
   <div class="modal fade viewUsuario" id="viewUsuario" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
-        <div class="modal-header">
+        <div class="modal-header cabecalho">
           <h5 class="modal-title" id="exampleModalLabel">Visualizar Usuario</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
         <div class="modal-body">
-          <form>
+          <!-- <form> -->
 
-                  <div class="form-group">
-                    <label for="input-nome">Nome:</label>
-                    <input type="text" class="form-control" id="nome" placeholder="Fulaninho da Silva">
-                  </div>
+            <div class="form-group">
+              <label for="input-nome">Nome:</label>
+              <input type="text" class="form-control" id="nome" disabled placeholder="Fulaninho da Silva">
+            </div>
 
-                  <div class="form-group">
-                    <label for="descricao">Senha</label>
-                    <input type="password" class="form-control" id="senha" placeholder="***">
-                  </div>
 
-                  <p> </p>
-          </form>
+            <p> </p>
+
+          <!-- </form> -->
 
         </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-secondary modbut" data-dismiss="modal">Fechar</button>
-              <button type="submit" class="btn btn-primary modbut">Confirmar</button>
+              <button type="submit" class="btn btn-secondary modbut" data-dismiss="modal">Fechar</button>
             </div>
        </div>
 
@@ -190,7 +187,7 @@
    <div class="modal fade editUsuario" id="editUsuario" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
-        <div class="modal-header">
+        <div class="modal-header cabecalho">
           <h5 class="modal-title" id="exampleModalLabel">Editar Usuario</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
             <span aria-hidden="true">&times;</span>
@@ -228,7 +225,7 @@
   <div class="modal fade deleteUsuario" id="deleteUsuario" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
-        <div class="modal-header">
+        <div class="modal-header cabecalho">
           <h5 class="modal-title" id="exampleModalLabel">Editar Usuario</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
             <span aria-hidden="true">&times;</span>

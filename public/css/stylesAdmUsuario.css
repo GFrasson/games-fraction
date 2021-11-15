@@ -11,24 +11,26 @@ body{
 
 .btn-primary.focus, .btn-primary:focus {
     box-shadow: none !important;
-  }
+}
 
-header{
+
+    
+h1{
     min-height: 9vh;
     display: flex;
     align-items: center;
     justify-content: center;
     color:#CA4727;;
     margin-top: 2em;
-       
-}
-    
-header h1{
     font-family: 'Bebas Neue', cursive;
     font-size: 3.0em;       
 }
 
-.container{
+.adicionar{
+    border-radius:50%;
+}
+
+.tabela{
     background-color:  #f2e9df;
     padding: 0;
     width: 60%;
@@ -43,34 +45,14 @@ header h1{
    
 }
 
-.thead{
+.cabecalho-tabela{
     background-color:#1C2143;
     color:#79B2DA;
     font-family: 'Bebas Neue', cursive;
     font-size: 1.2em;
 }
 
-.thead i{
-    color:white;
-    margin-right: 1.5em;
-    font-size: 1.5em;
-}
-
-.thead th i.searchBar{
-    font-size: 0.5em;
-}
-
-.searchBar{
-    width: 10em;
-    height: 1.5em;
-    border-radius: 0.3em;
-}
-
-.thead th i:hover{
-    color:#CA4727 ;
-}
-
-.th{
+.roxo{
     color:#CA4727;
     background-color: #F2E9DF;
 }
@@ -80,7 +62,7 @@ td{
     background-color: #F2E9DF;
 }
 
-.modal-header{
+.cabecalho{
     background-color:#1C2143 ;
     color: #CA4727;
     font-family: 'Bebas Neue', cursive;
@@ -89,8 +71,8 @@ td{
 .botaoacao {
     display: flex!important;
     list-style-type: none !important;
-    width: 100% !important;
-    padding-left: 0px !important;
+    /* width: 100% !important; */
+    padding: 0px !important;
     background-color: transparent !important;
     background-repeat: no-repeat !important;
     border: none !important;
@@ -101,6 +83,10 @@ td{
     box-shadow: 0px 0px 0px transparent;
     border: 0px solid transparent;
     text-shadow: 0px 0px 0px transparent;
+}
+
+.botaoacao + .botaoacao{
+    margin-left: 0.4rem;
 }
 
 .botaoacao:hover {
@@ -123,6 +109,7 @@ td{
 
 .iconebotao{
     color:gray !important;
+    font-size: 0.8rem;
 }
 
 .icones{
@@ -130,9 +117,42 @@ td{
 }
 
 
-@media (max-width: 600px) {
-    .container{
-        width: 15em;
-        margin-right:0.2;
+@media (max-width: 650px) {
+    .tabela{
+        width: 80%;
+        
     }
 }
+
+@media (max-width: 450px){
+    
+    body{
+        font-size: 62.5%;
+    }
+    
+    .tabela{
+        width: 90%;
+    }
+
+    td,th{
+        padding-left: 4px ;
+        padding-right: 4px;
+    }
+
+     .botaoacao + .botaoacao{
+        margin-left: 0;
+    }
+
+    .botaoacao{
+      margin:0.2rem
+    } 
+
+
+    .iconebotao{
+        width: 100%;
+    }
+
+
+
+}
+
