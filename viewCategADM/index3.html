@@ -22,7 +22,7 @@
               <tr>
                 <th scope="col">ID</th>
                 <th scope="col">Categoria</th>
-                <th scope="col"><button type="button" class="btn btn-primary botaoacao verCateg" data-toggle="modal" data-target=".viewCategorias">
+                <th scope="col"><button type="button" class="btn btn-primary botaoacao verCateg" data-toggle="modal" data-target=".addCategoria">
                   <a href="#addCateg"><img src="img/add.png" height="40px" width="40px"></a>
                 </button></th>
               </tr>
@@ -30,12 +30,10 @@
             <tbody>
               <tr>
                 <th scope="row">1  
-                  <div class="btn-group"> 
-                    <div class="icones d-flex flex-wrap"></div>
-                     
-                            <br>
+                  
+                    <div class="btn-group icones d-flex flex-wrap">
 
-                                  <button type="button" class="btn btn-primary botaoacao verCateg" data-toggle="modal" data-target=".viewCategoria">
+                              <button type="button" class="btn btn-primary botaoacao verCateg" data-toggle="modal" data-target=".viewCategoria">
                                     <img src="img/olho.png">
                               </button>
                               <button type="button" class="btn btn-primary botaoacao editCateg" data-toggle="modal" data-target=".editCategoria">
@@ -45,18 +43,18 @@
                                     <img src="img/lixo.png">
                               </button>
                     
-                        </button>
-                    </div>    
+                        
+                      
                   </div>
                 </th>
                 <td>Jogos Mídia Física</td>
               </tr>
               <tr>
                 <th scope="row">2
-                  <div class="btn-group"> 
-                    <div class="icones d-flex flex-wrap"></div>
+                  
+                    <div class="btn-group icones d-flex flex-wrap">
 
-                              <button type="button" class="btn btn-primary botaoacao verCateg" data-toggle="modal" data-target=".viewCategoria">
+                          <button type="button" class="btn btn-primary botaoacao verCateg" data-toggle="modal" data-target=".viewCategoria">
                                 <img src="img/olho.png">
                           </button>
                           <button type="button" class="btn btn-primary botaoacao editCateg" data-toggle="modal" data-target=".editCategoria">
@@ -66,16 +64,16 @@
                                 <img src="img/lixo.png">
                           </button>
                         
-                        </button>
+                        
                     </div>    
-                  </div>
+                  
                 </th>
                 <td>Jogos Mídia Digital</td>
               </tr>
               <tr>
                 <th scope="row">3
-                  <div class="btn-group"> 
-                    <div class="icones d-flex flex-wrap"></div>
+                  
+                    <div class="btn-group icones d-flex flex-wrap">
                         
                         <button type="button" class="btn btn-primary botaoacao verCateg" data-toggle="modal" data-target=".viewCategoria">
                              <img src="img/olho.png">
@@ -88,7 +86,7 @@
                         </button>
 
                     </div>    
-                  </div>
+                  
                 </th>
                 <td>Periféricos</td>
               </tr>
@@ -101,17 +99,16 @@
           <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
               <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                <h3 class="modal-title" id="exampleModalLongTitle">Visualizar categoria</h3>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
                 </button>
               </div>
               <div class="modal-body">
-                 junin
+                 *nome da categoria em questão*
               </div>
               <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                <button type="button" class="btn btn-primary">Salvar</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">OK</button>
               </div>
             </div>
           </div>
@@ -121,13 +118,14 @@
           <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
               <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                <h3 class="modal-title" id="exampleModalLongTitle">Editar categoria</h3>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
                 </button>
               </div>
               <div class="modal-body">
-                 Batata doce 3
+                 Novo nome da categoria:<br>
+                 <input type="text" placeholder="Digite aqui o novo nome desta categoria...">
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
@@ -141,17 +139,38 @@
           <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
               <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                <h3 class="modal-title" id="exampleModalLongTitle">Deletar categoria</h3>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
                 </button>
               </div>
               <div class="modal-body">
-                 Berinjek
+                 <h4>Tem certeza que deseja deletar essa categoria?</h4>
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                <button type="button" class="btn btn-primary">Salvar</button>
+                <button type="button" class="btn btn-primary">Sim, quero deletar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade addCategoria" id="modalAddCateg" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h3 class="modal-title" id="exampleModalLongTitle">Adicionar nova categoria</h3>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                 Nome da nova categoria:<br>
+                 <input type="text" placeholder="Escreva aqui o nome da nova categoria...">
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-primary">Adicionar</button>
               </div>
             </div>
           </div>
