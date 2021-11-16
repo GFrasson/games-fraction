@@ -16,7 +16,7 @@ h1{
     margin-top: 70px;
 }
 
-.container{
+.envelope{
     display: flex;
     background-color:  #f2e9df;
     padding: 0;
@@ -71,6 +71,7 @@ input[type=text] {
     box-shadow: 0px 0px 0px transparent;
     border: 0px solid transparent;
     text-shadow: 0px 0px 0px transparent;
+    
 }
 .botaoacao:hover {
     background: transparent;
@@ -89,4 +90,71 @@ input[type=text] {
     outline: 0;
     outline: none !important;
   }
+  .botaoacao img{
+    height: 30px;
+    width: 30px;
+
+    
+  }
+  .botaoacao + .botaoacao img{
+      margin-left: 15px;
+  }
+
+  .barraProcuraCategorias{
+      margin-left: 20%;
+      margin-right: 20%;
+  }
+
+
+  @media (max-width: 500px) {
+
+    body{
+        font-size: 87.5%;
+
+
+    }  
+    .envelope{
+        width: 85%;
+
+    }
+    .botaoacao img{
+        height: 20px;
+        width: 20px;
+    
+        
+    }
+    .botaoacao + .botaoacao img{
+        margin-left: 7px;
+    }
+    button{
+        display: flex;
+        flex-direction: column;
+    }
+    .barraProcuraCategorias{
+        margin-left: 7.5%;
+        margin-right: 7.5%;
+    }
   
+  }
+  @media (max-width: 360px) {
+      
+    .envelope{
+        width: 95%;
+    }     
+      
+    .botaoacao + .botaoacao img{
+        margin-left: 0px;
+    }
+    .icones{
+        display: flex;
+        flex-direction: column;
+
+    }  
+    .barraProcuraCategorias{
+        margin-left: 2.5%;
+        margin-right: 2.5%;
+    }
+  
+    
+    
+  }
