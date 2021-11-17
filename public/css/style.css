@@ -45,12 +45,14 @@ img{
     
 }
 .produto-titulo{
-    font-size: 3rem;
+    font-size: 4rem;
     text-transform: capitalize;
-    font-weight: 700;
+    font-weight: 500;
     position: relative;
     color: #1C2143;
     margin: 1rem 0;
+    font-family: 'Bebas Neue', cursive;
+    
 }
 .produto-titulo::after{
     content: "";
@@ -87,6 +89,7 @@ img{
     font-size: 0.9rem;
     padding: 0.3rem;
     opacity: 0.8;
+    font-family: 'Zen Maru Gothic', sans-serif;
     
     
 }
