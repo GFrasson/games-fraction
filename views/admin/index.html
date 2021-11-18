@@ -14,7 +14,7 @@
     <body>
       <H1><b>Categorias</b></H1>
       
-      <div class="barraProcuraCategorias"><input type="text" placeholder="Pesquisar categorias..."></div> 
+      <form><div class="barraProcuraCategorias"><input type="text" placeholder="Pesquisar categorias..."></div> </form>
     
       <div class="container envelope">
         <table class="table">
@@ -23,7 +23,7 @@
                 <th scope="col">ID</th>
                 <th scope="col">Categoria</th>
                 <th scope="col"><button type="button" class="btn btn-primary botaoacao verCateg" data-toggle="modal" data-target=".addCategoria">
-                  <a href="#addCateg"><img src="public/assets/add.png" height="40px" width="40px"></a>
+                  <a href="#addCateg"><img src="/games-fraction/public/assets/add.png" height="40px" width="40px"></a>
                 </button></th>
               </tr>
             </thead>
@@ -34,13 +34,13 @@
                     <div class="btn-group icones d-flex flex-wrap">
 
                               <button type="button" class="btn btn-primary botaoacao verCateg" data-toggle="modal" data-target=".viewCategoria">
-                                    <img src="img/olho.png">
+                                    <img src="/games-fraction/public/assets/olho.png">
                               </button>
                               <button type="button" class="btn btn-primary botaoacao editCateg" data-toggle="modal" data-target=".editCategoria">
-                                    <img src="img/lapis.png">
+                                    <img src="/games-fraction/public/assets/lapis.png">
                               </button>
                               <button type="button" class="btn btn-primary botaoacao deleteCateg" data-toggle="modal" data-target=".deleteCategoria">
-                                    <img src="img/lixo.png">
+                                    <img src="/games-fraction/public/assets/lixo.png">
                               </button>
                     
                         
@@ -54,17 +54,16 @@
                   
                     <div class="btn-group icones d-flex flex-wrap">
 
-                          <button type="button" class="btn btn-primary botaoacao verCateg" data-toggle="modal" data-target=".viewCategoria">
-                                <img src="img/olho.png">
-                          </button>
-                          <button type="button" class="btn btn-primary botaoacao editCateg" data-toggle="modal" data-target=".editCategoria">
-                                <img src="img/lapis.png">
-                          </button>
-                          <button type="button" class="btn btn-primary botaoacao deleteCateg" data-toggle="modal" data-target=".deleteCategoria">
-                                <img src="img/lixo.png">
-                          </button>
-                        
-                        
+                      <button type="button" class="btn btn-primary botaoacao verCateg" data-toggle="modal" data-target=".viewCategoria">
+                        <img src="/games-fraction/public/assets/olho.png">
+                  </button>
+                  <button type="button" class="btn btn-primary botaoacao editCateg" data-toggle="modal" data-target=".editCategoria">
+                        <img src="/games-fraction/public/assets/lapis.png">
+                  </button>
+                  <button type="button" class="btn btn-primary botaoacao deleteCateg" data-toggle="modal" data-target=".deleteCategoria">
+                        <img src="/games-fraction/public/assets/lixo.png">
+                  </button>
+        
                     </div>    
                   
                 </th>
@@ -75,15 +74,16 @@
                   
                     <div class="btn-group icones d-flex flex-wrap">
                         
-                        <button type="button" class="btn btn-primary botaoacao verCateg" data-toggle="modal" data-target=".viewCategoria">
-                             <img src="img/olho.png">
-                        </button>
-                        <button type="button" class="btn btn-primary botaoacao editCateg" data-toggle="modal" data-target=".editCategoria">
-                             <img src="img/lapis.png">
-                        </button>
-                        <button type="button" class="btn btn-primary botaoacao deleteCateg" data-toggle="modal" data-target=".deleteCategoria">
-                             <img src="img/lixo.png">
-                        </button>
+                      <button type="button" class="btn btn-primary botaoacao verCateg" data-toggle="modal" data-target=".viewCategoria">
+                        <img src="/games-fraction/public/assets/olho.png">
+                  </button>
+                  <button type="button" class="btn btn-primary botaoacao editCateg" data-toggle="modal" data-target=".editCategoria">
+                        <img src="/games-fraction/public/assets/lapis.png">
+                  </button>
+                  <button type="button" class="btn btn-primary botaoacao deleteCateg" data-toggle="modal" data-target=".deleteCategoria">
+                        <img src="/games-fraction/public/assets/lixo.png">
+                  </button>
+        
 
                     </div>    
                   
@@ -125,7 +125,7 @@
               </div>
               <div class="modal-body">
                  Novo nome da categoria:<br>
-                 <input type="text" placeholder="Digite aqui o novo nome desta categoria...">
+                 <form><input type="text" placeholder="Digite aqui o novo nome desta categoria..."></form>
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
@@ -166,7 +166,7 @@
               </div>
               <div class="modal-body">
                  Nome da nova categoria:<br>
-                 <input type="text" placeholder="Escreva aqui o nome da nova categoria...">
+                 <form><input type="text" placeholder="Escreva aqui o nome da nova categoria..."></form>
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
