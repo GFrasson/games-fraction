@@ -116,6 +116,26 @@ td{
     display: flex;
 }
 
+.barraDePesquisa{
+    margin-left: 2em;
+    margin-top: 0.2em; 
+    border-radius: 1.5em;
+}
+
+.adicionar{
+    margin-left: 15em;
+}
+
+.cabecalhoUm{
+    background-color:#1C2143 ;
+    border-radius: 0.5em;
+    /* height: 2.5em; */
+    
+}
+
+.lupa{
+    color:white
+}
 
 @media (max-width: 650px) {
     .tabela{
@@ -152,7 +172,16 @@ td{
         width: 100%;
     }
 
+    .adicionar{
+        margin-left: 4em;
+        width: 2em;
+        height: 2em;
+        text-align: center;
+    }
 
+    .barraDePesquisa{
+        margin-left: 1em;
+    }
 
 }
 
