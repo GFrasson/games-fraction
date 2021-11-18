@@ -185,3 +185,9 @@ input::-ms-clear {
 
 }
 
+@media (max-width: 310px){
+    .quadrados input{
+        width: 100%;
+    }
+}
+
