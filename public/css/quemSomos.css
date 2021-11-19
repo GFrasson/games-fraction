@@ -7,8 +7,6 @@
 html,body{
     background-color:#141414;
     color: #F2E9DF;
-    margin: 0px;
-    padding-bottom: 5%;
     font-family: 'Zen Maru Gothic', sans-serif;
 }
 
@@ -50,6 +48,10 @@ html,body{
 
 .imagem img{
     width: 300px;
+}
+
+.icones {
+    padding-bottom: 50px;
 }
 
 .icones div{

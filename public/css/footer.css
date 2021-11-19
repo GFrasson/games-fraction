@@ -1,27 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@300&display=swap');
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-body{
-    background-color:#f2e9df;
-
-}
 .rodapes{
     overflow: hidden;
-    position: absolute;
-    bottom: 0;
     background-color:#1c2143;
     display:flex;
-    flex-direction: row;
-    height:auto;
     width: 100%;
     justify-content:space-between ;
-    
 }
 
-.item1{
+.rodapes .item1{
     align-self: center;
     display:block;
     margin-top: 30px;
@@ -40,7 +26,7 @@ body{
     
 
 }
-.item2{
+.rodapes .item2{
     color:#79b2da;
     text-align: center;
     text-decoration: none;
@@ -53,7 +39,7 @@ body{
     padding-right: 1%;
     padding-left: 1%;
 }
-.item3{
+.rodapes .item3{
     color:#79b2da;
     text-align: center;
     text-decoration: none;
@@ -66,7 +52,7 @@ body{
     padding-right: 1%;
     padding-left: 1%;
 }
-.item4{
+.rodapes .item4{
     color:#79b2da;
     text-align: center;
     text-decoration: none;
@@ -87,7 +73,6 @@ body{
     .rodapes{
         overflow: hidden;
         position:relative;
-        bottom: 0;
         background-color:#1c2143;
         display:flex;
         flex-direction:column;
@@ -95,7 +80,7 @@ body{
         
     }
     
-    .item1{
+    .rodapes .item1{
         align-self: center;
         display:block;
         margin-top: 30px;
@@ -114,7 +99,7 @@ body{
         
     
     }
-    .item2{
+    .rodapes .item2{
         color:#79b2da;
         text-align: center;
         text-decoration: none;
@@ -127,7 +112,7 @@ body{
         padding-right: 1%;
         padding-left: 1%;
     }
-    .item3{
+    .rodapes .item3{
         color:#79b2da;
         text-align: center;
         text-decoration: none;
@@ -140,7 +125,7 @@ body{
         padding-right: 1%;
         padding-left: 1%;
     }
-    .item4{
+    .rodapes .item4{
         color:#79b2da;
         text-align: center;
         text-decoration: none;
