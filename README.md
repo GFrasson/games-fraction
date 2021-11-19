@@ -12,7 +12,7 @@ Desenvolvedores:
 - Integrante 1
 - [Gabriella Cruz e Silva](https://github.com/gabriellac2002)
 - Integrante 3
-- Integrante 4
+- [Leonardo Rodrigues Batalha] (https://github.com/leonardobatalha)
 
 Scrum Master:
 
