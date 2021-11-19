@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    background-color:#141414;
+    color: #F2E9DF;
+    margin: 0px;
+    padding-bottom: 5%;
+    font-family: 'Zen Maru Gothic', sans-serif;
+}
+
+.titulo{
+    text-align: center;
+    color: #CA4727;
+    font-family: 'Bebas Neue', cursive;
+    padding-top: 20px;
+}
+
+.historia{
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-bottom: 3%;
+    display: flex;
+}
+
+.historia p{
+    margin-bottom: 2em;
+}
+
+.texto{
+    
+    width: 64%;
+    text-align: justify;
+    font-size: 20px;
+    line-height: 29px;
+
+}
+
+.imagem{
+    width: 35%;
+    text-align: center;
+    height: 100%;
+
+    animation-name: efeitoUm;
+    animation-duration: 5s;
+}
+
+.imagem img{
+    width: 300px;
+}
+
+.icones div{
+    height: 100%;
+    text-align: center;
+}
+
+.icones div i{
+    font-size: 55px;
+    color:#CA4727 ;
+    margin-bottom: 0%;
+}
+
+.icones div i:hover{
+    color: #FFE26F;
+    font-size: 60px;
+}
+
+.icones h2{
+    margin-bottom: 0%;
+    margin-right: 0%;
+    text-align: left;
+    font-family:'Bebas Neue', cursive; 
+    color:#CA4727 ;
+}
+
+.missao{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1em;
+}
+
+.quebraLinha{
+    width: 79%;
+}
+
+.icone1{
+    width: 20%;
+}
+
+
+
+@keyframes efeitoUm{
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@media (max-width: 1000px){
+
+    .historia{
+        display: inline-block;
+    }
+
+
+    .texto{
+        width: 100%;
+       font-size: 15px;
+       line-height: 25px;
+       padding-bottom: 5px;
+    }
+
+    .imagem{
+        width: 100%;
+    }
+
+    .missao{
+        width: 100%;
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .quebraLinha{
+        width: 100%; 
+        text-align: center;
+    }
+
+    .quebraLinha h2{
+        text-align: center;
+        font-size: 20px;
+        margin-right: 5px;
+    }
+
+    .icone1{
+        text-align: center;
+        width: 100%;
+        margin-bottom: 1em;
+    }
+   
+}
