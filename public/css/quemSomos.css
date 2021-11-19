@@ -101,7 +101,10 @@ html,body{
 @media (max-width: 1000px){
 
     .historia{
-        display: inline-block;
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+        
     }
 
 
@@ -113,17 +116,21 @@ html,body{
     }
 
     .imagem{
-        width: 100%;
+        width: 80%;
+        
     }
-
+    .imagem img{
+        width: 300px;
+    }
     .missao{
-        width: 100%;
+        width: 80%;
         text-align: center;
         flex-direction: column;
+        margin: 0;
     }
 
     .quebraLinha{
-        width: 100%; 
+        width: 80%; 
         text-align: center;
     }
 
@@ -135,8 +142,18 @@ html,body{
 
     .icone1{
         text-align: center;
-        width: 100%;
+        width: 80%;
         margin-bottom: 1em;
     }
-   
+   .icones{
+      display: flex;
+      flex-direction: column;
+      align-items:center;
+      margin: 0;
+   }
+}
+@media (max-width:444px){
+    .imagem img{
+        width: 200px;
+    }   
 }

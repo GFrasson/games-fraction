@@ -10,7 +10,7 @@ html,body{
     background-color: #F2E9DF;
 }
 
-header{
+.titulo{
     min-height: 9vh;
     display: flex;
     align-items: center;
@@ -20,7 +20,7 @@ header{
    
 }
 
-header h1{
+.titulo h1{
     font-family: 'Bebas Neue', cursive;
     font-size: 3.0em;
    
