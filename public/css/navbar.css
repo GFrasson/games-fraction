@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+.navBar{
+background-color:#1c2143;
+display: flex;
+justify-content: space-between;
+align-items: center;
+width: 100%;
+}
+.navBar .botoes a {
+    color:#f2e9df;
+    margin: 12px;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: 'Bebas Neue', cursive;
+}
+.navBar a:hover{
+    color: #ffe26f;
+}
+
+.navBar .botoes-menujs a {
+    color:#f2e9df;
+    padding-right: 6px;
+    padding-left: 6px;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: 'Bebas Neue', cursive;
+}
+.navBar .botoes-menujs a:hover{
+    color: #ffe26f;
+}
+
+
+.navBar .logomain{
+    margin-left: 2%;
+}
+  .navBar .container{
+    height: 100%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding-right: 2%;
+}
+    .navBar #checkbox-menu{
+      position: absolute;
+      opacity: 0;
+  }
+  .navBar label{
+      cursor: pointer;
+      position: relative;
+       display:block;
+      height: 22px;
+      width: 30px;
+     
+  
+  }
+  .navBar label span{
+      position: absolute;
+      display: block;
+      height: 5px;
+      width: 100%;
+      border-radius: 30px;
+      background: #ca4727;
+      transition: 0.25s ease-in-out;
+  }
+    .navBar label span:nth-child(1){
+        top: 0;
+    }
+    .navBar label span:nth-child(2){
+        top: 8px;
+    }
+    .navBar label span:nth-child(3){
+        top: 16px;
+    }
+
+    .navBar #checkbox-menu:checked + label span:nth-child(1){
+        top: 8px;
+        transform: rotate(-45deg);
+    }
+    .navBar #checkbox-menu:checked + label span:nth-child(2){
+        opacity: 0;
+    }
+    .navBar #checkbox-menu:checked + label span:nth-child(3){
+        transform: rotate(+45deg);
+        top: 8px;
+    }
+
+    @media screen and  (max-width: 455px) {
+        .navBar .container{
+            display: block;
+        
+        }
+        .navBar .botoes{
+            display: none;
+         }
+        .navBar .botoes-menujs{
+            display:flex;
+            flex-direction: column;
+            position:absolute;
+            width: 100%;
+            top:70px;
+            z-index: 10;
+        }
+         .navBar .botoes-menujs a {
+            color:#f2e9df;
+            margin: 0px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 18px;
+            font-family: 'Bebas Neue', cursive;
+            box-sizing: border-box;
+            background-color:#79b2da;
+          
+            
+        }
+        .navBar .botoes-menujs a:hover{
+            color: #ffe26f;
+           background-color: #ca4727;
+        }
+    }
+
+   

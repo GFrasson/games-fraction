@@ -1,0 +1,198 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #E5E5E5;
+    font-family: 'Zen Maru Gothic', sans-serif;
+}
+
+.btn-primary.focus, .btn-primary:focus {
+    box-shadow: none !important;
+}
+
+
+    
+h1{
+    min-height: 9vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:#CA4727;;
+    margin-top: 2em;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 3.0em;       
+}
+
+.adicionar{
+    border-radius:50%;
+    margin-left: 2em;
+}
+
+.tabela{
+    background-color:  #f2e9df;
+    padding: 0;
+    width: 60%;
+    margin-top:3em;
+    border-radius: 20px;
+
+}
+
+.table{
+    width: 100%;
+    align-items: center;
+   
+}
+
+.cabecalho-tabela{
+    background-color:#1C2143;
+    color:#79B2DA;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 1.2em;
+}
+
+.roxo{
+    color:#CA4727;
+    background-color: #F2E9DF;
+}
+
+td{
+    color:black;
+    background-color: #F2E9DF;
+}
+
+.cabecalho{
+    background-color:#1C2143 ;
+    color: #CA4727;
+    font-family: 'Bebas Neue', cursive;
+}
+
+.botaoacao {
+    display: flex!important;
+    list-style-type: none !important;
+    /* width: 100% !important; */
+    padding: 0px !important;
+    background-color: transparent !important;
+    background-repeat: no-repeat !important;
+    border: none !important;
+    cursor: pointer !important;
+    overflow: hidden !important;
+    outline: none !important;
+    background: transparent;
+    box-shadow: 0px 0px 0px transparent;
+    border: 0px solid transparent;
+    text-shadow: 0px 0px 0px transparent;
+}
+
+.botaoacao + .botaoacao{
+    margin-left: 0.4rem;
+}
+
+.botaoacao:hover {
+  background: transparent;
+  box-shadow: 0px 0px 0px transparent;
+  border: 0px solid transparent;
+  text-shadow: 0px 0px 0px transparent;
+  outline: none !important;
+}
+
+.botaoacao:active {
+  outline: none !important;
+  border: none;
+}
+
+.botaoacao:focus {
+  outline: 0;
+  outline: none !important;
+}
+
+.iconebotao{
+    color:gray !important;
+    font-size: 0.8rem;
+}
+
+.icones{
+    display: flex;
+}
+
+.pesquisa-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.barraDePesquisa{
+    margin-left: 2em;
+    /* margin-top: 0.2em;  */
+    border-radius: 1.5em;
+}
+
+
+
+.cabecalhoUm{
+    background-color:#1C2143 ;
+    border-radius: 0.5em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* height: 2.5em; */
+    
+}
+
+
+.lupa{
+    color:white;
+    margin-right: 2em;
+}
+
+@media (max-width: 650px) {
+    .tabela{
+        width: 80%;
+        
+    }
+}
+
+@media (max-width: 450px){
+    
+    body{
+        font-size: 62.5%;
+    }
+    
+    .tabela{
+        width: 90%;
+    }
+
+    td,th{
+        padding-left: 4px ;
+        padding-right: 4px;
+    }
+
+     .botaoacao + .botaoacao{
+        margin-left: 0;
+    }
+
+    .botaoacao{
+      margin:0.2rem
+    } 
+
+
+    .iconebotao{
+        width: 100%;
+    }
+
+    .adicionar{
+        margin-left: 1em;
+        width: 2em;
+        height: 2em;
+        text-align: center;
+        padding: 0;
+    }
+
+    .barraDePesquisa{
+        margin-left: 1em;
+    }
+
+}
+
