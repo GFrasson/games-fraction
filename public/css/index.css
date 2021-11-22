@@ -28,6 +28,9 @@ html,body{
     left:0;
     bottom:0
 }
+main{
+    height: max-content;
+}
 /* card */
 .row{
     margin: 0;
@@ -148,7 +151,7 @@ span{
 
 /* Serviços */
 .code-servicos{
-    height:500px;
+    /* height:500px; */
 }
 /* Cards com Carrosel */
 .responsividade{

@@ -9,10 +9,13 @@
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
     <title>GamesFraction</title>
-
+    <!-- JS -->
+    <script src="../../public/js/navbar.js"></script>
     <!-- CSS -->
     <link rel="stylesheet" href="../../public/css/index.css">
-    <script src="../../public/js/seujs.js"></script>
+    <link rel="stylesheet" href="../../public/css/footer.css">
+    <link rel="stylesheet" href="../../public/css/navbar.css">
+   
     <!-- Jquery do Carrosel dos cards -->
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
@@ -21,6 +24,31 @@
 
 <body>
     <!-- NavBar -->
+    <header  class="navBar">
+
+        <div class="logoMain">
+            <a href="#default" class="logo"> <img src="../../public/assets/logo.svg" height="70px" width="70px" ></a>
+        </div>
+       
+        <nav id="botoes" class="botoes"> 
+            <a class="active" href="#home">Home</a>
+            <a href="#quemSomos">Quem somos</a>
+            <a href="#produtos">Produtos</a>
+            <a href="#contato">Contato</a>
+            <a href="#login">Login</a>
+        </nav>
+
+        <div class="container-menu">
+            <input type="checkbox" id="checkbox-menu">
+         
+            <label  for="checkbox-menu" onclick="openNav()">
+                <span></span>
+                <span></span>
+                <span></span>
+             </label>
+         </div>
+
+    </header>
     <!-- Fim NavBar -->
     <main>
         <!-- Carrosel -->
@@ -297,6 +325,30 @@
             </div>
         </div>
     </main>
+    <!-- Footer -->
+    <footer class="rodapes">
+        
+        <div class="item1"><img src="../../public/assets/logo.svg"></div>
+
+        <div class="item2">Contato:<br> Tel: 4002-8922<br>E-mail: gamesfraction@contato.com.br<br><br><br> CODEJRGamesFraction2021.2LTDA<br>Todos os direitos reservados.
+        </div>
+        
+        <div class="item3">Fique por dentro das novidades do site<br> nos seguindo em nossas redes sociais!<br><br>
+            <img src="../../public/assets/facebookIcon.png" height="50px" width="50px">     
+            <img src="../../public/assets/isntaIcon.png" height="50px" width="50px">     
+            <img src="../../public/assets/zapIcon.png" height="50px" width="50px">     <br>
+            <img src="../../public/assets/twitterIcon.png" height="50px" width="50px">     
+            <img src="../../public/assets/linkedinIcon.png" height="50px" width="50px">
+            
+        
+        </div>
+        
+        <div class="item4"><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7410.180362620558!2d-43.3699111!3d-21.7767705!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x989b9f99b33491%3A0xd9b48a8f80341c0d!2sUniversidade%20Federal%20de%20Juiz%20de%20Fora!5e0!3m2!1spt-BR!2sbr!4v1636227153122!5m2!1spt-BR!2sbr" width="100%" height="100%"></iframe></div>
+            
+        
+        
+    </footer>
+
     <!-- Java Script -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"

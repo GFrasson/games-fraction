@@ -33,7 +33,7 @@ width: 100%;
 .navBar .logomain{
     margin-left: 2%;
 }
-  .navBar .container{
+  .navBar .container-menu{
     height: 100%;
     display: none;
     align-items: center;
@@ -85,7 +85,7 @@ width: 100%;
     }
 
     @media screen and  (max-width: 455px) {
-        .navBar .container{
+        .navBar .container-menu{
             display: block;
         
         }
