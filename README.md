@@ -12,7 +12,7 @@ Desenvolvedores:
 - [Fernando Giardini](https://github.com/FernandoGiardini)
 - [Gabriella Cruz e Silva](https://github.com/gabriellac2002)
 - [Jhonattan Meira dos Santos](https://github.com/jhonattan-Meira-Santos)
-- [Leonardo Rodrigues Batalha] (https://github.com/leonardobatalha)
+- [Leonardo Rodrigues Batalha](https://github.com/leonardobatalha)
 
 Scrum Master:
 
