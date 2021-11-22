@@ -26,6 +26,7 @@ body {
     padding-right:10%;
     padding-left: 10%;
     padding-bottom: 10%;
+    background-color: #F2E9DF;
 } 
 
 .botaoacao {
@@ -43,6 +44,8 @@ body {
     box-shadow: 0px 0px 0px transparent;
     border: 0px solid transparent;
     text-shadow: 0px 0px 0px transparent;
+    width: 25px !important;
+
 }
 .botaoacao:hover {
     background: transparent;
@@ -61,4 +64,25 @@ body {
     outline: 0;
     outline: none !important;
   }
-  
+  .botaoacao img{
+    height: 30px;
+    width: 30px;
+
+    
+  }
+  .botaoacao + .botaoacao img{
+      margin-left: 1px;
+  }
+  .barrapesquisa{
+    width: 100%;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    border-radius: 10px;
+  }
+  .titulox {
+    font-family: 'Bebas Neue', cursive;
+    color: #CA4727;
+  }
+  .table{
+    background-color: #E5E5E5;
+  }
