@@ -8,6 +8,7 @@ body{
 
     background-color: #c4c4c4 ;
 }
+
 h1{
     text-align: center;
     font-family: 'Bebas Neue', cursive;
@@ -15,7 +16,6 @@ h1{
     font-size: 52px;
     margin-top: 70px;
 }
-
 .envelope{
     display: flex;
     background-color:  #f2e9df;
@@ -42,7 +42,6 @@ input[type=text] {
     display: flex!important;
     
     list-style-type: none !important;
-    /* width: 100% !important; */
     padding: 0px !important;
     background-color: transparent !important;
     background-repeat: no-repeat !important;
@@ -54,7 +53,6 @@ input[type=text] {
     box-shadow: 0px 0px 0px transparent;
     border: 0px solid transparent;
     text-shadow: 0px 0px 0px transparent;
-    
 }
 .botaoacao:hover {
     background: transparent;
@@ -76,6 +74,7 @@ input[type=text] {
   .botaoacao img{
     height: 30px;
     width: 30px;
+    
 
     
   }

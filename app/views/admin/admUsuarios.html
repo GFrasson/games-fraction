@@ -14,11 +14,29 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     <link rel="stylesheet" href="../../../public/css/stylesAdmUsuario.css"> 
+
+    <link rel="stylesheet" href="../../../public/css/navbarADM.css">
+    <script type="text/javascript" src="../../../public/js/navbarADM.js"></script>
     
 </head>
 
 <body>
   
+  <header class="navbar-adm">
+    <div id="caixa" class="caixa-fechada">
+        
+        <input type="checkbox" id="checkbox-menuS" onclick="openSB()">   
+        <label class="label" for="checkbox-menuS"><img class="icon-nav" src="../../../public/assets/configuracoes.svg"></label>
+
+     
+    </div>
+    <div id="topicos" class="topicos-fechados">
+        <a href="#GerenciarCategorias"><img class="icon-nav" src="../../../public/assets/rede.svg"><br>Categorias</a> 
+        <a href="#GerenciarProdutos"><img class="icon-nav" src="../../../public/assets/cubo.svg"><br>Produtos</a> 
+        <a href="#GerenciarUsuários"><img class="icon-nav" src="../../../public/assets/usuario-de-comentarios.svg"><br>Usuários</a>
+        <a href="#LogOut"><img class="icon-nav" src="../../../public/assets/kisspng-computer-icons-exit-sign-emergency-exit-logo-downl-5b383e15c54734.9298414015304125658081.png"><br>Log-out</a>
+    </div>
+   </header> 
     
   <h1>Usuários</h1>
     

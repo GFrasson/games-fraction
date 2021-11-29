@@ -10,10 +10,31 @@
     integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
   <link rel="stylesheet" href="../../../public/css/viewADMcategorias.css">
 
+  <link rel="stylesheet" href="../../../public/css/navbarADM.css">
+  <script type="text/javascript" src="../../../public/js/navbarADM.js"></script>
+  
+
   <title>Games Fraction</title>
 </head>
 
 <body>
+
+  <header class="navbar-adm">
+    <div id="caixa" class="caixa-fechada">
+        
+        <input type="checkbox" id="checkbox-menuS" onclick="openSB()">   
+        <label class="label" for="checkbox-menuS"><img class="icon-nav" src="../../../public/assets/configuracoes.svg"></label>
+
+     
+    </div>
+    <div id="topicos" class="topicos-fechados">
+        <a href="#GerenciarCategorias"><img class="icon-nav" src="../../../public/assets/rede.svg"><br>Categorias</a> 
+        <a href="#GerenciarProdutos"><img class="icon-nav" src="../../../public/assets/cubo.svg"><br>Produtos</a> 
+        <a href="#GerenciarUsuários"><img class="icon-nav" src="../../../public/assets/usuario-de-comentarios.svg"><br>Usuários</a>
+        <a href="#LogOut"><img class="icon-nav" src="../../../public/assets/kisspng-computer-icons-exit-sign-emergency-exit-logo-downl-5b383e15c54734.9298414015304125658081.png"><br>Log-out</a>
+    </div>
+   </header> 
+
   <h1><strong>Categorias</strong></h1>
 
   <form>
@@ -36,7 +57,7 @@
         <tr>
           <th scope="row">1
 
-            <div class="btn-group icones d-flex flex-wrap">
+            <div class="icones d-flex flex-wrap">
 
               <button type="button" class="btn btn-primary botaoacao verCateg" data-toggle="modal"
                 data-target=".viewCategoria">
@@ -60,7 +81,7 @@
         <tr>
           <th scope="row">2
 
-            <div class="btn-group icones d-flex flex-wrap">
+            <div class="icones d-flex flex-wrap">
 
               <button type="button" class="btn btn-primary botaoacao verCateg" data-toggle="modal"
                 data-target=".viewCategoria">
@@ -83,7 +104,7 @@
         <tr>
           <th scope="row">3
 
-            <div class="btn-group icones d-flex flex-wrap">
+            <div class="icones d-flex flex-wrap">
 
               <button type="button" class="btn btn-primary botaoacao verCateg" data-toggle="modal"
                 data-target=".viewCategoria">

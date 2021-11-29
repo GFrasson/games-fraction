@@ -4,12 +4,25 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+.navbar-adm{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+}
+#caixa,#topicos{
+    position: relative;
+}
+.navbar-adm .icon-nav{
+    height: 50px;
+    width: 50px;
+    z-index: 999;
+}
 .navbar-adm .caixa{
     overflow: visible;
     position:relative;
     background-color:#ffe26f;
-    width: 20%;
+    width: 250px;
     height: 75px;
     display: flex;
     flex-direction: column;
@@ -27,7 +40,7 @@
     background-color:#ffe26f;
     display: flex;
     flex-direction: column;
-    width: 20%;
+    width: 250px;
     justify-content: space-around;
     align-items: center;
     border-bottom-right-radius: 30px;
@@ -74,7 +87,7 @@
     overflow: visible;
     position:relative;
     background-color:#ffe26f;
-    width: 5%;
+    width: 80px;
     height: 75px;
     display: flex;
     flex-direction: column;
@@ -95,4 +108,59 @@
     transform: rotate(-360deg);
     transition: 1s;
     transition-timing-function: ease-in-out;
+}
+@media (max-width:450px){
+
+    .navbar-adm .icon-nav{
+        height: 30px;
+        width: 30px;
+    }
+
+    .navbar-adm .topicos a{
+        font-size: 15px;
+    }
+    .navbar-adm .caixa{
+        overflow: visible;
+        position:relative;
+        background-color:#ffe26f;
+        width: 100px;
+        height: 75px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        color: #f2e9df;
+        border-top-right-radius: 30px;
+        transition: all 1s;
+       
+    }
+    .navbar-adm .topicos{
+        z-index: 999;
+        position: absolute;
+        height: 90%;
+        background-color:#ffe26f;
+        display: flex;
+        flex-direction: column;
+        width: 100px;
+        justify-content: space-around;
+        align-items: center;
+        border-bottom-right-radius: 30px;
+        transition: all 1s;
+    }
+    .navbar-adm .caixa-fechada{
+        overflow: visible;
+        position:relative;
+        background-color:#ffe26f;
+        width: 60px;
+        height: 75px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        color: #f2e9df;
+    
+        border-bottom-right-radius: 30px;
+        border-top-right-radius: 30px;
+        transition: all 1s;
+    }
 }
