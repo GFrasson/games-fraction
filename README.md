@@ -9,10 +9,10 @@ Projeto desenvolvido para o Trainee da [Code Jr](https://codejr.com.br/) que con
 ## Projeto Trainee, Code Jr, Grupo 4, 2021.2 
 
 Desenvolvedores:
-- Integrante 1
-- Integrante 2
-- Integrante 3
-- Integrante 4
+- [Fernando Giardini](https://github.com/FernandoGiardini)
+- [Gabriella Cruz e Silva](https://github.com/gabriellac2002)
+- [Jhonattan Meira dos Santos](https://github.com/jhonattan-Meira-Santos)
+- [Leonardo Rodrigues Batalha](https://github.com/leonardobatalha)
 
 Scrum Master:
 

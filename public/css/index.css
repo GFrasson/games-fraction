@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+html,body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    place-items: center;
+    text-align: center;
+    background: #E5E5E5;
+    min-height: 100vh;
+}
+.box-geral-esquerda{
+    margin-top: 2rem;
+    margin-left: 2rem;
+}
+.box-geral-esquerda div.box-texto h3, .box-geral-direita div.box-texto h3 {
+    font-size:30px;
+    color:#27461f;
+    line-height:42px;
+    position: relative;
+}
+
+.box-geral-esquerda div.box-texto h3:before {
+    content: "";
+    position: absolute;
+    border-bottom: 5px solid #FFE26F;
+    width: 150px;
+    left:0;
+    bottom:0
+}
+main{
+    height: max-content;
+}
+/* card */
+.row{
+    margin: 0;
+}
+.d-flex{
+    align-items: center;
+    justify-content: center;
+}
+.card{
+    margin: 10px;
+    margin-bottom: 2rem;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.11);
+}
+.card:hover{
+    background: #f8f7f7;
+    box-shadow: 3px 2px 1px 1px rgba(0, 0, 0, 0.11);
+}
+.card-img-top{
+   height: 256px;
+}
+h3{
+    font-family:'Bebas Neue', cursive;
+}
+a{
+    text-decoration: none;
+    color:black;
+    font-family:'spotify-circular, Helvetica, Arial, sans-serif' ;
+}
+a:hover{
+    color: black;
+}
+a .card-title{
+   color: black; 
+   text-align: center;
+   font-size: 1.5rem;
+  
+}
+a .card-text-preco{
+    color:brown;
+    text-align: center;
+}
+a .card-text{
+    color:rgba(0, 0, 0, 0.575);
+    font-size: 0.9rem;
+}
+.d-block{
+    height: 313px;
+}
+/* Saiba mais*/
+.code-information{
+    width: 100%;
+    height: 200px;
+    background: #1C2143;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.title-code-information{
+    display: inline-block;
+    color: #fff;
+}
+.title-code-information:before{
+    position: absolute;
+    content: "";
+    bottom: -10px;
+    height: 2px;
+    background-color: orange;
+}
+.frame{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 80px;
+    width: 350px;
+    position: relative;
+    border-radius: 10px;
+}
+
+.btn{
+    height: 35px;
+    width: 35px;
+    border-radius: 3px;
+    background: #e0e5ec;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: transparent;
+    font-size: 16px;
+    color: rgba(42, 52, 84, 1);
+    text-decoration: none;
+}
+.btn:active{
+box-shadow:  4px 4px 6px 0 rgba(255,255,255,.5),
+            -4px -4px 6px 0 rgba(116, 125, 136, .2), 
+    inset -4px -4px 6px 0 rgba(255,255,255,.5),
+    inset 4px 4px 6px 0 rgba(116, 125, 136, .3);
+}
+div.icon-contato{
+    padding: 4px;
+}
+a.btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:100%;  
+}
+a.btn:hover{
+    background-color: #FFE26F; 
+}
+span{
+    color:#fff;
+    margin-left: -3px;
+}
+
+
+/* Serviços */
+
+/* Cards com Carrosel */
+.responsividade{
+    justify-content: center;
+    align-items: center;
+    
+    width: 100%;
+    
+}
+.carrosel-cards{
+    width: 100%;
+    margin:0;
+    padding: 0;
+    top:0;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: drop-shadow(4px 4px 10px blue);
+    background-position: center; /* Center the image */
+}
+.slider{
+   width: 100%;
+    margin-bottom: 20px;
+    align-items: center;
+    justify-content: space-around;
+   
+    width: 10px;
+}
+.slider .card{
+    background:#fff;
+    flex: 1;
+    margin: 0 10px;
+}
+.slider .card .img img{
+    height:min-content;
+    width: 100%;
+    height: 313px;
+    object-fit: contain;
+    padding: 10px;
+
+}
+.slider .card .content{
+    padding: 10px 20px;
+}
+.slider .card .content .title{
+    font-size: 25px;
+    font-weight: 600;
+}
+.slider .content p{
+    text-align: justify;
+    margin: 10px 0;
+}
+.image-carousel{
+    object-fit: cover;
+    text-align: center;
+}
+/* Responsivo */
+
+@media(max-width:700px){
+    .d-block{
+        height: max-content;
+    }
+}
+@media(max-width:550px){
+    .d-block{
+        height: 180px;
+    }
+    
+}
+@media(max-width:300px){
+    .d-block{
+        height: 145px;
+    }
+}

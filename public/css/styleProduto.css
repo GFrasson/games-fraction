@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+:root{
+    width: 100%;
+}
+*{
+    font-family:'Bebas Neue', cursive;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background-image:url("https://image.freepik.com/fotos-gratis/textura-de-papel-com-padrao_107441-49.jpg");  
+    
+}
+
+.code-filtro{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding:20px;
+    background:#CA4727;
+   
+    z-index: 1;
+   
+}
+form{
+    width: 50%;
+}
+.input-filtro{
+    width: 100%;
+    height: 40px;
+    border-radius: 3px;
+    outline: none;
+    border-color: #79B2DA;
+    border-style: solid double;
+    border-width: 1px ;
+    background: #f8f8f8;
+    padding-left: 10px;
+    max-width: 1000px;
+    max-height: 100px;
+}
+/* Cards */
+.container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #E5E5E5;    
+}
+.d-flex{
+    margin-top: 30px;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+a{
+    text-decoration: none;
+    color:black;
+}
+a.link-card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+}
+.card{
+   display:flex;
+   align-items: flex-start;
+   justify-content: start;
+
+    margin:10px;
+    margin-top: 30px;
+    box-shadow: 2px 2px rgba(0, 0, 0, 0.164), 1px 1px rgba(0, 0, 0, 0.164);
+    width: 25rem;
+    height: 12rem;
+   
+}
+.card:hover{
+    margin-top: 20px;
+    box-shadow: 2px 3px rgba(0, 0, 0, 0.26), 1px 1px rgba(0, 0, 0, 0.26);
+}
+.image-left{
+    width: 100%;
+}
+.image-left img{
+    height: 11.9rem;
+    width: 100%;
+}
+.body-right{
+    height:11.9rem;
+    width: 100%;
+    font-size: 13px;
+}
+p#nome{
+    width: 100%;
+    font-size: 20px;
+    font-weight:bold;
+    text-align: center;
+
+}
+p#categoria, p#preco{
+    margin-left: 10px;
+    font-size: 15px
+}
+/* Paginação */
+nav.paginacao{
+    width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+/* Responsivo */
+@media(max-width:1000px){
+    .linha{
+        width: 100%;
+    }
+}
+@media(max-width:450px){
+    .flex-card{
+       display: flex;
+       align-items: center;
+       justify-content: center;
+    }
+    .container{
+        margin: 0;
+        padding: 0;
+    }
+    
+    
+    body{
+        background: #E5E5E5;
+    }
+}
+
+@media(max-width:300px){
+    .card{
+        margin-left: 10px;
+    }
+}
