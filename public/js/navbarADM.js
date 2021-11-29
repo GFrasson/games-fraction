@@ -1,12 +1,12 @@
 function openSB(){
 
-    var c = document.getElementById("container"); 
+    var c = document.getElementById("caixa"); 
     var t = document.getElementById("topicos");
    
-    if(c.className === "container"){
-        c.className += "-fechado"
+    if(c.className === "caixa"){
+        c.className += "-fechada"
     }else{
-        c.className = "container"
+        c.className = "caixa"
     }
 
 

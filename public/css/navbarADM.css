@@ -4,11 +4,8 @@
     padding: 0;
     box-sizing: border-box;
 }
-body{
-    background-color:#79b2da;
-}
 
-.container{
+.navbar-adm .caixa{
     overflow: visible;
     position:relative;
     background-color:#ffe26f;
@@ -23,7 +20,7 @@ body{
     transition: all 1s;
    
 }
-.topicos{
+.navbar-adm .topicos{
     z-index: 999;
     position: absolute;
     height: 90%;
@@ -36,7 +33,7 @@ body{
     border-bottom-right-radius: 30px;
     transition: all 1s;
 }
-.topicos a{
+.navbar-adm .topicos a{
     font-size: 18px;
     font-family: 'Bebas Neue', cursive;
     font-weight: 500;
@@ -51,29 +48,29 @@ body{
     border-color: #ca4727;
 
 }
-.topicos a:hover{
+.navbar-adm .topicos a:hover{
     color: #ff3300;
     font-size: 22px;
 }
 
-#checkbox-menuS{
+.navbar-adm #checkbox-menuS{
     position: absolute;
     opacity: 0;
     z-index: 1;
 }
-label{
+.navbar-adm label{
     cursor: pointer;
 }
-input{
+.navbar-adm input{
     cursor: pointer;
 }
-#checkbox-menuS:checked + label :nth-child(1){
+.navbar-adm #checkbox-menuS:checked + label :nth-child(1){
     transform: rotate(360deg);
     transition: 1s;
     transition-timing-function: ease-in-out;
 }
 
-.container-fechado{
+.navbar-adm .caixa-fechada{
     overflow: visible;
     position:relative;
     background-color:#ffe26f;
@@ -90,11 +87,11 @@ input{
     transition: all 1s;
 }
    
-.topicos-fechados a{
+.navbar-adm .topicos-fechados a{
    
    display: none;
 }
-#checkbox-menuS:not(:checked) + label :nth-child(1){
+.navbar-adm #checkbox-menuS:not(:checked) + label :nth-child(1){
     transform: rotate(-360deg);
     transition: 1s;
     transition-timing-function: ease-in-out;
