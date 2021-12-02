@@ -13,29 +13,19 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Zen+Maru+Gothic&display=swap"
-    rel="stylesheet">
+        rel="stylesheet">
+    <link href="/your-path-to-fontawesome/css/fontawesome.css" rel="stylesheet">
+    <link href="/your-path-to-fontawesome/css/brands.css" rel="stylesheet">
+    <link href="/your-path-to-fontawesome/css/solid.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/c11bde093d.js" crossorigin="anonymous"></script>
 </head>
 
 
 
 
 <body>
-    <div class="titulox">
-        <h1>Produtos</h1>
-    </div>
-
-    <form action="">
-        <input name="produto" id="produto" class="barrapesquisa" placeholder=" Digite o nome do produto:" type="text">
-
-
-    </form>
-
-    <div  class="btn-group icones d-flex flex-wrap">
-
-        <button type="button" class="btn btn-primary botaoacao view" data-toggle="modal"
-            data-target=".addProduto">
-            <img src="../../public/assets/add.png">
-        </button>
+    <div>
+        <h1 class="titulox">Produtos</h1>
     </div>
 
 
@@ -45,271 +35,151 @@
 
 
 
-    <div class="content">
+
+
+
+
+
+    <div class="container">
+        <form action="">
+            <input name="produto" id="produto" class="barrapesquisa" placeholder=" Digite o nome do produto:"
+                type="text">
+
+
+        </form>
+
+        <div class="d-flex justify-content-between">
+            <span></span>
+            <button type="button" class="btn  view botaoadd" data-toggle="modal" data-target=".addProduto">
+                <i class="fas fa-plus-circle"></i>
+            </button>
+        </div>
+
+
+
 
         <table class="table">
             <thead>
                 <tr>
                     <th>Id</th>
                     <th>Nome</th>
-                    <th>Preço</th>
+                    <th class="price-title">Preço</th>
+                    <th>Opções</th>
 
                 </tr>
             </thead>
 
             <tbody>
                 <tr>
+                    <th scope="row">#1</th>
 
+                    <td>Jogo x </td>
+                    <td class="price-value">R$100,00</td>
+                    <td>
+                        <div class="button-container d-flex flex-wrap icones">
 
-
-
-
-                    <th scope="row">#1
-
-                        <div class="btn-group icones d-flex flex-wrap">
-
-                            <button type="button" class="btn btn-primary botaoacao view" data-toggle="modal"
-                                data-target=".viewProduto">
-                                <img src="../../public/assets/olho.png">
+                            <button type="button" class="  modal-button" data-toggle="modal" data-target=".viewProduto">
+                                <i class="fas fa-eye"></i>
                             </button>
-                            <button type="button" class="btn btn-primary botaoacao view" data-toggle="modal"
+                            <button type="button" class="  modal-button  " data-toggle="modal"
                                 data-target=".editProduto">
-                                <img src="../../public/assets/lapis.png">
+                                <i class="fas fa-pencil-alt"></i>
                             </button>
-                            <button type="button" class="btn btn-primary botaoacao view" data-toggle="modal"
+                            <button type="button" class="  modal-button " data-toggle="modal"
                                 data-target=".deleteProduto">
-                                <img src="../../public/assets/lixo.png">
+                                <i class="fas fa-trash-alt"></i>
                             </button>
 
 
 
                         </div>
-                    </th>
-                    <td>Jogox</td>
-                    <td>R$100,00</td>
+                    </td>
+
                 </tr>
 
-
-
-
                 <tr>
-                    <th scope="row">#2
+                    <th scope="row">#2</th>
 
-                        <div class="btn-group icones d-flex flex-wrap">
+                    <td>Jogo x </td>
+                    <td class="price-value">R$100,00</td>
+                    <td>
+                        <div class="button-container d-flex flex-wrap icones">
 
-                            <button type="button" class="btn btn-primary botaoacao view" data-toggle="modal"
-                                data-target=".viewProduto">
-                                <img src="../../public/assets/olho.png">
+                            <button type="button" class="  modal-button" data-toggle="modal" data-target=".viewProduto">
+                                <i class="fas fa-eye"></i>
                             </button>
-                            <button type="button" class="btn btn-primary botaoacao view" data-toggle="modal"
+                            <button type="button" class="  modal-button  " data-toggle="modal"
                                 data-target=".editProduto">
-                                <img src="../../public/assets/lapis.png">
+                                <i class="fas fa-pencil-alt"></i>
                             </button>
-                            <button type="button" class="btn btn-primary botaoacao view" data-toggle="modal"
+                            <button type="button" class="  modal-button " data-toggle="modal"
                                 data-target=".deleteProduto">
-                                <img src="../../public/assets/lixo.png">
+                                <i class="fas fa-trash-alt"></i>
                             </button>
 
 
 
                         </div>
-                    </th>
-
-                    <td>JogoY</td>
-                    <td>R$200,00</td>
+                    </td>
 
                 </tr>
-
-
-
                 <tr>
-                    <th scope="row">#3
+                    <th scope="row">#3</th>
 
-                        <div class="btn-group icones d-flex flex-wrap">
+                    <td>Jogo x </td>
+                    <td class="price-value">R$100,00</td>
+                    <td>
+                        <div class="button-container d-flex flex-wrap icones">
 
-                            <button type="button" class="btn btn-primary botaoacao view" data-toggle="modal"
-                                data-target=".viewProduto">
-                                <img src="../../public/assets/olho.png">
+                            <button type="button" class="  modal-button" data-toggle="modal" data-target=".viewProduto">
+                                <i class="fas fa-eye"></i>
                             </button>
-                            <button type="button" class="btn btn-primary botaoacao view" data-toggle="modal"
+                            <button type="button" class="  modal-button  " data-toggle="modal"
                                 data-target=".editProduto">
-                                <img src="../../public/assets/lapis.png">
+                                <i class="fas fa-pencil-alt"></i>
                             </button>
-                            <button type="button" class="btn btn-primary botaoacao view" data-toggle="modal"
+                            <button type="button" class="  modal-button " data-toggle="modal"
                                 data-target=".deleteProduto">
-                                <img src="../../public/assets/lixo.png">
+                                <i class="fas fa-trash-alt"></i>
                             </button>
 
 
 
                         </div>
-                    </th>
-                    <td>JogoY</td>
-                    <td>R$200,00</td>
+                    </td>
 
                 </tr>
                 <tr>
-                    <th scope="row">#4
+                    <th scope="row">#4</th>
 
-                        <div class="btn-group icones d-flex flex-wrap">
+                    <td>Jogo z </td>
+                    <td class="price-value">R$100,00</td>
+                    <td>
+                        <div class="button-container d-flex flex-wrap icones">
 
-                            <button type="button" class="btn btn-primary botaoacao view" data-toggle="modal"
-                                data-target=".viewProduto">
-                                <img src="../../public/assets/olho.png">
+                            <button type="button" class="  modal-button" data-toggle="modal" data-target=".viewProduto">
+                                <i class="fas fa-eye"></i>
                             </button>
-                            <button type="button" class="btn btn-primary botaoacao view" data-toggle="modal"
+                            <button type="button" class="  modal-button  " data-toggle="modal"
                                 data-target=".editProduto">
-                                <img src="../../public/assets/lapis.png">
+                                <i class="fas fa-pencil-alt"></i>
                             </button>
-                            <button type="button" class="btn btn-primary botaoacao view" data-toggle="modal"
+                            <button type="button" class="  modal-button " data-toggle="modal"
                                 data-target=".deleteProduto">
-                                <img src="../../public/assets/lixo.png">
+                                <i class="fas fa-trash-alt"></i>
                             </button>
 
 
 
                         </div>
-                    </th>
-                    <td>JogoY</td>
-                    <td>R$200,00</td>
+                    </td>
 
                 </tr>
-                <tr>
-                    <th scope="row">#5
-
-                        <div class="btn-group icones d-flex flex-wrap">
-
-                            <button type="button" class="btn btn-primary botaoacao view" data-toggle="modal"
-                                data-target=".viewProduto">
-                                <img src="../../public/assets/olho.png">
-                            </button>
-                            <button type="button" class="btn btn-primary botaoacao view" data-toggle="modal"
-                                data-target=".editProduto">
-                                <img src="../../public/assets/lapis.png">
-                            </button>
-                            <button type="button" class="btn btn-primary botaoacao view" data-toggle="modal"
-                                data-target=".deleteProduto">
-                                <img src="../../public/assets/lixo.png">
-                            </button>
 
 
 
-                        </div>
-                    </th>
-                    <td>JogoY</td>
-                    <td>R$200,00</td>
-
-                </tr>
-                <tr>
-                    <th scope="row">#6
-
-                        <div class="btn-group icones d-flex flex-wrap">
-
-                            <button type="button" class="btn btn-primary botaoacao view" data-toggle="modal"
-                                data-target=".viewProduto">
-                                <img src="../../public/assets/olho.png">
-                            </button>
-                            <button type="button" class="btn btn-primary botaoacao view" data-toggle="modal"
-                                data-target=".editProduto">
-                                <img src="../../public/assets/lapis.png">
-                            </button>
-                            <button type="button" class="btn btn-primary botaoacao view" data-toggle="modal"
-                                data-target=".deleteProduto">
-                                <img src="../../public/assets/lixo.png">
-                            </button>
 
 
-
-                        </div>
-                    </th>
-                    <td>JogoY</td>
-                    <td>R$200,00</td>
-
-                </tr>
-                <tr>
-                    <th scope="row">#7
-
-                        <div class="btn-group icones d-flex flex-wrap">
-
-                            <button type="button" class="btn btn-primary botaoacao view" data-toggle="modal"
-                                data-target=".viewProduto">
-                                <img src="../../public/assets/olho.png">
-                            </button>
-                            <button type="button" class="btn btn-primary botaoacao view" data-toggle="modal"
-                                data-target=".editProduto">
-                                <img src="../../public/assets/lapis.png">
-                            </button>
-                            <button type="button" class="btn btn-primary botaoacao view" data-toggle="modal"
-                                data-target=".deleteProduto">
-                                <img src="../../public/assets/lixo.png">
-                            </button>
-
-
-
-                        </div>
-                    </th>
-                    <td>JogoY</td>
-                    <td>R$200,00</td>
-
-                </tr>
-                <tr>
-                    <th scope="row">#8
-
-                        <div class="btn-group icones d-flex flex-wrap">
-
-                            <button type="button" class="btn btn-primary botaoacao view" data-toggle="modal"
-                                data-target=".viewProduto">
-                                <img src="../../public/assets/olho.png">
-                            </button>
-                            <button type="button" class="btn btn-primary botaoacao view" data-toggle="modal"
-                                data-target=".editProduto">
-                                <img src="../../public/assets/lapis.png">
-                            </button>
-                            <button type="button" class="btn btn-primary botaoacao view" data-toggle="modal"
-                                data-target=".deleteProduto">
-                                <img src="../../public/assets/lixo.png">
-                            </button>
-
-
-
-                        </div>
-                    </th>
-                    <td>JogoY</td>
-                    <td>R$200,00</td>
-
-                </tr>
-                <tr>
-                    <th scope="row">#9
-
-                        <div class="btn-group icones d-flex flex-wrap">
-
-                            <button type="button" class="btn btn-primary botaoacao view" data-toggle="modal"
-                                data-target=".viewProduto">
-                                <img src="../../public/assets/olho.png">
-                            </button>
-                            <button type="button" class="btn btn-primary botaoacao view" data-toggle="modal"
-                                data-target=".editProduto">
-                                <img src="../../public/assets/lapis.png">
-                            </button>
-                            <button type="button" class="btn btn-primary botaoacao view" data-toggle="modal"
-                                data-target=".deleteProduto">
-                                <img src="../../public/assets/lixo.png">
-                            </button>
-
-
-
-                        </div>
-                    </th>
-                    <td>JogoY</td>
-                    <td>R$200,00</td>
-
-                </tr>
-                <tr>
-                    <td>#10</td>
-                    <td>JogoY</td>
-                    <td>R$200,00</td>
-
-                </tr>
             </tbody>
 
 
@@ -326,11 +196,11 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                       <h5>Nome do produto:</h5>
-                       <h5>Descrição do produto:</h5>
-                       <h5>Foto do produto:</h5>
-                       <h5>Preço do produto:</h5>
-                       <h5>Categoria do produto:</h5>
+                        <h5>Nome do produto:</h5>
+                        <h5>Descrição do produto:</h5>
+                        <h5>Foto do produto:</h5>
+                        <h5>Preço do produto:</h5>
+                        <h5>Categoria do produto:</h5>
 
                     </div>
                     <div class="modal-footer">
@@ -340,159 +210,162 @@
             </div>
         </div>
 
-        
+
 
 
         <!-- Modal Edit -->
-   <div class="modal fade editProduto" id="editProduto" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-        <div class="modal-header cabecalho">
-          <h5 class="modal-title" id="exampleModalLabel">Editar produto</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <form>
+        <div class="modal fade editProduto" id="editProduto" tabindex="-1" role="dialog"
+            aria-labelledby="myLargeModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header cabecalho">
+                        <h5 class="modal-title" id="exampleModalLabel">Editar produto</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
 
-                  <div class="form-group">
-                    <label for="input-nome">Nome do produto:</label>
-                    <input type="text" class="form-control" id="nome" placeholder="">
-                  </div>
+                            <div class="form-group">
+                                <label for="input-nome">Nome do produto:</label>
+                                <input type="text" class="form-control" id="nome" placeholder="">
+                            </div>
 
-                  <div class="form-group">
-                    <label for="input-nome" >Descrição do produto:</label>
-                    <input type="text" class="form-control" id="nome" required placeholder="">
-                  </div>
+                            <div class="form-group">
+                                <label for="input-nome">Descrição do produto:</label>
+                                <input type="text" class="form-control" id="nome" required placeholder="">
+                            </div>
 
-                  <div class="form-group">
-                    <label for="exampleFormControlFile1">Fotos do produto:</label>
-                    <input type="file" class="form-control-file" id="exampleFormControlFile1">
-
-                   
-
-
-                  </div>
-                  <div class="form-group">
-                    <label for="descricao">Preço do Produto:</label>
-                    <input type="text" class="form-control" id="nome" placeholder="">
-                  </div>
+                            <div class="form-group">
+                                <label for="exampleFormControlFile1">Fotos do produto:</label>
+                                <input multiple type="file" class="form-control-file" id="exampleFormControlFile1">
 
 
-                  <div class="form-group">
-                    <label for="descricao">Categoria:</label>
-                    <input type="text" class="form-control" id="nome" placeholder="">
-                  </div>
 
-                  
 
-                  <p> </p>
-                  </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="descricao">Preço do Produto:</label>
+                                <input type="text" class="form-control" id="nome" placeholder="">
+                            </div>
 
-                  <p> </p>
-          </form>
 
-        </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary modbut" data-dismiss="modal">Fechar</button>
-              <button type="submit" class="btn btn-primary modbut">Confirmar</button>
+                            <div class="form-group">
+                                <label for="descricao">Categoria:</label>
+                                <input type="text" class="form-control" id="nome" placeholder="">
+                            </div>
+
+
+
+                            <p> </p>
+                    </div>
+
+                    <p> </p>
+                    </form>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary modbut" data-dismiss="modal">Cancelar</button>
+                    <button type="submit" class="btn btn-primary modbut">Confirmar</button>
+                </div>
             </div>
-       </div>
 
+        </div>
     </div>
-  </div>
-  <!-- Fim Modal Edit -->
+    <!-- Fim Modal Edit -->
 
 
-        
+
 
     <!-- Modal delete -->
-  <div class="modal fade deleteProduto" id="deleteProduto" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-        <div class="modal-header cabecalho">
-          <h5 class="modal-title" id="exampleModalLabel">Deletar produto</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <form>
-            Certeza que deseja excluir?
-            <p> </p>
-          </form>
+    <div class="modal fade deleteProduto" id="deleteProduto" tabindex="-1" role="dialog"
+        aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header cabecalho">
+                    <h5 class="modal-title" id="exampleModalLabel">Deletar produto</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        Você tem certeza que deseja excluir?
+                        <p> </p>
+                    </form>
 
-        </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary modbut" data-dismiss="modal">Cancelar</button>
-              <button type="submit" class="btn btn-primary modbut">Confirmar</button>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary modbut" data-dismiss="modal">Cancelar</button>
+                    <button type="submit" class="btn btn-primary modbut">Confirmar</button>
+                </div>
             </div>
-       </div>
 
+        </div>
     </div>
-  </div>
-  <!-- Fim Modal delete -->
+    <!-- Fim Modal delete -->
 
 
- <!-- Modal Adiconar Produto -->
- <div class="modal fade addProduto" id="addProduto" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Adicionar Produto</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <form>
+    <!-- Modal Adiconar Produto -->
+    <div class="modal fade addProduto" id="addProduto" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Adicionar Produto</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
 
-                  <div class="form-group">
-                    <label for="input-nome">Nome Produto</label>
-                    <input type="text" class="form-control" id="input-nome" placeholder="Nome do Produto">
-                  </div>
+                        <div class="form-group">
+                            <label for="input-nome">Nome Produto</label>
+                            <input type="text" class="form-control" id="input-nome" placeholder="">
+                        </div>
 
-                  <div class="form-group">
-                    <label for="descricao">Descrição</label>
-                    <textarea class="form-control" id="descricao" rows="3"></textarea>
-                  </div>
+                        <div class="form-group">
+                            <label for="descricao">Descrição</label>
+                            <textarea class="form-control" id="descricao" rows="3"></textarea>
+                        </div>
 
-                  <div class="form-group">
-                    <label for="input-nome">Preço</label>
-                    <input type="number" class="form-control" id="input-nome" placeholder="">
-                  </div>
+                        <div class="form-group">
+                            <label for="input-nome">Preço</label>
+                            <input type="number" class="form-control" id="input-nome" placeholder="">
+                        </div>
 
-                  <div class="form-group">
-                    <label for="exampleFormControlFile1">Imagem Principal do Produto</label>
-                    <input type="file" class="form-control-file" id="exampleFormControlFile1">
-                  </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlFile1">Imagens do Produto</label>
+                            <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                        </div>
 
-                  <div class="form-group">
-                    <label for="input-nome">Categoria:</label>
-                    <input type="number" class="form-control" id="input-nome" placeholder="">
-                  </div>
+                        <div class="form-group">
+                            <label for="input-nome">Categoria:</label>
+                            <input type="number" class="form-control" id="input-nome" placeholder="">
+                        </div>
 
-                  
 
-                  <p> </p>
 
-            <button type="submit" class="btn btn-primary modbut">Enviar</button>
-          </form>
+                        <p> </p>
 
-        </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary modbut" data-dismiss="modal">Fechar</button>
-              <button type="button" class="btn btn-primary modbut">Confirmar</button>
+                        <button type="submit" class="btn btn-primary modbut">Enviar</button>
+                    </form>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary modbut" data-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-primary modbut">Confirmar</button>
+                </div>
             </div>
-       </div>
 
+        </div>
     </div>
-  </div>
-  <!-- Fim Modal Adicionar Produto -->
+    <!-- Fim Modal Adicionar Produto -->
 
 
-    
+
 
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
