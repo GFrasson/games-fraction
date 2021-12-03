@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+    integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+  <link rel="stylesheet" href="../../../public/css/viewADMcategorias.css">
+
+  <link rel="stylesheet" href="../../../public/css/navbarADM.css">
+  <script type="text/javascript" src="../../../public/js/navbarADM.js"></script>
+  
+
+  <title>Games Fraction</title>
+</head>
+
+<body>
+
+  <header class="navbar-adm">
+    <div id="caixa" class="caixa-fechada">
+        
+        <input type="checkbox" id="checkbox-menuS" onclick="openSB()">   
+        <label class="label" for="checkbox-menuS"><img class="icon-nav" src="../../../public/assets/configuracoes.svg"></label>
+
+     
+    </div>
+    <div id="topicos" class="topicos-fechados">
+        <a href="#GerenciarCategorias"><img class="icon-nav" src="../../../public/assets/rede.svg"><br>Categorias</a> 
+        <a href="#GerenciarProdutos"><img class="icon-nav" src="../../../public/assets/cubo.svg"><br>Produtos</a> 
+        <a href="#GerenciarUsuários"><img class="icon-nav" src="../../../public/assets/usuario-de-comentarios.svg"><br>Usuários</a>
+        <a href="#LogOut"><img class="icon-nav" src="../../../public/assets/kisspng-computer-icons-exit-sign-emergency-exit-logo-downl-5b383e15c54734.9298414015304125658081.png"><br>Log-out</a>
+    </div>
+   </header> 
+
+  <h1><strong>Categorias</strong></h1>
+
+  <form>
+    <div class="barraProcuraCategorias"><input type="text" placeholder="Pesquisar categorias..."></div>
+  </form>
+
+  <div class="container envelope">
+    <table class="table">
+      <thead class="thead">
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Categoria</th>
+          <th scope="col"><button type="button" class="btn btn-primary botaoacao verCateg" data-toggle="modal"
+              data-target=".addCategoria">
+              <a href="#addCateg"><img src="../../../public/assets/add.png" height="40px" width="40px"></a>
+            </button></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1
+
+            <div class="icones d-flex flex-wrap">
+
+              <button type="button" class="btn btn-primary botaoacao verCateg" data-toggle="modal"
+                data-target=".viewCategoria">
+                <img src="../../../public/assets/olho.png">
+              </button>
+              <button type="button" class="btn btn-primary botaoacao editCateg" data-toggle="modal"
+                data-target=".editCategoria">
+                <img src="../../../public/assets/lapis.png">
+              </button>
+              <button type="button" class="btn btn-primary botaoacao deleteCateg" data-toggle="modal"
+                data-target=".deleteCategoria">
+                <img src="../../../public/assets/lixo.png">
+              </button>
+
+
+
+            </div>
+          </th>
+          <td>Jogos Mídia Física</td>
+        </tr>
+        <tr>
+          <th scope="row">2
+
+            <div class="icones d-flex flex-wrap">
+
+              <button type="button" class="btn btn-primary botaoacao verCateg" data-toggle="modal"
+                data-target=".viewCategoria">
+                <img src="../../../public/assets/olho.png">
+              </button>
+              <button type="button" class="btn btn-primary botaoacao editCateg" data-toggle="modal"
+                data-target=".editCategoria">
+                <img src="../../../public/assets/lapis.png">
+              </button>
+              <button type="button" class="btn btn-primary botaoacao deleteCateg" data-toggle="modal"
+                data-target=".deleteCategoria">
+                <img src="../../../public/assets/lixo.png">
+              </button>
+
+            </div>
+
+          </th>
+          <td>Jogos Mídia Digital</td>
+        </tr>
+        <tr>
+          <th scope="row">3
+
+            <div class="icones d-flex flex-wrap">
+
+              <button type="button" class="btn btn-primary botaoacao verCateg" data-toggle="modal"
+                data-target=".viewCategoria">
+                <img src="../../../public/assets/olho.png">
+              </button>
+              <button type="button" class="btn btn-primary botaoacao editCateg" data-toggle="modal"
+                data-target=".editCategoria">
+                <img src="../../../public/assets/lapis.png">
+              </button>
+              <button type="button" class="btn btn-primary botaoacao deleteCateg" data-toggle="modal"
+                data-target=".deleteCategoria">
+                <img src="../../../public/assets/lixo.png">
+              </button>
+
+
+            </div>
+
+          </th>
+          <td>Periféricos</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+
+  <div class="modal fade viewCategoria" id="modalViewCateg" tabindex="-1" role="dialog"
+    aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title" id="exampleModalLongTitle">Visualizar categoria</h3>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          *nome da categoria em questão*
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">OK</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade editCategoria" id="modalEditCateg" tabindex="-1" role="dialog"
+    aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title" id="exampleModalLongTitle">Editar categoria</h3>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <form action="" method="post">
+          <div class="modal-body">
+            Novo nome da categoria:<br>
+            <input type="text" placeholder="Digite aqui o novo nome desta categoria...">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+            <button type="submit" class="btn btn-primary">Salvar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade deleteCategoria" id="modalDelCateg" tabindex="-1" role="dialog"
+    aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title" id="exampleModalLongTitle">Deletar categoria</h3>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <form action="" method="post">
+          <div class="modal-body">
+            <h4>Tem certeza que deseja deletar essa categoria?</h4>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+            <button type="submit" class="btn btn-primary">Sim, quero deletar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade addCategoria" id="modalAddCateg" tabindex="-1" role="dialog"
+    aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title" id="exampleModalLongTitle">Adicionar nova categoria</h3>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <form action="" method="post">
+          <div class="modal-body">
+            Nome da nova categoria:<br>
+            <input type="text" placeholder="Escreva aqui o nome da nova categoria...">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+            <button type="submit" class="btn btn-primary">Adicionar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
