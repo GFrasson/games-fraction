@@ -9,14 +9,16 @@ class UsuarioController
 {
     public function index()
     {
-        $usuario = App::get('database')->selectAll('usuario');
+        $usuario = App::get('database')->selectAll('usuarios');
 
         $tables = [
 
-            'usuario' => $usuario, 
+            'usuarios' => $usuario, 
         ]; 
 
-        return view('admUsuarios', $tables); 
+        return view('admin/admUsuarios', $tables); 
+        //header('location: /admUsuarios'); 
+        
     }
 
     public function show()
@@ -30,17 +32,17 @@ class UsuarioController
         
         $parameters = [ 
 
-            'nome' => $_POST['nome'] ,
             'email' => $_POST['email'],
-            'senha' => $_POST['senha'],
+            'nome' => $_POST['nome'] ,
+            'senha' => $_POST['senha']
     
         ]; 
     
-        app::get('database')->insert('usuario', $parameters); 
+        app::get('database')->insert('usuarios', $parameters); 
     
      
     
-        header('Location: /admUsuarios'); 
+        header('location: /admUsuarios'); 
     
     
     }
@@ -65,7 +67,7 @@ class UsuarioController
         
         app::get('database')->delete('usuarios', $_POST['id']); 
 
-        header('Location: /admUsuarios'); 
+        header('location: /admUsuarios'); 
 
 
     }

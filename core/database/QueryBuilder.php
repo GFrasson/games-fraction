@@ -48,7 +48,12 @@ class QueryBuilder
 
     public function insert($table, $parametros)
     {
-        $sql = "insert into '{$table}' (coluna) values ('{$parametros['coluna']}')";
+        $columns = implode(", ",array_keys($parametros));
+        // var_dump($columns);
+        $values = implode(":",array_values($parametros));
+        // var_dump($values);
+        // die();
+        $sql = "insert into {$table} ({$columns}) values ('".implode("', '", $parametros)."')";
 
         try
         {
@@ -63,7 +68,18 @@ class QueryBuilder
 
     public function edit()
     {
-         
+        $sql = "update {$table} SET {$parametros['coluna']} where id = $id";
+       
+
+        try
+        {
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute();
+
+        } catch (Exception $e)
+        {
+            die($e->getMessage());
+        }
     }
 
     public function delete($table,$id)
