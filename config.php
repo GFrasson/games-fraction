@@ -2,7 +2,7 @@
 
 return [
     'database' => [
-        'name' => 'nome_do_banco',
+        'name' => 'crud',
         'username' => 'root',
         'password' => '',
         'connection' => 'mysql:host=127.0.0.1',
