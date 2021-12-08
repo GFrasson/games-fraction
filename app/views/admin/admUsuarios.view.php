@@ -84,112 +84,11 @@
 
           <!-- Modais: -->
 
-          <!-- Modal Edit -->
-          <div class="modal fade editUsuario" id="edtUsuario-<?= $usuario->id ?>" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-lg">
-              <div class="modal-content">
-                <div class="modal-header cabecalho">
-                  <h5 class="modal-title" id="exampleModalLabel">Editar Usuário</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div class="modal-body">
-                  <form>
-
-                          <div class="form-group">
-                            <label for="input-nome">Nome:</label>
-                            <input type="text" class="form-control" id="nome" placeholder="Fulaninho da Silva">
-                          </div>
-
-                          <div class="form-group">
-                            <label for="input-nome" >Email:</label>
-                            <input type="text" class="form-control" id="nome" required placeholder="Fulaninho@gmail.com">
-                          </div>
-
-                          <div class="form-group">
-                            <label for="descricao">Senha</label>
-                            <input type="password" class="form-control" id="senha" placeholder="***">
-                          </div>
-
-                          <p> </p>
-                  </form>
-
-                </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary modbut" data-dismiss="modal">Fechar</button>
-                      <button type="submit" class="btn btn-primary modbut">Confirmar</button>
-                    </div>
-              </div>
-
-            </div>
-          </div>
-          <!-- Fim Modal Edit -->
-
-          <!-- Modal View -->
-          <div class="modal fade viewUsuario" id="viewUsuario-<?= $usuario->id ?>" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-lg">
-              <div class="modal-content">
-                <div class="modal-header cabecalho">
-                  <h5 class="modal-title" id="exampleModalLabel">Visualizar Usuário</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div class="modal-body">
-                  <!-- <form> -->
-
-                    <div class="form-group">
-                      <label for="input-nome">Nome:</label>
-                      <input type="text" class="form-control" id="nome" disabled placeholder="<?= $usuario->nome ?>">
-              
-                    </div>
-
-                    <div class="form-group">
-                      <label for="input-nome" >Email:</label>
-                      <input type="text" class="form-control" id="nome" disabled placeholder="<?= $usuario->email ?>">
-                    </div>
-
-                    <p> </p>
-
-                  <!-- </form> -->
-
-                </div>
-                    <div class="modal-footer">
-                      <button type="submit" class="btn btn-secondary modbut" data-dismiss="modal">Fechar</button>
-                    </div>
-              </div>
-
-            </div>
-          </div>
-          <!-- Fim Modal view -->
-
-          <!-- Modal delete -->
-          <div class="modal fade deleteUsuario" id="deleteUsuario-<?= $usuario->id ?>" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-lg">
-              <div class="modal-content">
-                <div class="modal-header cabecalho">
-                  <h5 class="modal-title" id="exampleModalLabel">Deletar Usuário</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div class="modal-body">
-                  <form>
-                    Certeza que deseja excluir?
-                    <p> </p>
-                  </form>
-
-                </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary modbut" data-dismiss="modal">Cancelar</button>
-                      <button type="submit" class="btn btn-primary modbut">Confirmar</button>
-                    </div>
-              </div>
-
-            </div>
-          </div>
-          <!-- Fim Modal delete -->
+          <?php require 'modais-usuario/modalEdit.php' ?>
+          <?php require 'modais-usuario/modalView.php' ?>
+          <?php require 'modais-usuario/modalDelete.php' ?>
+          
+          
 
           <tr class="colunaacoes">
           

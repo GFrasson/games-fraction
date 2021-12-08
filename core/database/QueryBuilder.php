@@ -66,20 +66,25 @@ class QueryBuilder
         }
     }
 
-    public function edit()
+    public function edit($table, $parametros)
     {
-        $sql = "update {$table} SET {$parametros['coluna']} where id = $id";
-       
+        $columns = implode(", ",array_keys($parametros));
 
-        try
-        {
-            $stmt = $this->pdo->prepare($sql);
-            $stmt->execute();
+        $sql = "update $table set $columns='{".implode("', '", $parametros)."}'";
 
-        } catch (Exception $e)
-        {
-            die($e->getMessage());
-        }
+      try 
+      {
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->execute();
+
+      }
+
+      catch (Exception $e)
+      {
+
+         die($e->getMessage());
+
+      }
     }
 
     public function delete($table,$id)
