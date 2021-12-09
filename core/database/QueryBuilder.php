@@ -16,7 +16,7 @@ class QueryBuilder
 
     public function selectAll($table)
     {
-        $sql = "select * from {$table}";
+        $sql = "SELECT * FROM {$table}";
 
         try
         {
@@ -32,7 +32,7 @@ class QueryBuilder
 
     public function select($table)
     {
-        $sql= "select {$coluna} from {$table}";
+        $sql= "SELECT {$coluna} FROM {$table}";
 
         try
         {
@@ -50,15 +50,16 @@ class QueryBuilder
     {
         $columns = implode(", ",array_keys($parametros));
         // var_dump($columns);
-        $values = implode(":",array_values($parametros));
-        // var_dump($values);
-        // die();
-        $sql = "insert into {$table} ({$columns}) values ('".implode("', '", $parametros)."')";
+        $values = ":" . implode(", :",array_keys($parametros));
+        
+         
+        $sql = "INSERT INTO {$table} ({$columns}) VALUES ({$values})";
+        
 
         try
         {
             $stmt = $this->pdo->prepare($sql);
-            $stmt->execute();
+            $stmt->execute($parametros);
 
         } catch (Exception $e)
         {
@@ -66,16 +67,24 @@ class QueryBuilder
         }
     }
 
-    public function edit($table, $parametros)
+    public function edit($table, $parametros, $id)
     {
-        $columns = implode(", ",array_keys($parametros));
+        $sql = "UPDATE {$table} SET ";
+        $colunas = [];
+        foreach (array_keys($parametros) as $parametro){
+            array_push($colunas,"{$parametro} = :{$parametro}");
+            
+        }
+        $sql .= implode(", ",$colunas);
+        $sql .= " WHERE id = :id";
 
-        $sql = "update $table set $columns='{".implode("', '", $parametros)."}'";
-
+        
+        $parametros["id"]=$id;
+        
       try 
       {
         $stmt = $this->pdo->prepare($sql);
-        $stmt->execute();
+        $stmt->execute($parametros);
 
       }
 
@@ -89,7 +98,7 @@ class QueryBuilder
 
     public function delete($table,$id)
     {
-        $sql = "delete from {$table} where id = {$id}";
+        $sql = "DELETE FROM {$table} WHERE id = {$id}";
 
         try
         {

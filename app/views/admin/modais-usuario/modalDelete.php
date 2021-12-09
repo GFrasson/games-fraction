@@ -1,5 +1,5 @@
 <!-- Modal delete -->
-<div class="modal fade deleteUsuario" id="deleteUsuario-<?= $usuario->id ?>" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+<div class="modal fade deleteUsuario-<?= $usuario->id ?>" id="deleteUsuario-<?= $usuario->id ?>" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header cabecalho">
@@ -13,15 +13,16 @@
                 <form method="POST" action="usuario/delete">
                     Certeza que deseja excluir?
                     <p> </p>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary modbut" data-dismiss="modal">Cancelar</button>
+                        <input type="hidden" value="<?= $usuario->id ?>" name="id">
+                        <button type="submit" class="btn btn-primary modbut">Confirmar</button>
+                    </div>
                 </form>
 
             </div>
 
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary modbut" data-dismiss="modal">Cancelar</button>
-                <input type="hidden" value="<?= $usuario->id ?>" name="id">
-                <button type="submit" class="btn btn-primary modbut">Confirmar</button>
-            </div>
+            
         </div>
 
     </div>

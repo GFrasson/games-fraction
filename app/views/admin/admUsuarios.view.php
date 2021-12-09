@@ -79,8 +79,10 @@
 
       <tbody>
         <?php
+
        
         foreach ($usuarios as $usuario): ?>
+        
 
           <!-- Modais: -->
 
@@ -95,15 +97,15 @@
             <th class="roxo" scope="row">
 
               <div class="btn-grop icones d-flex flex-wrap"> 
-                <button type="button" class="btn btn-primary botaoacao" data-toggle="modal" data-target="#viewUsuario-<?= $usuario->id ?>">
+                <button type="button" class="btn btn-primary botaoacao" data-toggle="modal" data-target=".viewUsuario-<?= $usuario->id ?>">
                   <i class="fas fa-eye iconebotao"></i>
                 </button>
 
-                <button type="button" class="btn btn-primary botaoacao" data-toggle="modal" data-target="#edtUsuario-<?= $usuario->id ?>">
+                <button type="button" class="btn btn-primary botaoacao" data-toggle="modal" data-target=".editUsuario-<?= $usuario->id ?>">
                   <i class="far fa-edit iconebotao"></i> 
                 </button>
                 
-                <button type="button" class="btn btn-primary botaoacao" data-toggle="modal" data-target="#deleteUsuario-<?= $usuario->id ?>">
+                <button type="button" class="btn btn-primary botaoacao" data-toggle="modal" data-target=".deleteUsuario-<?= $usuario->id ?>">
                   <i class="fas fa-trash iconebotao"></i>
                 </button>
               </div>

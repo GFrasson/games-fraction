@@ -67,7 +67,7 @@ class UsuarioController
     
         ]; 
 
-        app::get('database')->update('usuarios', $parameters, $_POST['id']);
+        app::get('database')->edit('usuarios', $parameters, $_POST['id']);
         header('location: /admUsuarios'); 
     }
 
