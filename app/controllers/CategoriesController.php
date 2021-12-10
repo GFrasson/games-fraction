@@ -9,10 +9,8 @@ class CategoriesController
 {
     public function index()
     {
-        $gamesfraction 
-
-
-
+        
+        
         return view('admin/viewADMcategorias');
     }
 

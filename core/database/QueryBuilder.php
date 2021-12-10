@@ -1,118 +1,83 @@
 <?php
 
-namespace App\Core\Database;
+namespace App\Controllers;
 
-use PDO;
+use App\Core\App;
+use Exception;
 
-class QueryBuilder
+class UsuarioController
 {
-    protected $pdo;
-
-
-    public function __construct($pdo) ///construtor
+    public function index()
     {
-        $this->pdo = $pdo; 
-    }
+        $usuario = App::get('database')->selectAll('usuarios');
 
-    public function selectAll($table)
-    {
-        $sql = "SELECT * FROM {$table}";
+        $tables = [
 
-        try
-        {
-            $stmt = $this->pdo->prepare($sql);
-            $stmt->execute();
+            'usuarios' => $usuario, 
+        ]; 
 
-            return $stmt->fetchAll(PDO::FETCH_CLASS);
-        } catch (Exception $e)
-        {
-            die($e->getMessage());
-        }
-    }
-
-    public function select($table)
-    {
-        $sql= "SELECT {$coluna} FROM {$table}";
-
-        try
-        {
-            $stmt = $this->pdo->prepare($sql);
-            $stmt->execute();
-
-            return $stmt->fetchAll(PDO::FETCH_CLASS);
-        } catch (Exception $e)
-        {
-            die($e->getMessage());
-        }
-    }
-
-    public function insert($table, $parametros)
-    {
-        $columns = implode(", ",array_keys($parametros));
-        // var_dump($columns);
-        $values = ":" . implode(", :",array_keys($parametros));
+        return view('admin/admUsuarios', $tables); 
+        //header('location: /admUsuarios'); 
         
+    }
+
+    public function show()
+    {
          
-        $sql = "INSERT INTO {$table} ({$columns}) VALUES ({$values})";
-        
 
-        try
-        {
-            $stmt = $this->pdo->prepare($sql);
-            $stmt->execute($parametros);
-
-        } catch (Exception $e)
-        {
-            die($e->getMessage());
-        }
     }
 
-    public function edit($table, $parametros, $id)
+    public function create()
     {
-        $sql = "UPDATE {$table} SET ";
-        $colunas = [];
-        foreach (array_keys($parametros) as $parametro){
-            array_push($colunas,"{$parametro} = :{$parametro}");
-            
-        }
-        $sql .= implode(", ",$colunas);
-        $sql .= " WHERE id = :id";
-
         
-        $parametros["id"]=$id;
-        
-      try 
-      {
-        $stmt = $this->pdo->prepare($sql);
-        $stmt->execute($parametros);
+        $parameters = [ 
 
-      }
-
-      catch (Exception $e)
-      {
-
-         die($e->getMessage());
-
-      }
+            'email' => $_POST['email'],
+            'nome' => $_POST['nome'] ,
+            'senha' => $_POST['senha']
+    
+        ]; 
+    
+        app::get('database')->insert('usuarios', $parameters); 
+    
+     
+    
+        header('location: /admUsuarios'); 
+    
+    
     }
 
-    public function delete($table,$id)
+    public function store()
     {
-        $sql = "DELETE FROM {$table} WHERE id = {$id}";
 
-        try
-        {
-            $stmt = $this->pdo->prepare($sql);
-            $stmt->execute();
-
-        } catch (Exception $e)
-        {
-            die($e->getMessage());
-        }
     }
 
-    public function read()
+    public function edit()
     {
-      
+  
+    }
+
+    public function update()
+    {
+        $parameters = [ 
+
+            'email' => $_POST['email'],
+            'nome' => $_POST['nome'] ,
+            'senha' => $_POST['senha']
+    
+        ]; 
+
+        app::get('database')->edit('usuarios', $parameters, $_POST['id']);
+        header('location: /admUsuarios'); 
+    }
+
+    public function delete()
+    {
+        
+        app::get('database')->delete('usuarios', $_POST['id']); 
+
+        header('location: /admUsuarios'); 
+
+
     }
 }
