@@ -42,8 +42,9 @@ class UsuarioController
         
             ]; 
         
-            app::get('database')->insert('usuarios', $parameters); 
-        
+            if ($parameters['email'] && $parameters['nome'] && $parameters['senha']) {
+                app::get('database')->insert('usuarios', $parameters); 
+            }
         
         
             header('location: /admUsuarios'); 
@@ -64,18 +65,19 @@ class UsuarioController
     public function update()
     {
 
-        if (empty($_POST['email'] && $_POST['nome'] && $_POST['senha']) == false) {
-            $parameters = [ 
-
-                'email' => $_POST['email'],
-                'nome' => $_POST['nome'] ,
-                'senha' => $_POST['senha']
         
-            ]; 
+        $parameters = [ 
 
-            app::get('database')->edit('usuarios', $parameters, $_POST['id']);
-            header('location: /admUsuarios'); 
+            'email' => $_POST['email'],
+            'nome' => $_POST['nome'] ,
+            'senha' => $_POST['senha']
+    
+        ]; 
+        
+        if ($parameters['email'] && $parameters['nome'] && $parameters['senha']) {
+            app::get('database')->edit('usuarios', $parameters, $_POST['id']); 
         } 
+        header('location: /admUsuarios');
     }
 
     public function delete()
