@@ -30,7 +30,7 @@ class QueryBuilder
         }
     }
 
-    public function select($table)
+    public function select($table,$coluna)
     {
         $sql= "SELECT {$coluna} FROM {$table}";
 

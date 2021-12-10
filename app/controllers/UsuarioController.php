@@ -7,6 +7,8 @@ use Exception;
 
 class UsuarioController
 {
+
+
     public function index()
     {
         $usuario = App::get('database')->selectAll('usuarios');
@@ -29,21 +31,23 @@ class UsuarioController
 
     public function create()
     {
-        
-        $parameters = [ 
 
-            'email' => $_POST['email'],
-            'nome' => $_POST['nome'] ,
-            'senha' => $_POST['senha']
-    
-        ]; 
-    
-        app::get('database')->insert('usuarios', $parameters); 
-    
-     
-    
-        header('location: /admUsuarios'); 
-    
+        if (empty($_POST['email'] && $_POST['nome'] && $_POST['senha'])) {
+
+            $parameters = [ 
+
+                'email' => $_POST['email'],
+                'nome' => $_POST['nome'] ,
+                'senha' => $_POST['senha']
+        
+            ]; 
+        
+            app::get('database')->insert('usuarios', $parameters); 
+        
+        
+        
+            header('location: /admUsuarios'); 
+        }
     
     }
 
@@ -59,16 +63,19 @@ class UsuarioController
 
     public function update()
     {
-        $parameters = [ 
 
-            'email' => $_POST['email'],
-            'nome' => $_POST['nome'] ,
-            'senha' => $_POST['senha']
-    
-        ]; 
+        if (empty($_POST['email'] && $_POST['nome'] && $_POST['senha']) == false) {
+            $parameters = [ 
 
-        app::get('database')->edit('usuarios', $parameters, $_POST['id']);
-        header('location: /admUsuarios'); 
+                'email' => $_POST['email'],
+                'nome' => $_POST['nome'] ,
+                'senha' => $_POST['senha']
+        
+            ]; 
+
+            app::get('database')->edit('usuarios', $parameters, $_POST['id']);
+            header('location: /admUsuarios'); 
+        } 
     }
 
     public function delete()
