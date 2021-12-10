@@ -55,54 +55,8 @@
       </thead>
       <tbody>
         <tr>
-          <th scope="row">1
-
-            <div class="icones d-flex flex-wrap">
-
-              <button type="button" class="btn btn-primary botaoacao verCateg" data-toggle="modal"
-                data-target=".viewCategoria">
-                <img src="../../../public/assets/olho.png">
-              </button>
-              <button type="button" class="btn btn-primary botaoacao editCateg" data-toggle="modal"
-                data-target=".editCategoria">
-                <img src="../../../public/assets/lapis.png">
-              </button>
-              <button type="button" class="btn btn-primary botaoacao deleteCateg" data-toggle="modal"
-                data-target=".deleteCategoria">
-                <img src="../../../public/assets/lixo.png">
-              </button>
-
-
-
-            </div>
-          </th>
-          <td>Jogos Mídia Física</td>
-        </tr>
-        <tr>
-          <th scope="row">2
-
-            <div class="icones d-flex flex-wrap">
-
-              <button type="button" class="btn btn-primary botaoacao verCateg" data-toggle="modal"
-                data-target=".viewCategoria">
-                <img src="../../../public/assets/olho.png">
-              </button>
-              <button type="button" class="btn btn-primary botaoacao editCateg" data-toggle="modal"
-                data-target=".editCategoria">
-                <img src="../../../public/assets/lapis.png">
-              </button>
-              <button type="button" class="btn btn-primary botaoacao deleteCateg" data-toggle="modal"
-                data-target=".deleteCategoria">
-                <img src="../../../public/assets/lixo.png">
-              </button>
-
-            </div>
-
-          </th>
-          <td>Jogos Mídia Digital</td>
-        </tr>
-        <tr>
-          <th scope="row">3
+          <?php foreach ($categorias as $categoria):?>
+          <th scope="row"><?= $categoria-> id ?>
 
             <div class="icones d-flex flex-wrap">
 
@@ -123,8 +77,9 @@
             </div>
 
           </th>
-          <td>Periféricos</td>
+          <td><?= $categoria-> nome_categoria ?></td>
         </tr>
+        <?php endforeach ;?>
       </tbody>
     </table>
 
@@ -141,7 +96,11 @@
           </button>
         </div>
         <div class="modal-body">
-          *nome da categoria em questão*
+          <?php foreach ($categorias as $categoria):?>
+
+        <?= $categoria-> nome_categoria ?>
+
+        <?php endforeach ;?>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">OK</button>
@@ -160,7 +119,7 @@
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
-        <form action="" method="post">
+        <form action="" method="POST">
           <div class="modal-body">
             Novo nome da categoria:<br>
             <input type="text" placeholder="Digite aqui o novo nome desta categoria...">
@@ -184,7 +143,7 @@
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
-        <form action="" method="post">
+        <form action="" method="POST">
           <div class="modal-body">
             <h4>Tem certeza que deseja deletar essa categoria?</h4>
           </div>
@@ -207,10 +166,10 @@
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
-        <form action="" method="post">
+        <form action="/categorias/create" method="POST">
           <div class="modal-body">
             Nome da nova categoria:<br>
-            <input type="text" placeholder="Escreva aqui o nome da nova categoria...">
+            <input type="text" name="nome_categoria" placeholder="Escreva aqui o nome da nova categoria...">
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>

@@ -5,19 +5,19 @@ namespace App\Controllers;
 use App\Core\App;
 use Exception;
 
-class UsuarioController
+class CategoriesController
 {
     public function index()
     {
-        $usuario = App::get('database')->selectAll('usuarios');
+        $categorias = App::get('database')->selectAll('categorias');
 
         $tables = [
 
-            'usuarios' => $usuario, 
+            'categorias' => $categorias, 
         ]; 
 
-        return view('admin/admUsuarios', $tables); 
-        //header('location: /admUsuarios'); 
+        return view('admin/viewADMcategorias', $tables); 
+        //header('location: /viewADMcategorias'); 
         
     }
 
@@ -32,17 +32,15 @@ class UsuarioController
         
         $parameters = [ 
 
-            'email' => $_POST['email'],
-            'nome' => $_POST['nome'] ,
-            'senha' => $_POST['senha']
+            'nome_categoria'f => $_POST['nome_categoria'] 
     
         ]; 
     
-        app::get('database')->insert('usuarios', $parameters); 
+        app::get('database')->insert('categorias', $parameters); 
     
      
     
-        header('location: /admUsuarios'); 
+        header('location: /viewADMcategorias'); 
     
     
     }
@@ -61,22 +59,20 @@ class UsuarioController
     {
         $parameters = [ 
 
-            'email' => $_POST['email'],
-            'nome' => $_POST['nome'] ,
-            'senha' => $_POST['senha']
+            'nome' => $_POST['nome'] 
     
         ]; 
 
-        app::get('database')->edit('usuarios', $parameters, $_POST['id']);
-        header('location: /admUsuarios'); 
+        app::get('database')->edit('categorias', $parameters, $_POST['id']);
+        header('location: /viewADMcategorias'); 
     }
 
     public function delete()
     {
         
-        app::get('database')->delete('usuarios', $_POST['id']); 
+        app::get('database')->delete('categorias', $_POST['id']); 
 
-        header('location: /admUsuarios'); 
+        header('location: /viewADMcategorias'); 
 
 
     }
