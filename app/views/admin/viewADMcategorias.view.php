@@ -166,7 +166,7 @@
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
-        <form action="/categorias/create" method="POST">
+        <form action="categorias/create" method="POST">
           <div class="modal-body">
             Nome da nova categoria:<br>
             <input type="text" name="nome_categoria" placeholder="Escreva aqui o nome da nova categoria...">

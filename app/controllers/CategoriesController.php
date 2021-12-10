@@ -32,15 +32,15 @@ class CategoriesController
         
         $parameters = [ 
 
-            'nome_categoria'f => $_POST['nome_categoria'] 
-    
+            'nome_categoria' => $_POST['nome_categoria']
+        
         ]; 
     
         app::get('database')->insert('categorias', $parameters); 
     
      
     
-        header('location: /viewADMcategorias'); 
+        header('location: /categorias'); 
     
     
     }
