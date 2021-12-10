@@ -1,83 +1,120 @@
 <?php
 
-namespace App\Controllers;
+namespace App\Core\Database;
 
-use App\Core\App;
+use PDO;
+
 use Exception;
 
-class UsuarioController
+class QueryBuilder
 {
-    public function index()
+    protected $pdo;
+
+
+    public function __construct($pdo) ///construtor
     {
-        $usuario = App::get('database')->selectAll('usuarios');
-
-        $tables = [
-
-            'usuarios' => $usuario, 
-        ]; 
-
-        return view('admin/admUsuarios', $tables); 
-        //header('location: /admUsuarios'); 
-        
+        $this->pdo = $pdo; 
     }
 
-    public function show()
+    public function selectAll($table)
     {
+        $sql = "SELECT * FROM {$table}";
+
+        try
+        {
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute();
+
+            return $stmt->fetchAll(PDO::FETCH_CLASS);
+        } catch (Exception $e)
+        {
+            die($e->getMessage());
+        }
+    }
+
+    public function select($table, $coluna)
+    {
+        $sql= "SELECT {$coluna} FROM {$table}";
+
+        try
+        {
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute();
+
+            return $stmt->fetchAll(PDO::FETCH_CLASS);
+        } catch (Exception $e)
+        {
+            die($e->getMessage());
+        }
+    }
+
+    public function insert($table, $parametros)
+    {
+        $columns = implode(", ",array_keys($parametros));
+        // var_dump($columns);
+        $values = ":" . implode(", :",array_keys($parametros));
+        
          
-
-    }
-
-    public function create()
-    {
+        $sql = "INSERT INTO {$table} ({$columns}) VALUES ({$values})";
         
-        $parameters = [ 
 
-            'email' => $_POST['email'],
-            'nome' => $_POST['nome'] ,
-            'senha' => $_POST['senha']
-    
-        ]; 
-    
-        app::get('database')->insert('usuarios', $parameters); 
-    
-     
-    
-        header('location: /admUsuarios'); 
-    
-    
+        try
+        {
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute($parametros);
+
+        } catch (Exception $e)
+        {
+            die($e->getMessage());
+        }
     }
 
-    public function store()
+    public function edit($table, $parametros, $id)
     {
+        $sql = "UPDATE {$table} SET ";
+        $colunas = [];
+        foreach (array_keys($parametros) as $parametro){
+            array_push($colunas,"{$parametro} = :{$parametro}");
+            
+        }
+        $sql .= implode(", ",$colunas);
+        $sql .= " WHERE id = :id";
 
-    }
-
-    public function edit()
-    {
-  
-    }
-
-    public function update()
-    {
-        $parameters = [ 
-
-            'email' => $_POST['email'],
-            'nome' => $_POST['nome'] ,
-            'senha' => $_POST['senha']
-    
-        ]; 
-
-        app::get('database')->edit('usuarios', $parameters, $_POST['id']);
-        header('location: /admUsuarios'); 
-    }
-
-    public function delete()
-    {
         
-        app::get('database')->delete('usuarios', $_POST['id']); 
+        $parametros["id"]=$id;
+        
+      try 
+      {
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->execute($parametros);
 
-        header('location: /admUsuarios'); 
+      }
 
+      catch (Exception $e)
+      {
 
+         die($e->getMessage());
+
+      }
+    }
+
+    public function delete($table,$id)
+    {
+        $sql = "DELETE FROM {$table} WHERE id = {$id}";
+
+        try
+        {
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute();
+
+        } catch (Exception $e)
+        {
+            die($e->getMessage());
+        }
+    }
+
+    public function read()
+    {
+      
     }
 }
