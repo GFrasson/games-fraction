@@ -32,23 +32,25 @@ class UsuarioController
     public function create()
     {
 
-        if (empty($_POST['email'] && $_POST['nome'] && $_POST['senha'])) {
+        
 
-            $parameters = [ 
+        $parameters = [ 
 
-                'email' => $_POST['email'],
-                'nome' => $_POST['nome'] ,
-                'senha' => $_POST['senha']
-        
-            ]; 
-        
-            if ($parameters['email'] && $parameters['nome'] && $parameters['senha']) {
-                app::get('database')->insert('usuarios', $parameters); 
-            }
-        
-        
-            header('location: /admUsuarios'); 
+            'email' => $_POST['email'],
+            'nome' => $_POST['nome'] ,
+            'senha' => $_POST['senha']
+    
+        ]; 
+
+        $parameters['senha'] = md5($parameters['senha']);
+    
+        if ($parameters['email'] && $parameters['nome'] && $parameters['senha']) {
+            app::get('database')->insert('usuarios', $parameters); 
         }
+    
+    
+        header('location: /admUsuarios'); 
+        
     
     }
 
@@ -73,8 +75,12 @@ class UsuarioController
             'senha' => $_POST['senha']
     
         ]; 
+
+        if(empty($parameters['senha'])){
+            unset($parameters['senha']);
+        }
         
-        if ($parameters['email'] && $parameters['nome'] && $parameters['senha']) {
+        if ($parameters['email'] && $parameters['nome'] ) {
             app::get('database')->edit('usuarios', $parameters, $_POST['id']); 
         } 
         header('location: /admUsuarios');
