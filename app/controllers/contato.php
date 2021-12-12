@@ -5,11 +5,11 @@ namespace App\Controllers;
 use App\Core\App;
 use Exception;
 
-class ExampleController
+class contato
 {
     public function index()
     {
-        
+        return view('site/projetoContato');
     }
 
     public function show()

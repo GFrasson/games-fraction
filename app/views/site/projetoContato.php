@@ -60,7 +60,7 @@
 
 
     <div class="box">
-        <form name="form-contato" action=" nethod="POST">
+        <form name="form-contato" action="" method="POST">
             <fieldset>
                 <legend><strong> Contato</strong></legend>
                 
