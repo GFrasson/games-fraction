@@ -42,9 +42,10 @@ class UsuarioController
     
         ]; 
 
-        $parameters['senha'] = md5($parameters['senha']);
+        
     
         if ($parameters['email'] && $parameters['nome'] && $parameters['senha']) {
+            $parameters['senha'] = md5($parameters['senha']);
             app::get('database')->insert('usuarios', $parameters); 
         }
     
@@ -78,6 +79,8 @@ class UsuarioController
 
         if(empty($parameters['senha'])){
             unset($parameters['senha']);
+        } else {
+            $parameters['senha'] = md5($parameters['senha']);
         }
         
         if ($parameters['email'] && $parameters['nome'] ) {
