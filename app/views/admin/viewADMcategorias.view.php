@@ -61,15 +61,15 @@
             <div class="icones d-flex flex-wrap">
 
               <button type="button" class="btn btn-primary botaoacao verCateg" data-toggle="modal"
-                data-target=".viewCategoria">
+                data-target=".viewCategoria-<?= $categoria-> id ?>">
                 <img src="../../../public/assets/olho.png">
               </button>
               <button type="button" class="btn btn-primary botaoacao editCateg" data-toggle="modal"
-                data-target=".editCategoria">
+                data-target=".editCategoria-<?= $categoria-> id ?>">
                 <img src="../../../public/assets/lapis.png">
               </button>
               <button type="button" class="btn btn-primary botaoacao deleteCateg" data-toggle="modal"
-                data-target=".deleteCategoria">
+                data-target=".deleteCategoria-<?= $categoria-> id ?>">
                 <img src="../../../public/assets/lixo.png">
               </button>
 
@@ -85,31 +85,32 @@
 
   </div>
 
-  <div class="modal fade viewCategoria" id="modalViewCateg" tabindex="-1" role="dialog"
-    aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h3 class="modal-title" id="exampleModalLongTitle">Visualizar categoria</h3>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <?php foreach ($categorias as $categoria):?>
+  <?php foreach ($categorias as $categoria):?>
+    <div class="modal fade viewCategoria-<?= $categoria-> id ?>" id="modalViewCateg" tabindex="-1" role="dialog"
+      aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title" id="exampleModalLongTitle">Visualizar categoria</h3>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+          
+          <?= $categoria-> nome_categoria ?>
 
-        <?= $categoria-> nome_categoria ?>
-
-        <?php endforeach ;?>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">OK</button>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">OK</button>
+          </div>
         </div>
       </div>
     </div>
-  </div>
+  
 
-  <div class="modal fade editCategoria" id="modalEditCateg" tabindex="-1" role="dialog"
+  
+  <div class="modal fade editCategoria-<?= $categoria-> id ?>" id="modalEditCateg" tabindex="-1" role="dialog"
     aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
@@ -119,13 +120,14 @@
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
-        <form action="" method="POST">
+        <form action="categorias/edit" method="POST">
           <div class="modal-body">
             Novo nome da categoria:<br>
-            <input type="text" placeholder="Digite aqui o novo nome desta categoria...">
+            <input type="text" name="nome_categoria" value="<?= $categoria-> nome_categoria ?>">
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+            <input type="hidden" value="<?= $categoria->id ?>" name="id">
             <button type="submit" class="btn btn-primary">Salvar</button>
           </div>
         </form>
@@ -133,7 +135,7 @@
     </div>
   </div>
 
-  <div class="modal fade deleteCategoria" id="modalDelCateg" tabindex="-1" role="dialog"
+  <div class="modal fade deleteCategoria-<?= $categoria-> id ?>" id="modalDelCateg" tabindex="-1" role="dialog"
     aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
@@ -143,18 +145,20 @@
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
-        <form action="" method="POST">
+        <form action="categorias/delete" method="POST">
           <div class="modal-body">
             <h4>Tem certeza que deseja deletar essa categoria?</h4>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+            <input type="hidden" value="<?= $categoria->id ?>" name="id">
             <button type="submit" class="btn btn-primary">Sim, quero deletar</button>
           </div>
         </form>
       </div>
     </div>
   </div>
+  <?php endforeach ;?>
 
   <div class="modal fade addCategoria" id="modalAddCateg" tabindex="-1" role="dialog"
     aria-labelledby="exampleModalCenterTitle" aria-hidden="true">

@@ -59,12 +59,12 @@ class CategoriesController
     {
         $parameters = [ 
 
-            'nome' => $_POST['nome'] 
+            'nome_categoria' => $_POST['nome_categoria'] 
     
         ]; 
 
         app::get('database')->edit('categorias', $parameters, $_POST['id']);
-        header('location: /viewADMcategorias'); 
+        header('location: /categorias'); 
     }
 
     public function delete()
@@ -72,7 +72,7 @@ class CategoriesController
         
         app::get('database')->delete('categorias', $_POST['id']); 
 
-        header('location: /viewADMcategorias'); 
+        header('location: /categorias'); 
 
 
     }
