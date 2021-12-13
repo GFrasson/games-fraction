@@ -34,11 +34,12 @@ class CategoriesController
 
             'nome_categoria' => $_POST['nome_categoria']
         
-        ]; 
+        ];
+        if (trim($parameters['nome_categoria'])){ 
     
         app::get('database')->insert('categorias', $parameters); 
     
-     
+        }
     
         header('location: /categorias'); 
     
@@ -63,7 +64,11 @@ class CategoriesController
     
         ]; 
 
-        app::get('database')->edit('categorias', $parameters, $_POST['id']);
+        if (trim($parameters['nome_categoria'])){
+
+            app::get('database')->edit('categorias', $parameters, $_POST['id']);
+
+        }
         header('location: /categorias'); 
     }
 
