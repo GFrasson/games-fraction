@@ -1,9 +1,8 @@
 <?php
     
-    $router->get('projetoContato', 'contato@index');
+    $router->get('projetoContato', 'ControllerContato@index');
 
-    // $router->post('usuario/create','UsuarioController@create');
-    // $router->post('usuario/delete','UsuarioController@delete');
-    // $router->post('usuario/update','UsuarioController@update');
+    $router->post('contato/enviar','ControllerContato@enviar');
+    
 
 ?>
