@@ -46,7 +46,7 @@
     border-bottom-right-radius: 30px;
     transition: all 1s;
 }
-.navbar-adm .topicos a{
+.navbar-adm .topicos .icon-container{
     font-size: 18px;
     font-family: 'Bebas Neue', cursive;
     font-weight: 500;
@@ -61,9 +61,10 @@
     border-color: #ca4727;
 
 }
-.navbar-adm .topicos a:hover{
+.navbar-adm .topicos .icon-container:hover{
     color: #ff3300;
     font-size: 22px;
+    cursor:pointer;
 }
 
 .navbar-adm #checkbox-menuS{
@@ -100,7 +101,7 @@
     transition: all 1s;
 }
    
-.navbar-adm .topicos-fechados a{
+.navbar-adm .topicos-fechados .icon-container{
    
    display: none;
 }
@@ -109,6 +110,25 @@
     transition: 1s;
     transition-timing-function: ease-in-out;
 }
+
+.navbar-adm .topicos .icon-container button{
+background: none;
+border: none;
+
+font-size: 18px;
+    font-family: 'Bebas Neue', cursive;
+    font-weight: 500;
+    text-decoration: none;
+    color: #ca4727;
+    text-align: center;
+}   
+
+.navbar-adm .topicos .icon-container button:hover{
+    color: #ff3300;
+    font-size: 22px;
+    cursor:pointer;
+}
+
 @media (max-width:450px){
 
     .navbar-adm .icon-nav{
@@ -116,7 +136,7 @@
         width: 30px;
     }
 
-    .navbar-adm .topicos a{
+    .navbar-adm .topicos .icon-container{
         font-size: 15px;
     }
     .navbar-adm .caixa{

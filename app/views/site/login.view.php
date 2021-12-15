@@ -55,7 +55,7 @@
         
         <main>
 
-            <form action="/pagina-processa-dados-do-form" method="post">
+            <form action="fazLogin" method="post">
 
                 <div class="quadrados">
                     <div class="email">
@@ -67,9 +67,18 @@
                         <span class="linha"><label for="senha">Senha:</label></span>
                         <input type="password" id="senha" name="senha" placeholder="******">
                         <i class="fas fa-eye hidden" id="aberto" onclick="mostrarSenha()"></i>
-                        <i class="fas fa-eye-slash" id="fechado" onclick="mostrarSenha()"></i>
+                        <i class="fas fa-eye-slash" id="fechado" onclick="mostrarSenha()"></i>  
                     </div>
 
+                    <span class="text-danger"><?php 
+
+                    if(isset($_SESSION["erro"]) == true){
+                        echo $_SESSION["erro"];
+                        unset($_SESSION["erro"]);
+                    }
+
+                    ?></span>
+                                    
                     <div class="botao">
                         <button type="submit">Login</button>
                     </div>

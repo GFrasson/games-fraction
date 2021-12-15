@@ -113,8 +113,19 @@ class QueryBuilder
         }
     }
 
-    public function read()
+    public function selectLogin($email)
     {
-      
+        $sql= "SELECT * FROM usuarios WHERE email = :email ";
+
+        try
+        {
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute(compact('email'));
+
+            return $stmt->fetchAll(PDO::FETCH_CLASS);
+        } catch (Exception $e)
+        {
+            die($e->getMessage());
+        }
     }
 }
