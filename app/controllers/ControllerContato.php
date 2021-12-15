@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use App\Core\App;
 use Exception;
+use PHPMaeiler\PHPMaeiler\PHPMaeiler;
 
 require 'mailer/PHPMailerAutoload.php';
 
