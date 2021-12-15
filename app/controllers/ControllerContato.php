@@ -4,9 +4,9 @@ namespace App\Controllers;
 
 use App\Core\App;
 use Exception;
-use PHPMaeiler\PHPMaeiler\PHPMaeiler;
+use PHPMailer\PHPMailer\PHPMailer;
 
-require 'mailer/PHPMailerAutoload.php';
+// require 'mailer/PHPMailerAutoload.php';
 
 
 class ControllerContato
