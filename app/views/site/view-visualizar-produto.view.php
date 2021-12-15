@@ -26,9 +26,9 @@
     </div>
 
     <nav id="botoes" class="botoes">
-      <a class="active" href="#home">Home</a>
-      <a href="#quemSomos">Quem somos</a>
-      <a href="#produtos">Produtos</a>
+      <a class="active" href="index">Home</a>
+      <a href="quemSomos">Quem somos</a>
+      <a href="produtos">Produtos</a>
       <a href="#contato">Contato</a>
       <a href="#login">Login</a>
     </nav>
@@ -132,18 +132,35 @@
     </div>
 
     <div class="item3">Fique por dentro das novidades do site<br> nos seguindo em nossas redes sociais!<br><br>
-      <img src="../../../public/assets/facebookIcon.png" height="50px" width="50px">
-      <img src="../../../public/assets/isntaIcon.png" height="50px" width="50px">
-      <img src="../../../public/assets/zapIcon.png" height="50px" width="50px"> <br>
-      <img src="../../../public/assets/twitterIcon.png" height="50px" width="50px">
-      <img src="../../../public/assets/linkedinIcon.png" height="50px" width="50px">
+     
+      <a href="https://www.facebook.com/">
+        <img src="../../../public/assets/facebookIcon.png" height="50px" width="50px"> 
+      </a>
 
+      <a href="https://www.instagram.com/">    
+         <img src="../../../public/assets/isntaIcon.png" height="50px" width="50px">  
+      </a>  
+      
+      <a href="https://web.whatsapp.com/">
+        <img src="../../../public/assets/zapIcon.png" height="50px" width="50px">    
+      </a>
+
+      <br>
+
+      <a href="https://twitter.com/">
+        <img src="../../../public/assets/twitterIcon.png" height="50px" width="50px">    
+      </a>
+      
+      <a href="https://www.linkedin.com/">
+        <img src="../../../public/assets/linkedinIcon.png" height="50px" width="50px">
+      </a>
 
     </div>
 
     <div class="item4"><iframe
-        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7410.180362620558!2d-43.3699111!3d-21.7767705!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x989b9f99b33491%3A0xd9b48a8f80341c0d!2sUniversidade%20Federal%20de%20Juiz%20de%20Fora!5e0!3m2!1spt-BR!2sbr!4v1636227153122!5m2!1spt-BR!2sbr"
-        width="100%" height="100%"></iframe></div>
+      src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7410.180362620558!2d-43.3699111!3d-21.7767705!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x989b9f99b33491%3A0xd9b48a8f80341c0d!2sUniversidade%20Federal%20de%20Juiz%20de%20Fora!5e0!3m2!1spt-BR!2sbr!4v1636227153122!5m2!1spt-BR!2sbr"
+      width="100%" height="100%"></iframe>
+    </div>
 
 
 

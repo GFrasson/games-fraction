@@ -30,9 +30,9 @@
             </div>
            
             <nav id="botoes" class="botoes"> 
-                <a class="active" href="#home">Home</a>
-                <a href="#quemSomos">Quem somos</a>
-                <a href="#produtos">Produtos</a>
+                <a class="active" href="index">Home</a>
+                <a href="quemSomos">Quem somos</a>
+                <a href="produtos">Produtos</a>
                 <a href="#contato">Contato</a>
                 <a href="#login">Login</a>
             </nav>

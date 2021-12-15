@@ -27,9 +27,9 @@
         </div>
        
         <nav id="botoes" class="botoes"> 
-            <a class="active" href="#home">Home</a>
-            <a href="#quemSomos">Quem somos</a>
-            <a href="#produtos">Produtos</a>
+            <a class="active" href="index">Home</a>
+            <a href="quemSomos">Quem somos</a>
+            <a href="produtos">Produtos</a>
             <a href="#contato">Contato</a>
             <a href="#login">Login</a>
         </nav>
@@ -57,7 +57,7 @@
             <div class="d-flex flex-wrap flex-card ">
 
                 <div class="card">
-                    <a href="/" class="link-card">
+                    <a href="view-visualizar-produto" class="link-card">
                         <div class="image-left">
                             <img
                                 src="https://image.api.playstation.com/cdn/UP0001/CUSA05904_00/IKYAgcRh0k3IOklJSDoNBTk5t5MSm7KE.png">
@@ -146,11 +146,27 @@
         </div>
         
         <div class="item3">Fique por dentro das novidades do site<br> nos seguindo em nossas redes sociais!<br><br>
-            <img src="../../../public/assets/facebookIcon.png" height="50px" width="50px">     
-            <img src="../../../public/assets/isntaIcon.png" height="50px" width="50px">     
-            <img src="../../../public/assets/zapIcon.png" height="50px" width="50px">     <br>
-            <img src="../../../public/assets/twitterIcon.png" height="50px" width="50px">     
-            <img src="../../../public/assets/linkedinIcon.png" height="50px" width="50px">
+            <a href="https://www.facebook.com/">
+                <img src="../../../public/assets/facebookIcon.png" height="50px" width="50px"> 
+            </a>
+
+            <a href="https://www.instagram.com/">    
+                <img src="../../../public/assets/isntaIcon.png" height="50px" width="50px">  
+            </a>  
+            
+            <a href="https://web.whatsapp.com/">
+                <img src="../../../public/assets/zapIcon.png" height="50px" width="50px">    
+            </a>
+
+            <br>
+
+            <a href="https://twitter.com/">
+                <img src="../../../public/assets/twitterIcon.png" height="50px" width="50px">    
+            </a>
+            
+            <a href="https://www.linkedin.com/">
+                <img src="../../../public/assets/linkedinIcon.png" height="50px" width="50px">
+            </a>
             
         
         </div>

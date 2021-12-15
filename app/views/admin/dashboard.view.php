@@ -40,7 +40,7 @@
     <main>
         <div class="container">
             <div class="card">
-                <a href="/">
+                <a href="admUsuarios">
 
                     <div class="header">
                         <i class="fas fa-user usuario icon"></i>
@@ -53,7 +53,7 @@
             </div>
 
             <div class="card">
-                <a href="/">
+                <a href="categorias">
 
                     <div class="header">
                         <i class="fas fa-clipboard-list icon"></i>
@@ -79,7 +79,7 @@
             </div>
 
             <div class="card">
-                <a href="/">
+                <a href="index">
                     <div class="header">
                         <i class="fas fa-sign-out-alt icon"></i>
                     </div>
