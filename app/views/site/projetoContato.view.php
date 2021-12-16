@@ -102,7 +102,7 @@
                 
             </fieldset>
             
-                <button class = "submit-form" type="submit" form="form-contato">Enviar</button>
+            <button class = "submit-form" type="submit">Enviar</button>
             
 
         </form>
