@@ -166,162 +166,20 @@
                 </div>
             </div>
             <div class="d-flex flex-wrap">
-                <div class="card" style="width: 18rem;">
-                    <a href="#">
-                        <img class="card-img-top" src="../../../public/img/gta v.png" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Gta V</h5>
-                            <p class="card-text-preco">R$ 96,00</p>
-                            <p class="card-text">Lorem ipsum dolor sit amet. Et commodi cumque ex soluta nulla non
-                                voluptates unde et minima possimus hic fugiat consequatur. Ab aliquid neque sed
-                                voluptate
-                                dolorem ut ducimus fuga.</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="card" style="width: 18rem;">
-                    <a href="#">
-                        <img class="card-img-top" src="../../../public/img/gta v.png" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Gta V</h5>
-                            <p class="card-text-preco">R$ 96,00</p>
-                            <p class="card-text">Lorem ipsum dolor sit amet. Et commodi cumque ex soluta nulla non
-                                voluptates unde et minima possimus hic fugiat consequatur. Ab aliquid neque sed
-                                voluptate
-                                dolorem ut ducimus fuga.</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="card" style="width: 18rem;">
-                    <a href="#">
-                        <img class="card-img-top" src="../../../public/img/gta v.png" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Gta V</h5>
-                            <p class="card-text-preco">R$ 96,00</p>
-                            <p class="card-text">Lorem ipsum dolor sit amet. Et commodi cumque ex soluta nulla non
-                                voluptates unde et minima possimus hic fugiat consequatur. Ab aliquid neque sed
-                                voluptate
-                                dolorem ut ducimus fuga.</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="card" style="width: 18rem;">
-                    <a href="#">
-                        <img class="card-img-top" src="../../../public/img/gta v.png" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Gta V</h5>
-                            <p class="card-text-preco">R$ 96,00</p>
-                            <p class="card-text">Lorem ipsum dolor sit amet. Et commodi cumque ex soluta nulla non
-                                voluptates unde et minima possimus hic fugiat consequatur. Ab aliquid neque sed
-                                voluptate
-                                dolorem ut ducimus fuga.</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="card" style="width: 18rem;">
-                    <a href="#">
-                        <img class="card-img-top" src="../../../public/img/gta v.png" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Gta V</h5>
-                            <p class="card-text-preco">R$ 96,00</p>
-                            <p class="card-text">Lorem ipsum dolor sit amet. Et commodi cumque ex soluta nulla non
-                                voluptates unde et minima possimus hic fugiat consequatur. Ab aliquid neque sed
-                                voluptate
-                                dolorem ut ducimus fuga.</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="card" style="width: 18rem;">
-                    <a href="#">
-                        <img class="card-img-top" src="../../../public/img/gta v.png" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Gta V</h5>
-                            <p class="card-text-preco">R$ 96,00</p>
-                            <p class="card-text">Lorem ipsum dolor sit amet. Et commodi cumque ex soluta nulla non
-                                voluptates unde et minima possimus hic fugiat consequatur. Ab aliquid neque sed
-                                voluptate
-                                dolorem ut ducimus fuga.</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="card" style="width: 18rem;">
-                    <a href="#">
-                        <img class="card-img-top" src="../../../public/img/gta v.png" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Gta V</h5>
-                            <p class="card-text-preco">R$ 96,00</p>
-                            <p class="card-text">Lorem ipsum dolor sit amet. Et commodi cumque ex soluta nulla non
-                                voluptates unde et minima possimus hic fugiat consequatur. Ab aliquid neque sed
-                                voluptate
-                                dolorem ut ducimus fuga.</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="card" style="width: 18rem;">
-                    <a href="#">
-                        <img class="card-img-top" src="../../../public/img/gta v.png" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Gta V</h5>
-                            <p class="card-text-preco">R$ 96,00</p>
-                            <p class="card-text">Lorem ipsum dolor sit amet. Et commodi cumque ex soluta nulla non
-                                voluptates unde et minima possimus hic fugiat consequatur. Ab aliquid neque sed
-                                voluptate
-                                dolorem ut ducimus fuga.</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="card" style="width: 18rem;">
-                    <a href="#">
-                        <img class="card-img-top" src="../../../public/img/gta v.png" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Gta V</h5>
-                            <p class="card-text-preco">R$ 96,00</p>
-                            <p class="card-text">Lorem ipsum dolor sit amet. Et commodi cumque ex soluta nulla non
-                                voluptates unde et minima possimus hic fugiat consequatur. Ab aliquid neque sed
-                                voluptate
-                                dolorem ut ducimus fuga.</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="card" style="width: 18rem;">
-                    <a href="#">
-                        <img class="card-img-top" src="../../../public/img/gta v.png" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Gta V</h5>
-                            <p class="card-text-preco">R$ 96,00</p>
-                            <p class="card-text">Lorem ipsum dolor sit amet. Et commodi cumque ex soluta nulla non
-                                voluptates unde et minima possimus hic fugiat consequatur. Ab aliquid neque sed
-                                voluptate
-                                dolorem ut ducimus fuga.</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="card" style="width: 18rem;">
-                    <a href="#">
-                        <img class="card-img-top" src="../../../public/img/gta v.png" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Gta V</h5>
-                            <p class="card-text-preco">R$ 96,00</p>
-                            <p class="card-text">Lorem ipsum dolor sit amet. Et commodi cumque ex soluta nulla non
-                                voluptates unde et minima possimus hic fugiat consequatur. Ab aliquid neque sed
-                                voluptate
-                                dolorem ut ducimus fuga.</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="card" style="width: 18rem;">
-                    <a href="#">
-                        <img class="card-img-top" src="../../../public/img/gta v.png" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Gta V</h5>
-                            <p class="card-text-preco">R$ 96,00</p>
-                            <p class="card-text">Lorem ipsum dolor sit amet. Et commodi cumque ex soluta nulla non
-                                voluptates unde et minima possimus hic fugiat consequatur. Ab aliquid neque sed
-                                voluptate
-                                dolorem ut ducimus fuga.</p>
-                        </div>
-                    </a>
-                </div>
+
+                <?php foreach ($produtos as $produto):?>
+
+                    <div class="card" style="width: 18rem;">
+                        <a href="#">
+                            <img class="card-img-top" src="../../../public/img/gta v.png" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title"><?= $produto-> nome_produto?></h5>
+                                <p class="card-text-preco"><?= $produto-> preco?></p>
+                                <p class="card-text"><?= $produto-> descricao?></p>
+                            </div>
+                        </a>
+                    </div>
+                <?php endforeach ?>
             </div>
         </div>
     </main>
