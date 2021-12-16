@@ -16,4 +16,6 @@ $router->post('usuario/delete','UsuarioController@delete');
 
 $router->post('usuario/update','UsuarioController@update');
 
+$router->get('inicio','PagesController@index');
+
 ?>
