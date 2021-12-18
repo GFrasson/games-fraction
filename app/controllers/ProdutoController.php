@@ -29,6 +29,31 @@ class ProdutoController
 
     public function show() //Mostrar 1 item da página
     {
+        $verifica = 0;
+
+        $pesquisa = $_GET['pesquisa'];
+
+        $produtos = App::get('database')->searchprodutos('produtos', $pesquisa);
+
+        $verifica = count($produtos);
+
+        if($verifica == 0){
+            session_start();
+            $_SESSION['erro'] = 'Nenhum resultado encontrado';
+            return view('admin/adm-produtos');
+        }
+        else{
+            for ($i = 0; $i < count($produtos); $i++) {
+                $produto_imagens = App::get('database')->select_produto_imagem($produtos[$i]->id);
+    
+                $produtos[$i]->imagens = $produto_imagens;
+            }
+    
+            $tables = [
+                'produtos' => $produtos      
+            ];
+            return view('admin/adm-produtos', $tables);
+        }
     }
 
     public function create()
@@ -117,4 +142,6 @@ class ProdutoController
         App::get('database')->delete('produtos', $_POST['id']);
         header('Location: /adm-produtos');
     }
+
+
 }

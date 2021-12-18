@@ -188,4 +188,24 @@ class QueryBuilder
             die($e->getMessage());
         }
     }
+    public function searchprodutos($table, $searcher)
+    {
+      $sql = "SELECT * FROM {$table} WHERE nome_produto LIKE '%{$searcher}%' ";
+
+      try 
+      {
+          $stmt = $this->pdo->prepare($sql);
+          $stmt->execute();
+
+          return $stmt->fetchAll(PDO::FETCH_CLASS);
+      }
+
+      catch (Exception $e)
+      {
+
+         die($e->getMessage());
+
+      }
+    }
+
 }

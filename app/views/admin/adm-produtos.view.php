@@ -1,3 +1,10 @@
+<?php
+
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+
+?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -42,7 +49,7 @@
 
     <div class="container">
         <form method="GET" action="produtos/pesquisa">
-            <input name="produto" id="produto" class="barrapesquisa" placeholder=" Digite o nome do produto:" type="text">
+            <input name="pesquisa" id="produto" class="barrapesquisa" placeholder=" Digite o nome do produto:" type="text">
         </form>
 
         <div class="d-flex justify-content-between">
@@ -64,40 +71,50 @@
             <?php
 
             ?>
-            <?php require 'modais-produtos/adicionar.php'; 
+            <?php require 'modais-produtos/adicionar.php';
             ?>
-            
+
             <tbody>
-                <?php foreach ($produtos as $produto) :
-                    
-                    require 'modais-produtos/editar.php';
-                    require 'modais-produtos/deletar.php';
-                    require 'modais-produtos/visualizar.php';
+
+                <?php
+                //verifica se existe produtos  
+                if (isset($produtos)) :
+                    foreach ($produtos as $produto) :
+
+                        require 'modais-produtos/editar.php';
+                        require 'modais-produtos/deletar.php';
+                        require 'modais-produtos/visualizar.php';
                 ?>
 
-                    <tr>
-                        <th scope="row">#<?= $produto->id; ?></th>
+                        <tr>
+                            <th scope="row">#<?= $produto->id; ?></th>
 
-                        <td><?= $produto->nome_produto; ?></td>
-                        <td class="price-value">R$<?= $produto->preco; ?></td>
-                        <td>
-                            <div class="button-container d-flex flex-wrap icones">
-        
-                                <button type="submit" class="  modal-button" data-toggle="modal" data-target=".viewProduto-<?= $produto->id; ?>">
-                                    <i class="fas fa-eye"></i>
-                                </button>
-                               
-                                <button type="button" class="  modal-button" data-toggle="modal" data-target=".editProduto-<?= $produto->id; ?>">
-                                    <i class="fas fa-pencil-alt"></i>
-                                </button>
-                                <button type="button" class="  modal-button " data-toggle="modal" data-target=".deleteProduto-<?= $produto->id; ?>">
-                                    <i class="fas fa-trash-alt"></i>
-                                </button>
-                            </div>
-                        </td>
+                            <td><?= $produto->nome_produto; ?></td>
+                            <td class="price-value">R$<?= $produto->preco; ?></td>
+                            <td>
+                                <div class="button-container d-flex flex-wrap icones">
 
-                    </tr>
-                <?php endforeach; ?>
+                                    <button type="submit" class="  modal-button" data-toggle="modal" data-target=".viewProduto-<?= $produto->id; ?>">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+
+                                    <button type="button" class="  modal-button" data-toggle="modal" data-target=".editProduto-<?= $produto->id; ?>">
+                                        <i class="fas fa-pencil-alt"></i>
+                                    </button>
+                                    <button type="button" class="  modal-button " data-toggle="modal" data-target=".deleteProduto-<?= $produto->id; ?>">
+                                        <i class="fas fa-trash-alt"></i>
+                                    </button>
+                                </div>
+                            </td>
+
+                        </tr>
+                    <?php endforeach;
+                else :
+                    ?>
+                    <tr><td colspan="4"><span class="erro"><?= $_SESSION['erro']; ?></span></td></tr>
+                <?php
+                endif;
+                ?>
             </tbody>
 
 
