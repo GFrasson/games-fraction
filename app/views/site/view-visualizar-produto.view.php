@@ -86,26 +86,21 @@
       </div>
 
       <div class="produto-conteudo">
-        <h2 class="produto-titulo">GTA V</h2>
+        <h2 class="produto-titulo"><?= $produtos[0]->nome_produto?></h2>
 
 
 
         <div class="produto-preco">
-          <p class="ultimo-preco">De: <span>R$XXX.XX</span></p>
-          <p class="preco-novo">Para: <span>R$XXX.XX (X%)</span></p>
+          <!-- <p class="ultimo-preco">De: <span>R$XXX.XX</span></p> -->
+          <p class="preco-novo">Valor: <span><?= $produtos[0]->preco?></span></p>
         </div>
 
         <div class="produto-detalhe">
           <h2>Sobre esse produto: </h2>
-          <p>Entre nas vidas de três criminosos muito diferentes, Michael, Franklin e Trevor, enquanto eles arriscam
-            tudo
-            em uma série de assaltos ousados que podem garantir o resto de suas vidas. Explore o deslumbrante mundo de
-            Los Santos e Blaine County na experiência definitiva de Grand Theft Auto V, apresentando amplas atualizações
-            e melhorias técnicas tanto para jogadores novos quanto para os que estão retornando. Além de distâncias
-            maiores de renderização e melhor resolução, os jogadores podem esperar diversas adições e melhorias.</p>
+          <p><?= $produtos[0]->descricao?></p>
           <ul>
 
-            <li>Disponível: <span>Em estoque</span></li>
+            <!-- <li>Disponível: <span>Em estoque</span></li> -->
             <li>Categoria: <span>Jogos eletrônicos</span></li>
 
           </ul>

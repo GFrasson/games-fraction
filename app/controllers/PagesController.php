@@ -14,15 +14,14 @@ class PagesController
         
     
         $produtos = App::get('database')->selectAll('produtos');
-        echo count($produtos);
-        die();
+        
         for ($i = 0; $i < count($produtos); $i++) {
             $produto_imagens = App::get('database')->select_produto_imagem($produtos[$i]->id);
 
             $produtos[$i]->imagens = $produto_imagens;
         }
-        // var_dump($produtos);
-        // die();
+       
+         
 
         $tables = [
             'produtos' => $produtos,
@@ -42,17 +41,41 @@ class PagesController
 
     public function produtos()
     {
-        $produto = App::get('database')->selectAll('produtos');
-        return view('site/produtos', compact("produtos"));
+        
+        $produtos = App::get('database')->selectAll('produtos');
+        for ($i = 0; $i < count($produtos); $i++) {
+            $produto_categorias = App::get('database')->produtoCategoria($produtos[$i]->categoria_idcategoria);
+
+            $produtos[$i]->categorias = $produto_categorias;
+        }
+        //var_dump($produto_categorias);
+    //    var_dump($produtos);
+    //     die();
+        
+        for ($i = 0; $i < count($produtos); $i++) {
+            $produto_imagens = App::get('database')->select_produto_imagem($produtos[$i]->id);
+
+            $produtos[$i]->imagens = $produto_imagens;
+        }
+
+
+        $tables = [
+            'produtos' => $produtos
+        ];
+        return view('site/produtos',$tables);
         
         
     }
 
     public function viewProduto()
     {
-        $produto = App::get('database')->selectAll('produtos');
+        $produtos = App::get('database') -> select('produtos', $_GET['id']);
 
-        return view('site/view-visualizar-produto', compact("produtos"));
+        $tables = [
+            'produtos' => $produtos,
+        ];
+
+        return view('site/view-visualizar-produto', $produtos);
         
     }
 

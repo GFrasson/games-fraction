@@ -32,18 +32,18 @@ class QueryBuilder
         }
     }
 
-    public function select($table,$coluna)
+    public function select($table,$id)
     {
-        $sql= "SELECT {$coluna} FROM {$table}";
+        
+        $sql = "SELECT * FROM {$table} WHERE id = {$id}";
 
-        try
-        {
+        try {
             $stmt = $this->pdo->prepare($sql);
+
             $stmt->execute();
 
             return $stmt->fetchAll(PDO::FETCH_CLASS);
-        } catch (Exception $e)
-        {
+        } catch (Exception $e) {
             die($e->getMessage());
         }
     }
@@ -177,6 +177,21 @@ class QueryBuilder
         {
             $stmt = $this->pdo->prepare($sql);
             $stmt->execute();
+
+            return $stmt->fetchAll(PDO::FETCH_CLASS);
+        } catch (Exception $e)
+        {
+            die($e->getMessage());
+        }
+    }
+
+    public function produtoCategoria($id){
+        $sql = "SELECT nome_categoria FROM categorias WHERE categorias.id = :id";
+
+        try
+        {
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute(["id"=>$id]);
 
             return $stmt->fetchAll(PDO::FETCH_CLASS);
         } catch (Exception $e)

@@ -55,64 +55,26 @@
         <!-- Cards -->
         <div class="container">
             <div class="d-flex flex-wrap flex-card ">
-
+            <?php foreach($produtos as $produto): ?> 
                 <div class="card">
-                    <a href="view-visualizar-produto" class="link-card">
+                    <a href="/view-visualizar-produto?produto=<?= $produto->id?>" class="link-card">
                         <div class="image-left">
+                        <?php for ($i = 0; $i < 1; $i++) : ?>
                             <img
-                                src="https://image.api.playstation.com/cdn/UP0001/CUSA05904_00/IKYAgcRh0k3IOklJSDoNBTk5t5MSm7KE.png">
+                                src="<?php echo "../../../../public/img/" . $produto->imagens[0]->nome_imagem ?>">
+                        <?php endfor; ?>
                         </div>
                         <div class="body-right">
-                            <p id="nome">Far Cry 5</p>
-                            <p id="categoria">Categoria:<br> Ação</p>
-                            <p id="preco">Preço:<br> R$ 57,00</p>
+                            <p id="nome"><?= $produto -> nome_produto ?></p>
+                            <p id="categoria">Categoria:<br><?php echo  $produto->categorias[0]->nome_categoria ?> </p>
+                            <p id="preco">Preço:<br> R$<?= $produto -> preco ?></</p>
 
                         </div>
                     </a>
                 </div>
-                <div class="card">
-                    <a href="/" class="link-card">
-                        <div class="image-left">
-                            <img
-                                src="https://image.api.playstation.com/cdn/UP0001/CUSA05904_00/IKYAgcRh0k3IOklJSDoNBTk5t5MSm7KE.png">
-                        </div>
-                        <div class="body-right">
-                            <p id="nome">Far Cry 5</p>
-                            <p id="categoria">Categoria:<br> Ação</p>
-                            <p id="preco">Preço:<br> R$ 57,00</p>
-
-                        </div>
-                    </a>
-                </div>
-                <div class="card">
-                    <a href="/" class="link-card">
-                        <div class="image-left">
-                            <img
-                                src="https://image.api.playstation.com/cdn/UP0001/CUSA05904_00/IKYAgcRh0k3IOklJSDoNBTk5t5MSm7KE.png">
-                        </div>
-                        <div class="body-right">
-                            <p id="nome">Far Cry 5</p>
-                            <p id="categoria">Categoria:<br> Ação</p>
-                            <p id="preco">Preço:<br> R$ 57,00</p>
-
-                        </div>
-                    </a>
-                </div>
-                <div class="card">
-                    <a href="/" class="link-card">
-                        <div class="image-left">
-                            <img
-                                src="https://image.api.playstation.com/cdn/UP0001/CUSA05904_00/IKYAgcRh0k3IOklJSDoNBTk5t5MSm7KE.png">
-                        </div>
-                        <div class="body-right">
-                            <p id="nome">Far Cry 5</p>
-                            <p id="categoria">Categoria:<br> Ação</p>
-                            <p id="preco">Preço:<br> R$ 57,00</p>
-
-                        </div>
-                    </a>
-                </div>
-
+                <?php endforeach; ?>
+               
+            
                
 
             </div>
