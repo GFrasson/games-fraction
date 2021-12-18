@@ -1,7 +1,7 @@
 <?php
     $router->get('adm-produtos','ProdutoController@index');
 
-    $router->get('produtos/pesquisa','ProdutoController@show');
+    $router->get('produtospesquisa','ProdutoController@show');
 
     $router->post('produtos/delete','ProdutoController@delete');
 

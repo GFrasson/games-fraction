@@ -48,7 +48,7 @@ if (session_status() === PHP_SESSION_NONE) {
     </div>
 
     <div class="container">
-        <form method="GET" action="produtos/pesquisa">
+        <form method="GET" action="produtospesquisa">
             <input name="pesquisa" id="produto" class="barrapesquisa" placeholder=" Digite o nome do produto:" type="text">
         </form>
 
