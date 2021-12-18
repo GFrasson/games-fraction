@@ -48,6 +48,38 @@ class QueryBuilder
         }
     }
 
+    public function select_produto_imagem($id)
+    {
+        $sql = "SELECT nome_imagem FROM imagens WHERE imagens.produto_idproduto = :id";
+
+        try
+        {
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute(["id"=>$id]);
+
+            return $stmt->fetchAll(PDO::FETCH_CLASS);
+        } catch (Exception $e)
+        {
+            die($e->getMessage());
+        }
+    }
+
+    public function select_produto()
+    {
+        $sql= "SELECT id FROM `produtos` ORDER BY id DESC LIMIT 1";
+
+        try
+        {
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute();   
+
+            return $stmt->fetchAll(PDO::FETCH_CLASS);
+        } catch (Exception $e)
+        {
+            die($e->getMessage());
+        }
+    }
+
     public function insert($table, $parametros)
     {
         $columns = implode(", ",array_keys($parametros));
@@ -117,4 +149,40 @@ class QueryBuilder
     {
       
     }
+
+    public function selectAlldesc($table)
+    {
+      $sql = "SELECT * FROM {$table} ORDER BY id DESC LIMIT 10";
+
+      try 
+      {
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->execute();
+
+        return $stmt->fetchAll(PDO::FETCH_CLASS);
+      }
+
+      catch (Exception $e)
+      {
+
+        die($e->getMessage());
+
+      }
+    }
+
+    public function categorias($table){
+        //$sql = "SELECT * FROM {$table} as produtos,{$table2} as categorias,{$table3} as imagens WHERE categorias.id = :id and imagens.id = :id";
+        $sql = "SELECT * FROM {$table}";
+        try
+        {
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute();
+
+            return $stmt->fetchAll(PDO::FETCH_CLASS);
+        } catch (Exception $e)
+        {
+            die($e->getMessage());
+        }
+    }
+
 }

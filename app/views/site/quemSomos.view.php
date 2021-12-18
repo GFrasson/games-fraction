@@ -28,8 +28,8 @@
             <a class="active" href="index">Home</a>
             <a href="quemSomos">Quem somos</a>
             <a href="produtos">Produtos</a>
-            <a href="#contato">Contato</a>
-            <a href="#login">Login</a>
+            <a href="projetoContato">Contato</a>
+            <a href="login">Login</a>
         </nav>
 
         <div class="container-menu">

@@ -11,15 +11,24 @@ class PagesController
 
     public function index()
     {
-        $produto = App::get('database')->selectAll('produtos');
+        
+    
+        $produtos = App::get('database')->selectAll('produtos');
+        echo count($produtos);
+        die();
+        for ($i = 0; $i < count($produtos); $i++) {
+            $produto_imagens = App::get('database')->select_produto_imagem($produtos[$i]->id);
+
+            $produtos[$i]->imagens = $produto_imagens;
+        }
+        // var_dump($produtos);
+        // die();
 
         $tables = [
-
-            'produtos' => $produto, 
-        ]; 
+            'produtos' => $produtos,
+        ];
 
         return view('site/index', $tables); 
-        //header('location: /admUsuarios'); 
         
     }
 
@@ -27,21 +36,15 @@ class PagesController
     {
         
         return view('site/quemSomos'); 
-        //header('location: /admUsuarios'); 
+       
         
     }
 
     public function produtos()
     {
         $produto = App::get('database')->selectAll('produtos');
-
-        $tables = [
-
-            'produtos' => $produto, 
-        ]; 
-
-        return view('site/produtos', $tables); 
-        //header('location: /admUsuarios'); 
+        return view('site/produtos', compact("produtos"));
+        
         
     }
 
@@ -49,13 +52,7 @@ class PagesController
     {
         $produto = App::get('database')->selectAll('produtos');
 
-        $tables = [
-
-            'produtos' => $produto, 
-        ]; 
-
-        return view('site/view-visualizar-produto', $tables); 
-        //header('location: /admUsuarios'); 
+        return view('site/view-visualizar-produto', compact("produtos"));
         
     }
 
