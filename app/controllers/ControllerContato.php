@@ -38,7 +38,7 @@ class ControllerContato
         $mail->Port = 587;
 
         $mail->setFrom('gamesfraction00@gmail.com', 'Contato');
-        $mail->addAddress($email);
+        $mail->addAddress('gamesfraction00@gmail.com');
 
         $mail->isHTML(true);
         $mail->Subject = $assunto;
@@ -48,8 +48,9 @@ class ControllerContato
         if(!$mail->send()) {
             echo 'Não foi possível enviar a mensagem.<br>';
             echo 'Erro: ' . $mail->ErrorInfo;
+            return view("site/projetoContato");
         } else {
-            echo 'Mensagem enviada.';
+            return view("site/projetoContato");
         }
     }
 
