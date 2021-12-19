@@ -68,7 +68,7 @@
         <div class="img-selecao">
         <?php for ($i = 0; $i < count($produto->imagens); $i++) : ?>
           <div class="img-item">
-            <a href="#" data-id="1">
+            <a href="#" data-id="<?= $id ?>">
               <img src="<?php echo "../../../../public/img/" . $produto->imagens[$i]->nome_imagem ?>"  alt="paisagem">
             </a>
           </div>
