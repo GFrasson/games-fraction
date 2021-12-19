@@ -171,7 +171,7 @@
             <div class="d-flex flex-wrap">
                 
                 <?php foreach($produtos as $produto): ?>
-                <div class="card" style="width: 18rem;">
+                <div class="card cardprod" style="width: 18rem;">
                     <a href="view-visualizar-produto?produto=<?= $produto->id?>">
                         <?php for ($i = 0; $i < 1; $i++) : ?>
                         <img class="card-img-top" src="<?php echo "../../../../public/img/" . $produto->imagens[0]->nome_imagem ?>" alt="Card image cap">

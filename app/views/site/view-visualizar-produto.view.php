@@ -44,15 +44,18 @@
     </div>
 
   </header>
+
+  <?php foreach($produtos as $produto): ?>
   <div class="principal">
     <div class="card">
 
       <div class="produtos-imgs">
         <div class="img-display">
+        
           <div class="mostruario">
-            <?php foreach($produtos as $produto): ?>
-            <img class=fotoprincipal src="<?php echo "../../../../public/img/" . $produto->imagens[0]->nome_imagem ?>" class="img-fluid" alt="Jogo Gta V">
             <?php for ($i = 1; $i < count($produto->imagens); $i++) : ?>
+            <img class=fotoprincipal src="<?php echo "../../../../public/img/" . $produto->imagens[0]->nome_imagem ?>" class="img-fluid" alt="Jogo Gta V">
+            
             <img src="<?php echo "../../../../public/img/" . $produto->imagens[$i]->nome_imagem ?>" alt="">
             <?php endfor; ?>
             <!-- <img src="../../../public/img/paisagem2.jpg" alt="">
@@ -60,6 +63,7 @@
             <img class="foto2" src="../../../public/img/gta5.jpg" alt=""> -->
 
           </div>
+        
         </div>
         <div class="img-selecao">
         <?php for ($i = 0; $i < count($produto->imagens); $i++) : ?>

@@ -16,7 +16,7 @@ body{
 
 .mostruario img,
 .img-selecao img{
-    width:2em;
+    width:100%;
     display: block;
 }
 .img-display{
@@ -24,7 +24,7 @@ body{
 }
 .mostruario{
     display: flex;
-    width: 30em;
+    width: 100%;
     height: 30em;
     transition: all 0.5s ease;
 }

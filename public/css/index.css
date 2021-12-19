@@ -52,6 +52,11 @@ main{
 .card-img-top{
    height: 256px;
 }
+
+.cardprod{
+    height: 32em !important;
+}
+
 h3{
     font-family:'Bebas Neue', cursive;
 }
