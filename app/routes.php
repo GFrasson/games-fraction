@@ -21,7 +21,7 @@
 
     $router->post('usuario/update','UsuarioController@update');
 
-    $router->get('index','PagesController@index'); 
+    $router->get('','PagesController@index'); 
 
     $router->get('quemSomos','PagesController@quemSomos'); 
 

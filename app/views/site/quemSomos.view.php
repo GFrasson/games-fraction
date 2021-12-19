@@ -25,7 +25,7 @@
         </div>
        
         <nav id="botoes" class="botoes"> 
-            <a class="active" href="index">Home</a>
+            <a class="active" href="">Home</a>
             <a href="quemSomos">Quem somos</a>
             <a href="produtos">Produtos</a>
             <a href="projetoContato">Contato</a>

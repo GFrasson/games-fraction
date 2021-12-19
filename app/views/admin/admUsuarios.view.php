@@ -34,7 +34,7 @@
         <a href="categorias"><img class="icon-nav" src="../../../public/assets/rede.svg"><br>Categorias</a> 
         <a href="produtos/pesquisa"><img class="icon-nav" src="../../../public/assets/cubo.svg"><br>Produtos</a> 
         <a href="admUsuarios"><img class="icon-nav" src="../../../public/assets/usuario-de-comentarios.svg"><br>Usuários</a>
-        <a href="index"><img class="icon-nav" src="../../../public/assets/kisspng-computer-icons-exit-sign-emergency-exit-logo-downl-5b383e15c54734.9298414015304125658081.png"><br>Log-out</a>
+        <a href=""><img class="icon-nav" src="../../../public/assets/kisspng-computer-icons-exit-sign-emergency-exit-logo-downl-5b383e15c54734.9298414015304125658081.png"><br>Log-out</a>
     </div>
    </header> 
     
