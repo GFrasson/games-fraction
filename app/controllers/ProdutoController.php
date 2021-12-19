@@ -8,42 +8,36 @@ use Exception;
 class ProdutoController
 {
     public function index() //Listar todos itens da página
-    {
-        $produtos = App::get('database')->selectAll('produtos');
-
-        for ($i = 0; $i < count($produtos); $i++) {
-            $produto_imagens = App::get('database')->select_produto_imagem($produtos[$i]->id);
-
-            $produtos[$i]->imagens = $produto_imagens;
-        }
-
-        $categorias = App::get('database')->categorias('categorias');
-
-        $tables = [
-            'produtos' => $produtos,
-            'categorias' => $categorias
-        ];
-
-        return view('admin/adm-produtos', $tables);
-    }
-
-    public function show() //Mostrar 1 item da página
-    {
+    {  
         $verifica = 0;
-
-        $pesquisa = $_GET['pesquisa'];
-
-        $produtos = App::get('database')->searchprodutos('produtos', $pesquisa);
-
+        if(isset($_GET['pesquisa']) && !empty($_GET['pesquisa'])){
+            $pesquisa = $_GET['pesquisa'];
+            $produtos = App::get('database')->searchprodutos('produtos', $pesquisa);
+           
+        }
+        else{
+            $produtos = App::get('database')->selectAll('produtos');
+        }
         $categorias = App::get('database')->categorias('categorias');
 
         $verifica = count($produtos);
-        
+      
         if($verifica == 0){
-            session_start();
-            $_SESSION['erro'] = 'Nenhum resultado encontrado';
+            $produtos = App::get('database')->selectAll('produtos');
             
-            return view('admin/adm-produtos');
+            for ($i = 0; $i < count($produtos); $i++) {
+                $produto_imagens = App::get('database')->select_produto_imagem($produtos[$i]->id);
+    
+                $produtos[$i]->imagens = $produto_imagens;
+                
+            }
+
+            $tables = [
+                'produtos' => $produtos,
+                'categorias' => $categorias
+            ];
+            
+            return view('admin/adm-produtos', $tables);
         }
         else{
             for ($i = 0; $i < count($produtos); $i++) {
@@ -57,11 +51,16 @@ class ProdutoController
             }
             
             $tables = [
-                'produtos' => $produtos,    
+                'produtos' => $produtos,        
                 'categorias' => $categorias  
             ];
             return view('admin/adm-produtos', $tables);
         }
+    }
+
+    public function show() //Mostrar 1 item da página
+    {
+      
     }
 
     public function create()

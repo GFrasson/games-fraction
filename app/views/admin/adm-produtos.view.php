@@ -48,7 +48,7 @@ if (session_status() === PHP_SESSION_NONE) {
     </div>
 
     <div class="container">
-        <form method="GET" action="produtospesquisa">
+        <form method="GET" action="adm-produtos">
             <input name="pesquisa" id="produto" class="barrapesquisa" placeholder=" Digite o nome do produto:" type="text">
         </form>
 
@@ -78,7 +78,7 @@ if (session_status() === PHP_SESSION_NONE) {
 
                 <?php
                 //verifica se existe produtos  
-                if (isset($produtos)) :
+                
                     foreach ($produtos as $produto) :
 
                         require 'modais-produtos/editar.php';
@@ -109,12 +109,7 @@ if (session_status() === PHP_SESSION_NONE) {
 
                         </tr>
                     <?php endforeach;
-                else :
-                    ?>
-                    <tr><td colspan="4"><span class="erro"><?= $_SESSION['erro']; ?></span></td></tr>
-                <?php
-                endif;
-                ?>
+              ?>
             </tbody>
 
 
