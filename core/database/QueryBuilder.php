@@ -16,15 +16,15 @@ class QueryBuilder
         $this->pdo = $pdo; 
     }
 
-    public function selectAll($table,$inicio=null,$total_reg=null)
+    public function selectAll($table,$limite=null,$offset=null)
     {
-        if($inicio == null && $total_reg == null){
+        if($limite == null && $offset == null){
 
             $sql = "SELECT * FROM {$table}";
 
         }else{
-
-            $sql = "SELECT * FROM {$table} LIMIT {$inicio}, {$total_reg}";
+            
+            $sql = "SELECT * FROM {$table} LIMIT {$offset}, {$limite} ";
         }
         try
         {
