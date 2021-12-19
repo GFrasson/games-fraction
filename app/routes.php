@@ -1,4 +1,9 @@
 <?php
+    
+    $router->get('projetoContato', 'ControllerContato@index');
+
+    $router->post('contato/enviar','ControllerContato@enviar');
+    
 
     $router->get('categorias','CategoriesController@index'); 
 

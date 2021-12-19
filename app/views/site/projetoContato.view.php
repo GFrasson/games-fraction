@@ -60,7 +60,7 @@
 
 
     <div class="box">
-        <form name="form-contato" action=" nethod="POST">
+        <form name="form-contato" method="POST" action="contato/enviar">
             <fieldset>
                 <legend><strong> Contato</strong></legend>
                 
@@ -102,7 +102,7 @@
                 
             </fieldset>
             
-                <button class = "submit-form" type="submit" form="form-contato">Enviar</button>
+            <button class = "submit-form" type="submit">Enviar</button>
             
 
         </form>
