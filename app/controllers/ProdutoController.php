@@ -122,12 +122,12 @@ class ProdutoController
 
         app::get('database')->edit('produtos', $parameters, $_POST['id']);
 
-        $contador_imagem = 0;
+        $contador_imagem = false;
 
-        if ($_FILES["txtimagem"]) {
-            $contador_imagem = count($_FILES["txtimagem"]['name']);
+        if ($_FILES["txtimagem"] && $_FILES["txtimagem"]['name'][0] != "") {
+            $contador_imagem = true;
         }
-        if ($contador_imagem > 0) {
+        if ($contador_imagem) {
             app::get('database')->delete_imagens('imagens', $_POST['id']);
 
             for ($i = 0; $i < count($_FILES["txtimagem"]['name']); $i++) {
