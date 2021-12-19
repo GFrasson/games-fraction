@@ -35,11 +35,14 @@ class ProdutoController
 
         $produtos = App::get('database')->searchprodutos('produtos', $pesquisa);
 
-        $verifica = count($produtos);
+        $categorias = App::get('database')->categorias('categorias');
 
+        $verifica = count($produtos);
+        
         if($verifica == 0){
             session_start();
             $_SESSION['erro'] = 'Nenhum resultado encontrado';
+            
             return view('admin/adm-produtos');
         }
         else{
@@ -47,10 +50,15 @@ class ProdutoController
                 $produto_imagens = App::get('database')->select_produto_imagem($produtos[$i]->id);
     
                 $produtos[$i]->imagens = $produto_imagens;
+                $tables = [
+                    'produtos' => $produtos,
+                    'categorias' => $categorias
+                ];
             }
-    
+            
             $tables = [
-                'produtos' => $produtos      
+                'produtos' => $produtos,    
+                'categorias' => $categorias  
             ];
             return view('admin/adm-produtos', $tables);
         }
