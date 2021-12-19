@@ -50,21 +50,25 @@
       <div class="produtos-imgs">
         <div class="img-display">
           <div class="mostruario">
-            <img class=fotoprincipal src="../../../public/img/gta5.jpg" class="img-fluid" alt="Jogo Gta V">
-            <img src="../../../public/img/paisagem1.jpg" alt="">
-            <img src="../../../public/img/paisagem2.jpg" alt="">
+            <?php foreach($produtos as $produto): ?>
+            <img class=fotoprincipal src="<?php echo "../../../../public/img/" . $produto->imagens[0]->nome_imagem ?>" class="img-fluid" alt="Jogo Gta V">
+            <?php for ($i = 1; $i < count($produto->imagens); $i++) : ?>
+            <img src="<?php echo "../../../../public/img/" . $produto->imagens[$i]->nome_imagem ?>" alt="">
+            <?php endfor; ?>
+            <!-- <img src="../../../public/img/paisagem2.jpg" alt="">
             <img src="../../../public/img/paisagem3.jpg" alt="">
-            <img class="foto2" src="../../../public/img/gta5.jpg" alt="">
+            <img class="foto2" src="../../../public/img/gta5.jpg" alt=""> -->
 
           </div>
         </div>
         <div class="img-selecao">
+        <?php for ($i = 0; $i < count($produto->imagens); $i++) : ?>
           <div class="img-item">
             <a href="#" data-id="1">
-              <img src="../../../public/img/paisagem1.jpg" alt="paisagem">
+              <img src="<?php echo "../../../../public/img/" . $produto->imagens[$i]->nome_imagem ?>"  alt="paisagem">
             </a>
           </div>
-          <div class="img-item">
+          <!-- <div class="img-item">
             <a href="#" data-id="2">
               <img src="../../../public/img/paisagem2.jpg" alt="paisagem">
             </a>
@@ -80,31 +84,33 @@
               <img src="../../../public/img/gta5.jpg" alt="paisagem">
             </a>
 
-          </div>
-
+          </div> -->
+          <?php endfor; ?>
         </div>
       </div>
 
+      
       <div class="produto-conteudo">
-        <h2 class="produto-titulo"><?= $produtos[0]->nome_produto?></h2>
+        <h2 class="produto-titulo"><?= $produto->nome_produto?></h2>
 
 
 
         <div class="produto-preco">
           <!-- <p class="ultimo-preco">De: <span>R$XXX.XX</span></p> -->
-          <p class="preco-novo">Valor: <span><?= $produtos[0]->preco?></span></p>
+          <p class="preco-novo">Valor: <span><?= $produto->preco?></span></p>
         </div>
 
         <div class="produto-detalhe">
           <h2>Sobre esse produto: </h2>
-          <p><?= $produtos[0]->descricao?></p>
+          <p><?= $produto->descricao?></p>
           <ul>
 
             <!-- <li>Disponível: <span>Em estoque</span></li> -->
-            <li>Categoria: <span>Jogos eletrônicos</span></li>
+            <li>Categoria: <span><?php echo  $produto->categorias[0]->nome_categoria ?></span></li>
 
           </ul>
         </div>
+        <?php endforeach; ?>
 
         <div class="informacao-compra">
           <input type="number" min="0" value="1">

@@ -89,18 +89,18 @@
             <div class="slider owl-carousel">
             <?php foreach($produtos as $produto): ?> 
                 <div class="card carousel-card">
-                    <a href="view-visualizar-produto">
+                    <a href="view-visualizar-produto?produto=<?= $produto->id?>">
                     <?php for ($i = 0; $i < 1; $i++) : ?>
                         <div class="img"><img src="<?php echo "../../../../public/img/" . $produto->imagens[0]->nome_imagem ?>" alt="Card image cap"></div>
                     <?php endfor; ?>
                     </a>
                 </div>
              <?php endforeach; ?>
-                <div class="card carousel-card">
+                <!-- <div class="card carousel-card">
                     <a href="view-visualizar-produto">
                         <div class="img"><img src="https://images.tcdn.com.br/img/img_prod/906426/opus_collection_the_day_we_found_earth_rocket_of_whispers_switch_7431_1_008249e8a8905920f640b78aedd2127d.jpg" alt="Card image cap"></div>
                     </a>
-                </div>
+                </div> -->
            
             </div>
             <script>
@@ -172,7 +172,7 @@
                 
                 <?php foreach($produtos as $produto): ?>
                 <div class="card" style="width: 18rem;">
-                    <a href="view-visualizar-produto">
+                    <a href="view-visualizar-produto?produto=<?= $produto->id?>">
                         <?php for ($i = 0; $i < 1; $i++) : ?>
                         <img class="card-img-top" src="<?php echo "../../../../public/img/" . $produto->imagens[0]->nome_imagem ?>" alt="Card image cap">
                         <?php endfor; ?>

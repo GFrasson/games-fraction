@@ -57,7 +57,7 @@
             <div class="d-flex flex-wrap flex-card ">
             <?php foreach($produtos as $produto): ?> 
                 <div class="card">
-                    <a href="/view-visualizar-produto?produto=<?= $produto->id?>" class="link-card">
+                    <a href="view-visualizar-produto?produto=<?= $produto->id?>" class="link-card">
                         <div class="image-left">
                         <?php for ($i = 0; $i < 1; $i++) : ?>
                             <img
