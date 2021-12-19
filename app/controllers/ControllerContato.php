@@ -40,17 +40,24 @@ class ControllerContato
         $mail->setFrom('gamesfraction00@gmail.com', 'Contato');
         $mail->addAddress('gamesfraction00@gmail.com');
 
+        $body = 
+            "<div>Nome: {$nome}</div>
+            <div>Email: {$email}</div>
+            <div>Telefone: {$telefone}</div>
+            <div>Mensagem: {$mensagem}</div>"
+        ;
+        
         $mail->isHTML(true);
         $mail->Subject = $assunto;
-        $mail->Body    = $mensagem;
+        $mail->Body    = $body;
         $mail->AltBody = $email;
 
         if(!$mail->send()) {
             echo 'Não foi possível enviar a mensagem.<br>';
             echo 'Erro: ' . $mail->ErrorInfo;
-            return view("site/projetoContato");
+            redirect('projetoContato');
         } else {
-            return view("site/projetoContato");
+            redirect('projetoContato');
         }
     }
 
