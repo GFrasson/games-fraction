@@ -9,7 +9,12 @@ class CategoriesController
 {
     public function index()
     {
-        $categorias = App::get('database')->selectAll('categorias');
+        if(isset($_GET['pesquisa']) && !empty($_GET['pesquisa'])){
+            $pesquisa = $_GET['pesquisa'];
+            $categorias = App::get('database')->searchCategorias('categorias', $pesquisa);
+        }else{
+            $categorias = App::get('database')->selectAll('categorias');
+        }
 
         $tables = [
 
@@ -19,12 +24,6 @@ class CategoriesController
         return view('admin/viewADMcategorias', $tables); 
         //header('location: /viewADMcategorias'); 
         
-    }
-
-    public function show()
-    {
-         
-
     }
 
     public function create()

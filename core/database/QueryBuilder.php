@@ -117,4 +117,24 @@ class QueryBuilder
     {
       
     }
+    public function searchcategorias($table, $searcher)
+    {
+        $sql = "SELECT * FROM {$table} WHERE nome_categoria LIKE '%{$searcher}%' ";
+
+        try 
+        {
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute();
+  
+            return $stmt->fetchAll(PDO::FETCH_CLASS);
+        }
+  
+        catch (Exception $e)
+        {
+  
+           die($e->getMessage());
+  
+        }
+      }
+
 }
