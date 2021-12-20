@@ -40,6 +40,7 @@ main{
     justify-content: center;
 }
 .card{
+    height: 100%;
     margin: 10px;
     margin-bottom: 2rem;
     box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.11);
@@ -51,6 +52,11 @@ main{
 .card-img-top{
    height: 256px;
 }
+
+.cardprod{
+    height: 32em !important;
+}
+
 h3{
     font-family:'Bebas Neue', cursive;
 }
@@ -205,6 +211,7 @@ span{
     object-fit: cover;
     text-align: center;
 }
+
 /* Responsivo */
 
 @media(max-width:700px){

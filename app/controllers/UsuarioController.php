@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use App\Core\App;
 use Exception;
+use App\Controllers\LoginController;
 
 class UsuarioController
 {
@@ -11,6 +12,8 @@ class UsuarioController
 
     public function index()
     {
+        LoginController::verifySession();
+
         $usuario = App::get('database')->selectAll('usuarios');
 
         $tables = [
@@ -31,8 +34,7 @@ class UsuarioController
 
     public function create()
     {
-
-        
+        LoginController::verifySession();
 
         $parameters = [ 
 
@@ -67,7 +69,7 @@ class UsuarioController
 
     public function update()
     {
-
+        LoginController::verifySession();
         
         $parameters = [ 
 
@@ -91,7 +93,8 @@ class UsuarioController
 
     public function delete()
     {
-        
+        LoginController::verifySession();
+
         app::get('database')->delete('usuarios', $_POST['id']); 
 
         header('location: /admUsuarios'); 
