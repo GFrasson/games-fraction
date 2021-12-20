@@ -1,21 +1,48 @@
 <?php
+   
 
-$router->get('categorias','CategoriesController@index'); 
+    
+    $router->get('projetoContato', 'ControllerContato@index');
 
-$router->post('categorias/create','CategoriesController@create');
+    $router->post('contato/enviar','ControllerContato@enviar');
+    
 
-$router->post('categorias/delete','CategoriesController@delete');
+    $router->get('categorias','CategoriesController@index'); 
 
-$router->post('categorias/edit','CategoriesController@update');
+    $router->post('categorias/create','CategoriesController@create');
 
-$router->get('admUsuarios', 'UsuarioController@index');
+    $router->post('categorias/delete','CategoriesController@delete');
 
-$router->post('usuario/create','UsuarioController@create');
+    $router->post('categorias/edit','CategoriesController@update');
 
-$router->post('usuario/delete','UsuarioController@delete');
+    $router->get('admUsuarios', 'UsuarioController@index');
 
-$router->post('usuario/update','UsuarioController@update');
+    $router->post('usuario/create','UsuarioController@create');
 
-$router->get('inicio','PagesController@index');
+    $router->post('usuario/delete','UsuarioController@delete');
+
+    $router->post('usuario/update','UsuarioController@update');
+
+    $router->get('','PagesController@index'); 
+
+    $router->get('quemSomos','PagesController@quemSomos'); 
+
+    $router->get('produtos','PagesController@produtos'); 
+
+    $router->get('view-visualizar-produto','PagesController@viewProduto'); 
+
+    $router->get('dashboard','PagesController@dashboardAdimin');
+    
+    $router->get('adm-produtos','ProdutoController@index');
+
+    $router->post('produtos/delete','ProdutoController@delete');
+
+    $router->post('produtos/create','ProdutoController@create');
+
+    $router->post('produtos/editar','ProdutoController@update');
+
+    $router->post('produtos/visualizar','ProdutoController@imagem');
+
+
 
 ?>

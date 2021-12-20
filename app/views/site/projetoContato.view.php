@@ -27,11 +27,11 @@
         </div>
        
         <nav id="botoes" class="botoes"> 
-            <a class="active" href="#home">Home</a>
-            <a href="#quemSomos">Quem somos</a>
-            <a href="#produtos">Produtos</a>
-            <a href="#contato">Contato</a>
-            <a href="#login">Login</a>
+            <a class="active" href="">Home</a>
+            <a href="quemSomos">Quem somos</a>
+            <a href="produtos">Produtos</a>
+            <a href="projetoContato">Contato</a>
+            <a href="login">Login</a>
         </nav>
 
         <div class="container-menu">
@@ -60,7 +60,7 @@
 
 
     <div class="box">
-        <form name="form-contato" action=" nethod="POST">
+        <form name="form-contato" method="POST" action="contato/enviar">
             <fieldset>
                 <legend><strong> Contato</strong></legend>
                 
@@ -102,7 +102,7 @@
                 
             </fieldset>
             
-                <button class = "submit-form" type="submit" form="form-contato">Enviar</button>
+            <button class = "submit-form" type="submit">Enviar</button>
             
 
         </form>
@@ -125,12 +125,28 @@
         </div>
         
         <div class="item3">Fique por dentro das novidades do site<br> nos seguindo em nossas redes sociais!<br><br>
-            <img src="../../../public/assets/facebookIcon.png" height="50px" width="50px">     
-            <img src="../../../public/assets/isntaIcon.png" height="50px" width="50px">     
-            <img src="../../../public/assets/zapIcon.png" height="50px" width="50px">     <br>
-            <img src="../../../public/assets/twitterIcon.png" height="50px" width="50px">     
-            <img src="../../../public/assets/linkedinIcon.png" height="50px" width="50px">
+            <a href="https://www.facebook.com/">
+                <img src="../../../public/assets/facebookIcon.png" height="50px" width="50px"> 
+            </a>
+
+            <a href="https://www.instagram.com/">    
+                <img src="../../../public/assets/isntaIcon.png" height="50px" width="50px">  
+            </a>  
             
+            <a href="https://web.whatsapp.com/">
+                <img src="../../../public/assets/zapIcon.png" height="50px" width="50px">    
+            </a>
+
+            <br>
+
+            <a href="https://twitter.com/">
+                <img src="../../../public/assets/twitterIcon.png" height="50px" width="50px">    
+            </a>
+            
+            <a href="https://www.linkedin.com/">
+                <img src="../../../public/assets/linkedinIcon.png" height="50px" width="50px">
+            </a>
+                
         
         </div>
         
