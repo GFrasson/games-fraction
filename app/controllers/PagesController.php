@@ -41,16 +41,26 @@ class PagesController
 
     public function produtos()
     {
+        $quantItens = App::get('database')->contaItens('produtos');
+        $itensPorPag = 10;
+        $pagina = 1;
+
+        if(isset($_GET['pagina']) && !empty($_GET['pagina'])){
+            $pagina = intval($_GET['pagina']);
+        }
+      
         
-        $produtos = App::get('database')->selectAll('produtos');
+        $quantPaginas = ceil($quantItens/$itensPorPag);
+        $limiteInicial = ($pagina*$itensPorPag)-$itensPorPag;
+     
+        $produtos = App::get('database')->selectAll('produtos',$limiteInicial,$itensPorPag);
+      
+       
         for ($i = 0; $i < count($produtos); $i++) {
             $produto_categorias = App::get('database')->produtoCategoria($produtos[$i]->categoria_idcategoria);
 
             $produtos[$i]->categorias = $produto_categorias;
         }
-        //var_dump($produto_categorias);
-    //    var_dump($produtos);
-    //     die();
         
         for ($i = 0; $i < count($produtos); $i++) {
             $produto_imagens = App::get('database')->select_produto_imagem($produtos[$i]->id);
@@ -60,8 +70,11 @@ class PagesController
 
 
         $tables = [
-            'produtos' => $produtos
+            'produtos' => $produtos,
+            'quantPaginas' => $quantPaginas,
+            'paginaAtual' => $pagina
         ];
+
         return view('site/produtos',$tables);
         
         

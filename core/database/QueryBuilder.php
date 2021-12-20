@@ -16,15 +16,16 @@ class QueryBuilder
         $this->pdo = $pdo; 
     }
 
-    public function selectAll($table,$limite=null,$offset=null)
+    public function selectAll($table,$offset=null,$quantItens=null)
     {
-        if($limite == null && $offset == null){
+        if($quantItens > 0 && $offset >= 0){
 
-            $sql = "SELECT * FROM {$table}";
+            $sql = "SELECT * FROM {$table} LIMIT {$offset}, {$quantItens} ";
+          
 
         }else{
             
-            $sql = "SELECT * FROM {$table} LIMIT {$offset}, {$limite} ";
+            $sql = "SELECT * FROM {$table}";
         }
         try
         {
@@ -283,4 +284,19 @@ class QueryBuilder
         }
     }
 
+    public function contaItens($table){
+
+        $sql = "SELECT COUNT(*) FROM {$table}";
+
+        try
+        {
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute();
+
+            return intval($stmt->fetch(PDO::FETCH_NUM)[0]);
+        } catch (Exception $e)
+        {
+            die($e->getMessage());
+        }
+    }
 }
