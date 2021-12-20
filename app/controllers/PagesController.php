@@ -70,7 +70,7 @@ class PagesController
     public function viewProduto()
     {
         if(isset($_GET['produto'])){
-            $produtos = App::get('database') -> selectColumn('produtos', $_GET['produto']);
+            $produtos = App::get('database') -> select('produtos', $_GET['produto']);
             for ($i = 0; $i < count($produtos); $i++) {
                 $produto_categorias = App::get('database')->produtoCategoria($produtos[$i]->categoria_idcategoria);
 
