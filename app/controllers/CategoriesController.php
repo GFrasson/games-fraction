@@ -4,11 +4,14 @@ namespace App\Controllers;
 
 use App\Core\App;
 use Exception;
+use App\Controllers\LoginController;
 
 class CategoriesController
 {
     public function index()
     {
+        LoginController::verifySession();
+
         if(isset($_GET['pesquisa']) && !empty($_GET['pesquisa'])){
             $pesquisa = $_GET['pesquisa'];
             $categorias = App::get('database')->searchCategorias('categorias', $pesquisa);
@@ -29,6 +32,7 @@ class CategoriesController
 
     public function create()
     {
+        LoginController::verifySession();
         
         $parameters = [ 
 
@@ -58,6 +62,8 @@ class CategoriesController
 
     public function update()
     {
+        LoginController::verifySession();
+
         $parameters = [ 
 
             'nome_categoria' => $_POST['nome_categoria'] 
@@ -74,7 +80,8 @@ class CategoriesController
 
     public function delete()
     {
-        
+        LoginController::verifySession();
+
         app::get('database')->delete('categorias', $_POST['id']); 
 
         header('location: /categorias'); 

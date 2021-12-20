@@ -4,11 +4,14 @@ namespace App\Controllers;
 
 use App\Core\App;
 use Exception;
+use App\Controllers\LoginController;
 
 class ProdutoController
 {
     public function index() //Listar todos itens da página
     {  
+        LoginController::verifySession();
+
         $verifica = 0;
         if(isset($_GET['pesquisa']) && !empty($_GET['pesquisa'])){
             $pesquisa = $_GET['pesquisa'];
@@ -65,6 +68,7 @@ class ProdutoController
 
     public function create()
     {
+        LoginController::verifySession();
 
         $parameters = [
             'nome_produto' => $_POST['nome'],
@@ -113,6 +117,8 @@ class ProdutoController
 
     public function update() //Editar algum item no BD
     {
+        LoginController::verifySession();
+
         $parameters = [
             'nome_produto' => $_POST['nome'],
             'descricao' => $_POST['descricao'],
@@ -146,6 +152,8 @@ class ProdutoController
 
     public function delete()
     {
+        LoginController::verifySession();
+
         App::get('database')->delete('produtos', $_POST['id']);
         header('Location: /adm-produtos');
     }
