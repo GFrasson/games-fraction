@@ -23,8 +23,8 @@
 
   <h1><strong>Categorias</strong></h1>
 
-  <form>
-    <div class="barraProcuraCategorias"><input type="text" placeholder="Pesquisar categorias..."></div>
+  <form action="categorias" method="GET">
+    <div class="barraProcuraCategorias"><input type="text" name="pesquisa" placeholder="Pesquisar categorias..."></div>
   </form>
 
   <div class="container envelope">

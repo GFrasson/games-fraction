@@ -27,11 +27,11 @@
         </div>
        
         <nav id="botoes" class="botoes"> 
-            <a class="active" href="#home">Home</a>
-            <a href="#quemSomos">Quem somos</a>
-            <a href="#produtos">Produtos</a>
-            <a href="#contato">Contato</a>
-            <a href="#login">Login</a>
+            <a class="active" href="">Home</a>
+            <a href="quemSomos">Quem somos</a>
+            <a href="produtos">Produtos</a>
+            <a href="projetoContato">Contato</a>
+            <a href="login">Login</a>
         </nav>
 
         <div class="container-menu">
@@ -55,87 +55,33 @@
         <!-- Cards -->
         <div class="container">
             <div class="d-flex flex-wrap flex-card ">
-
+            <?php foreach($produtos as $produto): ?> 
                 <div class="card">
-                    <a href="/" class="link-card">
+                    <a href="view-visualizar-produto?produto=<?= $produto->id?>" class="link-card">
                         <div class="image-left">
+                        <?php for ($i = 0; $i < 1; $i++) : ?>
                             <img
-                                src="https://image.api.playstation.com/cdn/UP0001/CUSA05904_00/IKYAgcRh0k3IOklJSDoNBTk5t5MSm7KE.png">
+                                src="<?php echo "../../../../public/img/" . $produto->imagens[0]->nome_imagem ?>">
+                        <?php endfor; ?>
                         </div>
                         <div class="body-right">
-                            <p id="nome">Far Cry 5</p>
-                            <p id="categoria">Categoria:<br> Ação</p>
-                            <p id="preco">Preço:<br> R$ 57,00</p>
+                            <p id="nome"><?= $produto -> nome_produto ?></p>
+                            <p id="categoria">Categoria:<br><?php echo  $produto->categorias[0]->nome_categoria ?> </p>
+                            <p id="preco">Preço:<br> R$<?= $produto -> preco ?></</p>
 
                         </div>
                     </a>
                 </div>
-                <div class="card">
-                    <a href="/" class="link-card">
-                        <div class="image-left">
-                            <img
-                                src="https://image.api.playstation.com/cdn/UP0001/CUSA05904_00/IKYAgcRh0k3IOklJSDoNBTk5t5MSm7KE.png">
-                        </div>
-                        <div class="body-right">
-                            <p id="nome">Far Cry 5</p>
-                            <p id="categoria">Categoria:<br> Ação</p>
-                            <p id="preco">Preço:<br> R$ 57,00</p>
-
-                        </div>
-                    </a>
-                </div>
-                <div class="card">
-                    <a href="/" class="link-card">
-                        <div class="image-left">
-                            <img
-                                src="https://image.api.playstation.com/cdn/UP0001/CUSA05904_00/IKYAgcRh0k3IOklJSDoNBTk5t5MSm7KE.png">
-                        </div>
-                        <div class="body-right">
-                            <p id="nome">Far Cry 5</p>
-                            <p id="categoria">Categoria:<br> Ação</p>
-                            <p id="preco">Preço:<br> R$ 57,00</p>
-
-                        </div>
-                    </a>
-                </div>
-                <div class="card">
-                    <a href="/" class="link-card">
-                        <div class="image-left">
-                            <img
-                                src="https://image.api.playstation.com/cdn/UP0001/CUSA05904_00/IKYAgcRh0k3IOklJSDoNBTk5t5MSm7KE.png">
-                        </div>
-                        <div class="body-right">
-                            <p id="nome">Far Cry 5</p>
-                            <p id="categoria">Categoria:<br> Ação</p>
-                            <p id="preco">Preço:<br> R$ 57,00</p>
-
-                        </div>
-                    </a>
-                </div>
-
+                <?php endforeach; ?>
+               
+            
                
 
             </div>
         </div>
-        <nav class="paginacao" aria-label="Navegação de página exemplo">
-            <ul class="pagination">
-                <li class="page-item">
-                    <a class="page-link" href="#" aria-label="Anterior">
-                        <span aria-hidden="true">&laquo;</span>
-                        <span class="sr-only">Anterior</span>
-                    </a>
-                </li>
-                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                <li class="page-item">
-                    <a class="page-link" href="#" aria-label="Próximo">
-                        <span aria-hidden="true">&raquo;</span>
-                        <span class="sr-only">Próximo</span>
-                    </a>
-                </li>
-            </ul>
-        </nav>
+    
+    <?php include "./app/views/includes/paginacao.php" ?>
+
     </main>
     <!-- Footer -->
     <footer class="rodapes">
@@ -146,11 +92,27 @@
         </div>
         
         <div class="item3">Fique por dentro das novidades do site<br> nos seguindo em nossas redes sociais!<br><br>
-            <img src="../../../public/assets/facebookIcon.png" height="50px" width="50px">     
-            <img src="../../../public/assets/isntaIcon.png" height="50px" width="50px">     
-            <img src="../../../public/assets/zapIcon.png" height="50px" width="50px">     <br>
-            <img src="../../../public/assets/twitterIcon.png" height="50px" width="50px">     
-            <img src="../../../public/assets/linkedinIcon.png" height="50px" width="50px">
+            <a href="https://www.facebook.com/">
+                <img src="../../../public/assets/facebookIcon.png" height="50px" width="50px"> 
+            </a>
+
+            <a href="https://www.instagram.com/">    
+                <img src="../../../public/assets/isntaIcon.png" height="50px" width="50px">  
+            </a>  
+            
+            <a href="https://web.whatsapp.com/">
+                <img src="../../../public/assets/zapIcon.png" height="50px" width="50px">    
+            </a>
+
+            <br>
+
+            <a href="https://twitter.com/">
+                <img src="../../../public/assets/twitterIcon.png" height="50px" width="50px">    
+            </a>
+            
+            <a href="https://www.linkedin.com/">
+                <img src="../../../public/assets/linkedinIcon.png" height="50px" width="50px">
+            </a>
             
         
         </div>
